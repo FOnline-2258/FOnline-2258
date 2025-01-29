@@ -57,5 +57,3 @@ intellisense*.h text eol=lf
 *.XCF  binary
 *.xlsx binary
 *.XLSX binary
-*.zip filter=lfs diff=lfs merge=lfs -text
-*.ZIP filter=lfs diff=lfs merge=lfs -text
