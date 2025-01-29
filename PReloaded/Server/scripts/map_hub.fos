@@ -1,0 +1,315 @@
+//
+// FOnline: 2238
+// Rotators
+//
+// map_hub.fos
+//
+
+#include "_macros.fos"
+#include "factions_h.fos"
+#include "economy_h.fos"
+#include "_defines.fos"
+#include "_entires.fos"
+#include "entire.fos"
+#include "_maps.fos"
+#include "messages_h.fos"
+#include "utils_h.fos"
+#include "mapdata_h.fos"
+#include "reinforcements_h.fos"
+#include "car_h.fos"
+#include "npc_roles_h.fos"
+
+#define PARKING_LOT_CHECK_FREQUENCY     (5000)  //  later this will be 5 minutes
+#define FREE_PARKING_TIME               (15000) //  later this will be 15 minutes
+#define PAYED_PARKING_TIME              (30000) //  later this will be 3 days
+#define ENTIRE_PARKINGLOT_NW            (210)
+#define ENTIRE_PARKINGLOT_SW            (220)
+
+import void StartFirstTentQuest(Critter& player) from "quest_first_tent";
+import bool d_QuestTimeoutNotReady(Critter& player, Critter@ npc) from "dialog";
+import bool MovePlayerToFreeHexNearLocation(Map& map, Critter& player, uint16 x, uint16 y, uint8 dir) from "car";
+import bool MoveCarWithTrunk(Item@ car, Map& map, uint HexX, uint HexY) from "car";
+import void SendCarInfoToPlayersOnMap(Map& map) from "unsafe_client";
+
+void map_init(Map& map, bool firstTime)
+{
+    map.SetData(MAP_DATA_BANK, BANK_HUB);
+
+    uint proto = map.GetProtoId();
+    string protoName;
+    map.ProtoName(protoName);
+	if (proto == MAP_HubDowntown || proto == MAP_HubOldtown || proto == MAP_HubHeights
+            || proto == MAP_HubWatermerchants || proto == MAP_HubUnderground || proto == MAP_HubUndergroundthief
+            || proto == MAP_HubParkingLot) {
+        _MapSetMode(map, MAP_MODE_NO_PVP);
+        _MapSetMode(map, MAP_MODE_NO_LOOT_DROP);
+        if (proto == MAP_HubParkingLot) {
+            _MapSetMode(map, MAP_MODE_NO_CAR_PICK);
+            Log("Setting NO PVP, NO LOOTING and NO CAR LOCKPICKING for location Hub (" + proto + ", " + protoName + ")");
+        } else {
+            Log("Setting NO PVP and NO LOOTING for location Hub (" + proto + ", " + protoName + ")");
+        }
+	}
+    // barrels rules
+    if(proto == MAP_HubArena)
+    {
+        map.SetEvent(MAP_EVENT_IN_CRITTER, "_CritterArenaIn");      //to remove guns on logging in/gm teleports into arena map
+        map.SetEvent(MAP_EVENT_OUT_CRITTER, "_CritterArenaOut");    //to return guns on going out of arena map
+    }
+    else
+        map.SetEvent(MAP_EVENT_OUT_CRITTER, "_CritterOut");
+
+
+    if(firstTime)
+    {
+
+        if(proto == MAP_HubDowntown)
+        {
+            uint[] maxes = { 35, 25 };
+            SetAlertMap(map, maxes);
+        }
+        else if(proto == MAP_HubOldtown)
+        {
+            uint[] maxes = { 10, 10 };
+            SetAlertMap(map, maxes);
+        }
+    }
+
+    if (proto == MAP_HubParkingLot) {
+        map.SetEvent(MAP_EVENT_LOOP_0, "_LoopParkingLot");
+        map.SetLoopTime(0, PARKING_LOT_CHECK_FREQUENCY);
+    }
+}
+
+void _LoopParkingLot(Map& map) {
+    //Log("Parking lot loop proc.");
+    //  process pay to leave parking spaces and remove locker from those that are past due, so players cannot block this area
+    array<Entire> carParkSpotPayNW;
+    ParseEntires(map, carParkSpotPayNW, ENTIRE_PARKINGLOT_NW);
+    for(int i = 0, j = carParkSpotPayNW.length(); i < j; i++) {
+        Item@ payCar = map.GetCar(carParkSpotPayNW[i].HexX, carParkSpotPayNW[i].HexY);
+        if (valid(payCar)) {
+            if (payCar.LockerId != 0) {
+                if (GetTick() > uint(payCar.Val9 + PAYED_PARKING_TIME)) {
+                    Log("_LoopParkingLot - Unlocking payCar with lockerId = " + payCar.LockerId + " on (" + carParkSpotPayNW[i].HexX + ", " + carParkSpotPayNW[i].HexY + ") type = " + GetCarTypeName(payCar.GetProtoId()));
+                    payCar.LockerId = 0;
+                    payCar.Update();
+                    SendCarInfoToPlayersOnMap(map);
+                }
+            }
+        }
+    }
+    array<Entire> carParkSpotPaySW;
+    ParseEntires(map, carParkSpotPaySW, ENTIRE_PARKINGLOT_SW);
+    for(int i = 0, j = carParkSpotPaySW.length(); i < j; i++) {
+        Item@ payCar = map.GetCar(carParkSpotPaySW[i].HexX, carParkSpotPaySW[i].HexY);
+        if (valid(payCar)) {
+            if (payCar.LockerId != 0) {
+                if (GetTick() > uint(payCar.Val9 + PAYED_PARKING_TIME)) {
+                    Log("_LoopParkingLot - Unlocking payCar with lockerId = " + payCar.LockerId + " on (" + carParkSpotPaySW[i].HexX + ", " + carParkSpotPaySW[i].HexY + ") type = " + GetCarTypeName(payCar.GetProtoId()));
+                    payCar.LockerId = 0;
+                    payCar.Update();
+                    SendCarInfoToPlayersOnMap(map);
+                }
+            }
+        }
+    }
+
+    //  process free parking spaces and move all cars that are past due to payed zone, so players cannot block this area
+    array<Entire> entires;
+    ParseEntires(map, entires, ENTIRE_CAR);
+    for(int i = 0, j = entires.length(); i < j; i++) {
+        Item@ car = map.GetCar(entires[i].HexX, entires[i].HexY);
+        if (valid(car)) {
+            string ownerName = "0";
+            if (car.Val6 > 0) {
+                ownerName = GetPlayerName(car.Val6);
+            }
+            if (car.Val9 > 0) {
+                if (GetTick() > uint(car.Val9 + FREE_PARKING_TIME)) {
+                    Log("_LoopParkingLot - Moving car on (" + entires[i].HexX + ", " + entires[i].HexY + ") type = " + GetCarTypeName(car.GetProtoId()) + " , owner = " + ownerName);
+                    if (GetCarTypeDirection(car.GetProtoId()) == CAR_TYPE_DIR_NW) {
+                        array<Entire> carParkSpotNW;
+                        ParseEntires(map, carParkSpotNW, ENTIRE_PARKINGLOT_NW);
+                        for(int ii = 0, jj = carParkSpotNW.length(); ii < jj; ii++) {
+                            Item@ tmpCarSpace = map.GetCar(carParkSpotNW[ii].HexX, carParkSpotNW[ii].HexY);
+                            if (!valid(tmpCarSpace)) {
+                                //  move car here
+                                //  WHEN YOU ADD NEW CARS TO GAME, use this log to check the hex distance from car and trunk,
+                                //  use that info in car.fos -> MoveCarWithTrunk(..)
+                                //Item@ trunk = car.GetChild(0);
+                                //if (valid(trunk)) {
+                                    //Log("_LoopParkingLot - Found TRUNK at (" + trunk.HexX + ", " + trunk.HexY + ") of car type = " + GetCarTypeName(car.GetProtoId()) + " at (" + car.HexX + ", " + car.HexY + ")");
+                                //}
+                                if (MoveCarWithTrunk(car, map, carParkSpotNW[ii].HexX, carParkSpotNW[ii].HexY)) {
+                                    SendCarInfoToPlayersOnMap(map);
+                                } else {
+                                    Log("MoveCarWithTrunk failed: Type = " + GetCarTypeName(car.GetProtoId()) + " , carId = " + car.Id);
+                                }
+                            }
+                        }
+                    }
+                    if (GetCarTypeDirection(car.GetProtoId()) == CAR_TYPE_DIR_SW) {
+                        array<Entire> carParkSpotSW;
+                        ParseEntires(map, carParkSpotSW, ENTIRE_PARKINGLOT_SW);
+                        for(int ii = 0, jj = carParkSpotSW.length(); ii < jj; ii++) {
+                            Item@ tmpCarSpace = map.GetCar(carParkSpotSW[ii].HexX, carParkSpotSW[ii].HexY);
+                            if (!valid(tmpCarSpace)) {
+                                //  move car here
+                                //  WHEN YOU ADD NEW CARS TO GAME, use this log to check the hex distance from car and trunk,
+                                //  use that info in car.fos -> MoveCarWithTrunk(..)
+                                //Item@ trunk = car.GetChild(0);
+                                //if (valid(trunk)) {
+                                    //Log("_LoopParkingLot - Found TRUNK at (" + trunk.HexX + ", " + trunk.HexY + ") of car type = " + GetCarTypeName(car.GetProtoId()) + " at (" + car.HexX + ", " + car.HexY + ")");
+                                //}
+                                if (MoveCarWithTrunk(car, map, carParkSpotSW[ii].HexX, carParkSpotSW[ii].HexY)) {
+                                    SendCarInfoToPlayersOnMap(map);
+                                } else {
+                                    Log("MoveCarWithTrunk failed: Type = " + GetCarTypeName(car.GetProtoId()) + " , carId = " + car.Id);
+                                }
+                            }
+                        }
+                    }
+                }
+            } else {
+                car.Val9 = GetTick();
+                Log("_LoopParkingLot tick = " + car.Val9 + " - New car on (" + entires[i].HexX + ", " + entires[i].HexY + ") type = " + GetCarTypeName(car.GetProtoId()) + " , owner = " + ownerName);
+            }
+            //car.Val9 = 0;
+        }
+    }
+}
+
+//  Exported main.fos
+void _PlayerEnterParkinglot(Map& map, Critter& player) {
+    //  need to move SW oriented cars immediately
+    array<Entire> entires;
+    ParseEntires(map, entires, ENTIRE_CAR);
+    for (int i = 0, j = entires.length(); i < j; i++) {
+        Item@ car = map.GetCar(entires[i].HexX, entires[i].HexY);
+        if (valid(car)) {
+            string ownerName = "0";
+            if (car.Val6 > 0) {
+                ownerName = GetPlayerName(car.Val6);
+            }
+            //  new car on parking lot
+            if (car.Val9 <= 0) {
+                car.Val9 = GetTick();
+            }
+            //  car has same owner as player and entered recently (idk how else to track if player entered map with car)
+            if (car.Val6 == int(player.Id) && car.Val9 + 1000 > int(GetTick())) {
+                Log("_LoopParkingLot - Player entered with car on (" + entires[i].HexX + ", " + entires[i].HexY + ") type = " + GetCarTypeName(car.GetProtoId()) + " , owner = " + ownerName);
+                if (GetCarTypeDirection(car.GetProtoId()) == CAR_TYPE_DIR_SW) {
+                    array<Entire> carParkSpotSW;
+                    ParseEntires(map, carParkSpotSW, ENTIRE_PARKINGLOT_SW);
+                    for(int ii = 0, jj = carParkSpotSW.length(); ii < jj; ii++) {
+                        Item@ tmpCarSpace = map.GetCar(carParkSpotSW[ii].HexX, carParkSpotSW[ii].HexY);
+                        if (!valid(tmpCarSpace)) {
+                            //  move car here
+                            //  WHEN YOU ADD NEW CARS TO GAME, use this log to check the hex distance from car and trunk,
+                            //  use that info in car.fos -> MoveCarWithTrunk(..)
+                            //Item@ trunk = car.GetChild(0);
+                            //if (valid(trunk)) {
+                                //Log("_LoopParkingLot - Found TRUNK at (" + trunk.HexX + ", " + trunk.HexY + ") of car type = " + GetCarTypeName(car.GetProtoId()) + " at (" + car.HexX + ", " + car.HexY + ")");
+                            //}
+                            if (MoveCarWithTrunk(car, map, carParkSpotSW[ii].HexX, carParkSpotSW[ii].HexY)) {
+                                SendCarInfoToPlayersOnMap(map);
+                                if (MovePlayerToFreeHexNearLocation(map, player, carParkSpotSW[ii].HexX, carParkSpotSW[ii].HexY, 2)) {
+                                    player.Say(SAY_NETMSG, "Moved to payed parking zone.");
+                                    break;
+                                } else {
+                                    player.Say(SAY_NETMSG, "Your car has been moved inside the pay parking zone.");
+                                    break;
+                                }
+                            } else {
+                                Log("MoveCarWithTrunk failed: Type = " + GetCarTypeName(car.GetProtoId()) + " , carId = " + car.Id);
+                                break;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+void _CritterArenaIn(Map& map, Critter& cr)
+{
+    if(GetLvar(cr, LVAR_hub_arena_inside) == 0)
+    {
+        TransferItemsToContOnMap(cr, GetMapByPid(MAP_HubArena, 0), ENTIRE_HUB_ARENA_CONTAINER, PID_FOOTLOCKER_CLEAN_LEFT, ITEMTRANSFER_WEAPONS);
+        SetLvar(cr, LVAR_hub_arena_inside, 1);
+    }
+}
+
+void _CritterArenaOut(Map& map, Critter& cr)
+{
+    if(cr.IsLife() && GetLvar(cr, LVAR_hub_arena_inside) == 1)
+    {
+        TransferItemsFromContOnMap(cr, GetMapByPid(MAP_HubArena, 0), ENTIRE_HUB_ARENA_CONTAINER, PID_FOOTLOCKER_CLEAN_LEFT);
+        SetLvar(cr, LVAR_hub_arena_inside, 0);
+    }
+}
+
+void _CritterOut(Map& map, Critter& cr)
+{
+    if(cr.IsPlayer() && _IsOnline(cr) && GetLocalVar(LVAR_q_first_tent, cr.Id) == 0 && cr.Param[ST_LEVEL] > 1)
+    {
+        StartFirstTentQuest(cr);
+    }
+}
+
+void t_NearParkEntrance(Critter& critter, Scenery& trigger, bool entered, uint8 dir)
+{
+    //Log("t_NearParkEntrance - entered =  " + entered + ", dir = " + dir + ")");
+    if(!critter.IsPlayer() || !entered)
+        return;
+
+    //  let players throw this direction, to get out of parking lot
+    if(dir == 1 || dir == 2 || dir == 3)
+        return;
+
+    //  if timeout is not ready, it means the player still has time left to enter parking lot since the last pay
+    Map@ map = critter.GetMap();
+    if (valid(map)) {
+        Critter@ ticketSeller = map.GetNpc(ROLE_HUB_GUARD_PARKING_TICKETS, FIND_ONLY_NPC | FIND_LIFE, 0);
+        if (valid(ticketSeller)) {
+            if (d_QuestTimeoutNotReady(critter, ticketSeller)) {
+                critter.SendMessage(MSG_HUB_PLAYER_NEAR_PARKING_ENTRANCE_PAYED, 0, MESSAGE_TO_VISIBLE_ME);
+            } else {
+                critter.SendMessage(MSG_HUB_PLAYER_NEAR_PARKING_ENTRANCE, 0, MESSAGE_TO_VISIBLE_ME);
+            }
+        }
+    }
+}
+
+void t_TryPassParkEntrance(Critter& critter, Scenery& trigger, bool entered, uint8 dir)
+{
+    //Log("t_TryPassParkEntrance - entered =  " + entered + ", dir = " + dir + ")");
+    if(!critter.IsPlayer())
+        return;
+
+    //  let players throw this direction, to get out of parking lot
+    if(dir == 1 || dir == 2 || dir == 3)
+        return;
+
+    //  entered trigger hex, give final warning, attack when leaving hex in wrong direction
+    Map@ map = critter.GetMap();
+    if (valid(map)) {
+        Critter@ ticketSeller = map.GetNpc(ROLE_HUB_GUARD_PARKING_TICKETS, FIND_ONLY_NPC | FIND_LIFE, 0);
+        if (valid(ticketSeller)) {
+            if (entered) {
+                if (d_QuestTimeoutNotReady(critter, ticketSeller)) {
+                    critter.SendMessage(MSG_HUB_PLAYER_PARKING_ENTRANCE_PAYED, 0, MESSAGE_TO_VISIBLE_ME);
+                } else {
+                    critter.SendMessage(MSG_HUB_PLAYER_PARKING_ENTRANCE, 0, MESSAGE_TO_VISIBLE_ME);
+                }
+            } else {
+                if (!d_QuestTimeoutNotReady(critter, ticketSeller)) {
+                    critter.SendMessage(MSG_HUB_PLAYER_PARKING_ILLEGAL_ENTRY, 0, MESSAGE_TO_VISIBLE_ME);
+                }
+            }
+        }
+    }
+
+}

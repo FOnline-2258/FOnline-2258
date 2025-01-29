@@ -1,0 +1,841 @@
+//
+// FOClassic: Brave New World
+// Sasabmeg (Slowhand)
+//
+// mapper_entitySwapper.fos
+//
+
+// Entity Swapper Plugin - allows to swap selected entities thematically, for example: Rust Railing Wall -> Silver Painted Wall
+
+
+#ifndef __MAPPER_ENTITY_SWAPPER__
+#define __MAPPER_ENTITY_SWAPPER__
+
+#include "_mapper_macros.fos"
+#include "mapper_plugin_h.fos"
+#include "mapper_utils_h.fos"
+#include "strtoint_h.fos"
+
+
+#define ES_TEXT_POS_X                       (390)
+#define ES_TEXT_POS_Y                       (0)
+
+
+class CEntitySwapper {
+    bool enabled = true;
+
+    bool controlDown = false;
+    bool shiftDown = false;
+    bool altDown = false;
+
+    bool selectionDropped = true;
+    int selectionShift = 0;
+
+    string messageText = "";
+    int xAdjust = 150;
+    int yAdjust = 10;
+    int messageWidth = 500;
+    int messageHeight = 500;
+    bool messageEnabled = true;
+    uint messageActivationTime = 0;
+    uint messageShowDuration = 5000;
+    uint messageColor = COLOR_GREEN;
+
+    array<array<array<array<uint>>>> data;
+    array<array<string>> dataThemeName;
+    array<string> dataSectionName;
+    array<CEntitySwapperMapObject> firstSelectionData;
+    array<CEntitySwapperPosFixDataObject> posFixData;
+
+    CEntitySwapper() {
+        controlDown = false;
+        shiftDown = false;
+        altDown = false;
+        messageEnabled = true;
+        xAdjust = __ScreenWidth - (__ScreenWidth * 0.8);
+        messageWidth = __ScreenWidth * 0.6;
+        messageHeight = __ScreenHeight * 0.5;
+        loadConfigFromCfgFile();
+    }
+
+    void resetInternalVariables() {
+        //  best way to empty arrays?
+        array<array<array<array<uint>>>> dataEmpty;
+        array<array<string>> dataThemeNameEmpty;
+        array<string> dataSectionNameEmpty;
+        array<CEntitySwapperMapObject> selectionDataEmpty;
+        array<CEntitySwapperPosFixDataObject> emptyPosFixData;
+        firstSelectionData = selectionDataEmpty;
+        data = dataEmpty;
+        dataThemeName = dataThemeNameEmpty;
+        dataSectionName = dataSectionNameEmpty;
+        selectionShift = 0;
+        posFixData = emptyPosFixData;
+    }
+
+    void Draw() {
+        //  Messages
+        if (messageEnabled) {
+            if (GetTick() < messageActivationTime + messageShowDuration) {
+                DrawText(messageText, xAdjust, yAdjust, messageWidth, messageHeight, messageColor, FONT_TYPE_FAT, FONT_FLAG_BORDERED | FONT_FLAG_CENTERX);
+            }
+        }
+    }
+
+    bool MouseDown(int click) {
+        if (click == MOUSE_CLICK_WHEEL_DOWN) {
+            if (controlDown) {
+                messageActivationTime = GetTick();
+                shiftSelected(true);
+                return true;
+            } else if (shiftDown) {
+                messageActivationTime = GetTick();
+                shiftSelectedVariation(true);
+                return true;
+            }
+        }
+        if (click == MOUSE_CLICK_WHEEL_UP) {
+            if (controlDown) {
+                messageActivationTime = GetTick();
+                shiftSelected(false);
+                return true;
+            } else if (shiftDown) {
+                messageActivationTime = GetTick();
+                shiftSelectedVariation(false);
+                return true;
+            }
+        }
+        if (click == MOUSE_CLICK_LEFT) {
+            selectionDropped = true;
+            array<CEntitySwapperMapObject> selectionDataEmpty;
+            firstSelectionData = selectionDataEmpty;
+            selectionShift = 0;
+            return false;
+        }
+        return false;
+    }
+
+    bool MouseUp(int click) {
+        return false;
+    }
+
+    void MouseMove(int x, int y) {
+    }
+
+    bool KeyDown(uint8 key) {
+        if (key == DIK_LCONTROL || key == DIK_RCONTROL) {
+            controlDown = true;
+        } else if (key == DIK_LSHIFT || key == DIK_RSHIFT) {
+            shiftDown = true;
+        } else if (key == DIK_LMENU || key == DIK_RMENU) {
+            altDown = true;
+        } else {
+            if (key == DIK_D && controlDown) {
+                printDebugLogs();
+            }
+            //  handle hotkeys here
+        }
+        return false;
+    }
+
+    bool KeyUp(uint8 key) {
+        if (key == DIK_LCONTROL || key == DIK_RCONTROL) {
+            controlDown = false;
+        } else if (key == DIK_LSHIFT || key == DIK_RSHIFT) {
+            shiftDown = false;
+        } else if (key == DIK_LMENU || key == DIK_RMENU) {
+            altDown = false;
+        } else {
+            //  handle hotkeys here
+        }
+        return false;
+    }
+
+    void InputLost() {
+        controlDown = false;
+        shiftDown = false;
+        altDown = false;
+    }
+
+    void shiftSelected(bool directionDown) {
+        if (selectionShift > 10) {
+            Log("selectionShift out of bounds, maximum 10 in both directions. cur val = " + selectionShift);
+            CLAMP(selectionShift, -10, 10);
+            return;
+        }
+        MapperMap@ map = GetActiveMap();
+        array<MapperObject@> objects;
+        array<MapperObject@> lastSelectedObjects;
+        bool firstTime = true;
+        //Log("lastSelectedObjects count = " + lastSelectedObjects.length());
+        uint index1 = 0, index2 = 0, index3 = 0, index4 = 0;
+        uint selectCount = GetSelectedObjects(objects);
+        if (selectCount > 0) {
+            //Log("selectedCount = " + selectCount + ", array.length() = " + objects.length());
+            for (uint i = 0; i < selectCount; i++) {
+                MapperObject@ object = objects[i];
+                if (valid(object)) {
+                    if (object.MapObjType == MAP_OBJECT_SCENERY || object.MapObjType == MAP_OBJECT_ITEM) {
+                        if (getProtoIdIndex(object.ProtoId, index1, index2, index3, index4)) {
+                            int oldPosX = 0, oldPosY = 0, curPosX = 0, curPosY = 0, newPosX = 0, newPosY = 0;
+                            //Log("Found relevant object with proto ID: " + object.ProtoId + " at [" + index1 + " , " + index2 + " , " + index3 + " , " + index4 + "]");
+                            //Log("selectionDropped = " + selectionDropped);
+                            if (selectionDropped) {
+                                //Log("11");
+                                CEntitySwapperMapObject selectionObject = CEntitySwapperMapObject(object.ProtoId, object.MapX, object.MapY, index1, index2, index3, index4);
+                                //Log("12");
+                                for (uint posFixIndex = 0; posFixIndex < posFixData.length(); posFixIndex++) {
+                                    if (posFixData[posFixIndex].protoId == object.ProtoId) {
+                                        oldPosX = posFixData[posFixIndex].posFixX;
+                                        oldPosY = posFixData[posFixIndex].posFixY;
+                                        selectionObject.posFixX = posFixData[posFixIndex].posFixX;
+                                        selectionObject.posFixY = posFixData[posFixIndex].posFixY;
+                                        //Log("Selection Dropped :: Fixing position for proto = " + object.ProtoId);
+                                        //break;
+                                    }
+                                }
+                                //Log("13");
+                                firstSelectionData.insertLast(selectionObject);
+                                //Log("14");
+                            }
+                            if ((!directionDown && index2 > 0) || (directionDown && index2 < data[index1].length() - 1)) {
+                                //  new selection
+                                if (!selectionDropped) {
+                                    //Log("15");
+                                    for (uint posFixIndex = 0; posFixIndex < posFixData.length(); posFixIndex++) {
+                                        if (posFixData[posFixIndex].protoId == object.ProtoId) {
+                                            curPosX = posFixData[posFixIndex].posFixX;
+                                            curPosY = posFixData[posFixIndex].posFixY;
+                                            //Log("Old Selection :: Fixing position for proto = " + object.ProtoId);
+                                            //break;
+                                        }
+                                    }
+                                    //Log("16");
+
+                                    //Log("17");
+                                    CEntitySwapperMapObject@ oldObject;
+                                    //Log("18");
+                                    @oldObject = getFromSelected(object.MapX - curPosX, object.MapY - curPosY);
+                                    //Log("19");
+                                    if (valid(oldObject)) {
+                                        //Log("20");
+                                        index2 = oldObject.index2;
+                                    } else {
+                                        Log("invalid - old object (" + object.ProtoId + ") getFromSelected mapCoord (" + object.MapX + ", " + object.MapY + ") posFix (" + curPosX + ", " + curPosY + ")");
+                                    }
+                                }
+                                //  shift entities
+                                //Log("21 - selectionShift = " + selectionShift + ", directionDown = " + directionDown);
+                                if (firstTime) {
+                                    firstTime = false;
+                                    if (directionDown) {
+                                        selectionShift++;
+                                    } else {
+                                        selectionShift--;
+                                    }
+                                }
+                                //Log("22 - selectionShift = " + selectionShift);
+                                //Log("23 - index2 = " + index2);
+                                if (selectionShift + index2 <= 0) {
+                                    index2 = 0;
+                                } else if (selectionShift + int(index2) >= int(data[index1].length()) - 1) {
+                                    index2 = data[index1].length() - 1;
+                                } else {
+                                    index2 += selectionShift;
+                                }
+                                //Log("24 - index2 = " + index2);
+                                if (index3 >= data[index1][index2].length() || data[index1][index2][index3][0] <= 0) {
+                                    if (index3 >= data[index1][index2].length()) {
+                                        //Log("shiftSelected :: Index3 out of bounds: " + index3 + " length() = " + data[index1][index2].length());
+                                    } else {
+                                        //Log("shiftSelected :: Proto <= 0.");
+                                    }
+                                    int indFix = 0;
+                                    while (index2 - indFix > 0 && (index3 >= data[index1][index2 - indFix].length() || data[index1][index2 - indFix][index3][0] <= 0)) {
+                                        indFix++;
+                                        //Log("index2 = " + index2 + ", indFix = " + indFix);
+                                    }
+                                    index2 -= indFix;
+                                    //Log("New Index2 = " + index2);
+                                    if (index3 >= data[index1][index2].length() || data[index1][index2][index3][0] <= 0) {
+                                        lastSelectedObjects.insertLast(object);
+                                        //Log("EntitySwapper :: shiftSelected() - Proto 0 or Index3 out of bounds and no suitable replacement.");
+                                        continue;
+                                    }
+                                }
+                                //  old selection, use index4 from save
+                                if (!selectionDropped) {
+                                    //Log("25");
+                                    CEntitySwapperMapObject@ selectionObject;
+                                    //Log("26");
+                                    @selectionObject = getFromSelected(object.MapX - curPosX, object.MapY - curPosY);
+                                    //Log("27");
+                                    if (valid(selectionObject)) {
+                                        index4 = selectionObject.index4;
+                                    } else {
+                                        Log("invalid - old object (" + object.ProtoId + ") getFromSelected mapCoord (" + object.MapX + ", " + object.MapY + ") posFix (" + curPosX + ", " + curPosY + ")");
+                                    }
+                                    //Log("28");
+                                    for (uint posFixIndex = 0; posFixIndex < posFixData.length(); posFixIndex++) {
+                                        if (posFixData[posFixIndex].protoId == object.ProtoId) {
+                                            oldPosX = posFixData[posFixIndex].posFixX;
+                                            oldPosY = posFixData[posFixIndex].posFixY;
+                                            //Log("Old Selection :: Fixing position for proto = " + object.ProtoId);
+                                            //break;
+                                        }
+                                    }
+                                    //Log("29");
+                                }
+                                //  default to first element if current index not present
+                                //Log("30");
+                                if (index4 >= data[index1][index2][index3].length()) {
+                                    index4 = 0;
+                                }
+                                //Log("31");
+                                //  check if new object has position fix values
+                                for (uint posFixIndex = 0; posFixIndex < posFixData.length(); posFixIndex++) {
+                                    //  old has posfix
+                                    if (posFixData[posFixIndex].protoId == object.ProtoId) {
+                                        //Log("Old position " + object.ProtoId + " has fix: Old (" + oldPosX + ", " + oldPosY + ")" + " New (" + newPosX + ", " + newPosY + ")");
+                                    }
+                                    if (posFixData[posFixIndex].protoId == data[index1][index2][index3][index4]) {
+                                        newPosX = posFixData[posFixIndex].posFixX;
+                                        newPosY = posFixData[posFixIndex].posFixY;
+                                        //Log("New position " + data[index1][index2][index3][index4] + " has fix: Old (" + oldPosX + ", " + oldPosY + ")" + " New (" + newPosX + ", " + newPosY + ")");
+                                        //break;
+                                    }
+                                }
+                                //Log("32");
+                                MapperObject@ newObj = map.AddObject( object.MapX - oldPosX + newPosX, object.MapY - oldPosY + newPosY, MAP_OBJECT_SCENERY, data[index1][index2][index3][index4]);
+                                DeleteObject(object);
+                                lastSelectedObjects.insertLast(newObj);
+                            } else {
+                                lastSelectedObjects.insertLast(object);
+                            }
+                            messageText = dataSectionName[index1] + ": " + dataThemeName[index1][index2];
+                        } else {
+                            lastSelectedObjects.insertLast(object);
+                        }
+                    } else {
+                        lastSelectedObjects.insertLast(object);
+                    }
+                } else {
+                    Log("Found invalid mapper object!!!");
+                }
+            }
+        } else {
+            Log("Nothing selected.");
+            messageText = "Nothing selected.";
+            selectionDropped = true;
+            return;
+        }
+        //printLastSelectionData();
+        selectionDropped = false;
+        SelectObjects(lastSelectedObjects, false);
+        SelectObjects(lastSelectedObjects, true);
+    }
+
+    void shiftSelectedVariation(bool directionDown) {
+        MapperMap@ map = GetActiveMap();
+        array<MapperObject@> objects;
+        array<MapperObject@> lastSelectedObjects;
+        //Log("lastSelectedObjects count = " + lastSelectedObjects.length());
+        uint index1 = 0, index2 = 0, index3 = 0, index4 = 0;
+        uint selectCount = GetSelectedObjects(objects);
+        if (selectCount > 0) {
+            //Log("selectedCount = " + selectCount + ", array.length() = " + objects.length());
+            for (uint i = 0; i < selectCount; i++) {
+                MapperObject@ object = objects[i];
+                if (valid(object)) {
+                    if (object.MapObjType == MAP_OBJECT_SCENERY || object.MapObjType == MAP_OBJECT_ITEM) {
+                        if (getProtoIdIndex(object.ProtoId, index1, index2, index3, index4)) {
+                            //Log("Found relevant object with proto ID: " + object.ProtoId + " at [" + index1 + " , " + index2 + " , " + index3 + " , " + index4 + "]");
+                            //Log("selectionDropped = " + selectionDropped);
+                            if (selectionDropped) {
+                                //Log("11");
+                                CEntitySwapperMapObject selectionObject = CEntitySwapperMapObject(object.ProtoId, object.MapX, object.MapY, index1, index2, index3, index4);
+                                //Log("12");
+                                firstSelectionData.insertLast(selectionObject);
+                                //Log("13");
+                            }
+                            if ((!directionDown && index4 > 0) || (directionDown && index4 < data[index1][index2][index3].length() - 1)) {
+                                //  new selection
+                                //  shift entities
+                                //Log("selectionShift = " + selectionShift + ", directionDown = " + directionDown);
+                                if (directionDown) {
+                                    index4++;
+                                } else {
+                                    index4--;
+                                }
+                                //Log("selectionShift = " + selectionShift);
+                                //Log("index2 = " + index2);
+                                //Log("index2 = " + index2);
+                                if (index3 >= data[index1][index2].length() || data[index1][index2][index3][0] <= 0) {
+                                    //index3 = data[index1][index2].length() - 1;
+                                    lastSelectedObjects.insertLast(object);
+                                    //Log("Found proto = 0");
+                                    continue;
+                                }
+                                //  default to first element if current index not present
+                                if (index4 >= data[index1][index2][index3].length()) {
+                                    index4 = 0;
+                                }
+                                MapperObject@ newObj = map.AddObject( object.MapX, object.MapY, MAP_OBJECT_SCENERY, data[index1][index2][index3][index4]);
+                                DeleteObject(object);
+                                lastSelectedObjects.insertLast(newObj);
+                            } else {
+                                lastSelectedObjects.insertLast(object);
+                            }
+                            messageText = dataSectionName[index1] + ": " + dataThemeName[index1][index2];
+                        } else {
+                            lastSelectedObjects.insertLast(object);
+                        }
+                    } else {
+                        lastSelectedObjects.insertLast(object);
+                    }
+                } else {
+                    Log("Found invalid mapper object!!!");
+                }
+            }
+        } else {
+            Log("Nothing selected.");
+            messageText = "Nothing selected.";
+            selectionDropped = true;
+            return;
+        }
+        //printLastSelectionData();
+        selectionDropped = false;
+        SelectObjects(lastSelectedObjects, false);
+        SelectObjects(lastSelectedObjects, true);
+    }
+
+    bool getProtoIdIndex(uint objectProtoId, uint& index1, uint& index2, uint& index3, uint& index4) {
+        for (uint i1 = 0; i1 < data.length(); i1++) {
+            for (uint i2 = 0; i2 < data[i1].length(); i2++) {
+                for (uint i3 = 0; i3 < data[i1][i2].length(); i3++) {
+                    for (uint i4 = 0; i4 < data[i1][i2][i3].length(); i4++) {
+                        if (data[i1][i2][i3][i4] == objectProtoId) {
+                            index1 = i1;
+                            index2 = i2;
+                            index3 = i3;
+                            index4 = i4;
+                            return true;
+                        }
+                    }
+                }
+            }
+        }
+        return false;
+    }
+
+    bool loadConfigFromCfgFile() {
+        resetInternalVariables();
+        file f;
+        if (f.open("data/EntitySwapper.cfg", "r") == -1) {
+            Message("File data/EntitySwapper.cfg not found.");
+            Log("File data/EntitySwapper.cfg not found.");
+            return false;
+        }
+        uint lineCount = 0;
+        uint len = 0;
+        uint act = 0;
+        int currentSection = -1;
+        int currentTheme = -1;
+        int currentUnit = -1;
+
+        while (!f.isEndOfFile()) {
+            string line;
+            // read one line and preprocess (trim trailing spaces and comments)
+            len = f.readLine(line);
+            lineCount++;
+            Log("[" + lineCount + "] " + line);
+            if (len == 0) {
+                continue;
+            }
+            //  remove line feed, new line and dash comments from end of line
+            act = 0;
+            while (act < len && (line.rawGet(act) != 10 && line.rawGet(act) != 13 && line[act] != "#")) {
+                act++;
+            }
+            //Log("1");
+            if (act == 0) {
+                continue;
+            }
+            line = substring(line, 0, act);
+            //  skip white spaces from start
+            act = 0;
+            len = line.length();
+            while (act < len && (line[act] == " " || line[act] == "\t")) {
+                act++;
+            }
+            //Log("2");
+            line = substring(line, act, line.length() - act);
+            if (line.length() == 0) {
+                continue;
+            }
+            //  skip white spaces from end
+            act = line.length() - 1;
+            while (act > 0 && (line[act] == " " || line[act] == "\t"))
+                act--;
+            //Log("3");
+            line = substring(line, 0, act + 1);
+            //Log("4");
+            len = line.length();
+            if(len == 0) {
+                continue;
+            }
+            //Log("[" + lineCount + "]: " + line);
+
+            if (getCharPos(line, "=") > 0) {
+                //  basic config of variables
+                array<string@>@ splittedLine = split(line, "=");
+                if (splittedLine.length() == 2 && splittedLine[0].length() > 0 && splittedLine[1].length() > 0) {
+                    if (splittedLine[0] == "enabled") {
+                        enabled = splittedLine[1] == "true" ? true : splittedLine[1] == "yes" ? true : splittedLine[1] == "1" ? true : false;
+                        Log("Input Visualizer: 'enabled' changed to: " + enabled);
+                    }
+                    if (splittedLine[0] == "messageColor") {
+                        if (StrToIntAnyFormat(splittedLine[1], messageColor)) {
+                            Log("Input Visualizer: 'messageColor' changed to '" + messageColor + "'");
+                        } else {
+                            Log("Input Visualizer: Failed to load color format. [" + splittedLine[1] + "]");
+                        }
+                    }
+                    if (splittedLine[0] == "messageShowDuration") {
+                        if (StrToIntAnyFormat(splittedLine[1], messageShowDuration)) {
+                            Log("Input Visualizer: 'activeDuration' changed to '" + messageShowDuration + "'");
+                        } else {
+                            Log("Input Visualizer: Failed to load 'activeDuration' value [" + splittedLine[1] + "]");
+                        }
+                    }
+                    if (splittedLine[0] == "posX") {
+                        if (StrToInt(splittedLine[1], xAdjust)) {
+                            Log("Input Visualizer: 'posX' changed to '" + xAdjust + "'");
+                        } else {
+                            Log("Input Visualizer: Failed to load 'posX' value [" + splittedLine[1] + "]");
+                        }
+                    }
+                    if (splittedLine[0] == "posY") {
+                        if (StrToInt(splittedLine[1], yAdjust)) {
+                            Log("Input Visualizer: 'posY' changed to '" + yAdjust + "'");
+                        } else {
+                            Log("Input Visualizer: Failed to load 'posY' value [" + splittedLine[1] + "]");
+                        }
+                    }
+                } else {
+                    Log("Line " + lineCount + ": cannot interpret (" + line + ")");
+                }
+            } else if (getCharPos(line, "[") >= 0 && getCharPos(line, "]") >= 0) {
+                //  DATA
+                //  section names
+                int pos = getCharPos(line, "[") + 1;
+                int len = getCharPos(line, "]") - pos;
+                if (pos > 0 && len > 0 && (pos + len) < int(line.length())) {
+                    string section = substring(line, pos, len);
+                    Log("Section Caption = " + section);
+                    array<string> newTheme;
+                    dataSectionName.insertLast(section);
+                    dataThemeName.insertLast(newTheme);
+                    array<array<array<uint>>> dataSectionEmpty;
+                    data.insertLast(dataSectionEmpty);
+                    currentSection++;
+                    currentTheme = -1;
+                } else {
+                    Log("Invalid Section Caption format.");
+                    return false;
+                }
+            } else if (getCharPos(line, "\"") >= 0 && getCharPos(line, ":") >= 0) {
+                //  theme names and values
+                if (currentSection >= 0) {
+                    array<string@>@ splittedLine = split(line, ":");
+                    if (splittedLine.length() == 2 && splittedLine[0].length() > 0 && splittedLine[1].length() > 0) {
+                        //  theme name
+                        int pos = getCharPos(splittedLine[0], "\"") + 1;
+                        int len = getCharPos(splittedLine[0], "\"", 1) - pos;
+                        if (pos > 0 && len > 0 && (pos + len) < int(splittedLine[0].length())) {
+                            string themeName = substring(splittedLine[0], pos, len);
+                            Log("Theme Name = " + themeName);
+                            dataThemeName[currentSection].insertLast(themeName);
+                            array<array<uint>> dataThemeEmpty;
+                            data[currentSection].insertLast(dataThemeEmpty);
+                            currentTheme++;
+                        } else {
+                            Log("Invalid Theme Name format.");
+                            return false;
+                        }
+                        //  theme data
+                        array<string@>@ splittedData = split(splittedLine[1], ",");
+                        if (splittedData.length() > 0) {
+                            for (currentUnit = 0; currentUnit < int(splittedData.length()); currentUnit++) {
+                                //Log("Trying to read number from: " + splittedData[i]);
+                                int value = 0;
+                                trimWhiteSpaces(splittedData[currentUnit]);
+                                if (splittedData[currentUnit].length() > 0) {
+                                    array<uint> dataUnitEmpty;
+                                    data[currentSection][currentTheme].insertLast(dataUnitEmpty);
+                                    array<string@>@ variationData = split(splittedData[currentUnit], " ");
+                                    for (uint currentVariation = 0; currentVariation < variationData.length(); currentVariation++) {
+                                        if (StrToInt(variationData[currentVariation], value)) {
+                                            //Log("Read value = " + value);
+                                            data[currentSection][currentTheme][currentUnit].insertLast(value);
+                                        } else {
+                                            Log("Failed to parse value from: '" + variationData[currentVariation] + "'");
+                                        }
+                                    }
+                                } else {
+                                    Log("Missing Unit information or wrong format.");
+                                    return false;
+                                }
+                            }
+                        } else {
+                            Log("Invalid Theme Data format.");
+                            return false;
+                        }
+                    }
+                } else {
+                    Log("Missing Section information. Specify Section first.");
+                    return false;
+                }
+            } else if (getCharPos(line, "{") >= 0 && getCharPos(line, "}") >= 0) {
+                //  posFix
+                int pos = getCharPos(line, "{") + 1;
+                int len = getCharPos(line, "}") - pos;
+                if (pos > 0 && len > 0 && (pos + len) < int(line.length())) {
+                    string posFix = substring(line, pos, len);
+                    Log("Found Position Fix: " + posFix);
+                    array<string@>@ splittedData = split(posFix, ",");
+                    if (splittedData.length() > 0) {
+                        for (uint i = 0; i < splittedData.length(); i++) {
+                            //Log("Trying to read number from: " + splittedData[i]);
+                            int value = 0;
+                            trimWhiteSpaces(splittedData[i]);
+                            if (splittedData[i].length() > 0) {
+                                array<string@>@ threeValuesData = split(splittedData[i], " ");
+                                int[] posFixValues = {0, 0, 0};
+                                if (threeValuesData.length() == 3) {
+                                    for (uint j = 0; j < threeValuesData.length(); j++) {
+                                        if (StrToInt(threeValuesData[j], value)) {
+                                            //Log("Read value = " + value);
+                                            posFixValues[j] = value;
+                                            Log("####\t" + posFixValues[j]);
+                                        } else {
+                                            Log("Failed to parse value from: '" + threeValuesData[j] + "'");
+                                        }
+                                    }
+                                    if (posFixValues[0] > 0 && (posFixValues[1] != 0 || posFixValues[2] != 0)) {
+                                        CEntitySwapperPosFixDataObject posFixTemp = CEntitySwapperPosFixDataObject(posFixValues[0], posFixValues[1], posFixValues[2]);
+                                        posFixData.insertLast(posFixTemp);
+                                    }
+                                } else {
+                                    Log("Value data length is not 3: '" + splittedData[i] + "'");
+                                }
+                            } else {
+                                Log("Missing Unit information or wrong format.");
+                                return false;
+                            }
+                        }
+                    } else {
+                        Log("Invalid Theme Data format.");
+                        return false;
+                    }
+                } else {
+                    Log("Invalid Position Fix format.");
+                    return false;
+                }
+            }
+        }
+        f.close();
+        printData();
+        return true;
+    }
+
+    void printData() {
+        for (uint i = 0; i < dataSectionName.length(); i++) {
+            Log("Section[" + i + "] " + dataSectionName[i]);
+            for (uint j = 0; j < dataThemeName[i].length(); j++) {
+                Log("\tTheme[" + i + ", " + j + "] " + dataThemeName[i][j]);
+                for (uint k = 0; k < data[i][j].length(); k++) {
+                    for (uint i4 = 0; i4 < data[i][j][k].length(); i4++) {
+                        Log("\t\tData[" + i + ", " + j + ", " + k + ", " + i4 + "] " + data[i][j][k][i4]);
+                    }
+                }
+            }
+        }
+        Log("Data len = " + data.length());
+        Log("Position Fix Data:");
+        for (uint i = 0; i < posFixData.length(); i ++) {
+            Log("\tProto = " + posFixData[i].protoId + ", X = " + posFixData[i].posFixX + ", Y = " + posFixData[i].posFixY);
+        }
+        Log("PosFixData len = " + posFixData.length());
+    }
+
+    void printDebugLogs() {
+        Log("printDebugLogs()");
+        MapperMap@ map = GetActiveMap();
+        array<MapperObject@> objects;
+        uint selectCount = GetSelectedObjects(objects);
+        if (selectCount > 0) {
+            Log("selectedCount = " + selectCount + ", array.length() = " + objects.length());
+            for (uint i = 0; i < selectCount; i++) {
+                MapperObject@ object = objects[i];
+                if (valid(object)) {
+                    Log("Selected mapper object: type = " + object.MapObjType + ", protoId = " + object.ProtoId + " at (" + object.MapX + ", " + object.MapY + ")");
+                    if (object.MapObjType == MAP_OBJECT_SCENERY) {
+
+                    } else {
+
+                    }
+                } else {
+                    Log("Found invalid mapper object!!!");
+                }
+            }
+        } else {
+            Log("Nothing selected.");
+            messageText = "Nothing selected.";
+            selectionDropped = true;
+            return;
+        }
+    }
+
+    void trimWhiteSpaces(string& strIn) {
+        uint i = 0;
+        while (i < strIn.length() && (strIn[i] == " " || strIn[i] == "\t")) {
+            i++;
+        }
+        strIn = substring(strIn, i, strIn.length() - i);
+        i = strIn.length() -1;
+        while (i >= 0 && (strIn[i] == " " || strIn[i] == "\t")) {
+            i--;
+        }
+        strIn = substring(strIn, 0, i + 1);
+    }
+
+    void printLastSelectionData() {
+        for (uint i = 0; i < firstSelectionData.length(); i++) {
+            Log("[" + i + "] (" + firstSelectionData[i].protoId + " , " + firstSelectionData[i].hexX + ", " + firstSelectionData[i].hexY +
+                ", " + firstSelectionData[i].index1 + ", " + firstSelectionData[i].index2 + ", " + firstSelectionData[i].index3 + ", " + firstSelectionData[i].index4 + ")");
+        }
+    }
+
+    CEntitySwapperMapObject@ getFromSelected(uint16 x, uint16 y) {
+        //Log("getFromSelected()");
+        if (valid(firstSelectionData)) {
+            //Log("valid - firstSelectionData");
+        } else {
+            Log("invalid - firstSelectionData");
+        }
+        for (uint i = 0; i < firstSelectionData.length(); i++) {
+            //Log("i = " + i);
+            if (firstSelectionData[i].hexX - firstSelectionData[i].posFixX == x && firstSelectionData[i].hexY - firstSelectionData[i].posFixY == y) {
+                return firstSelectionData[i];
+            }
+        }
+        //Log("getFromSelected() - return null");
+        return null;
+    }
+
+    //  return false to let other plugins parse the command, or true if this command was for Input Visualizer only
+    bool Message(string& message) {
+        if (message == "es" || message == "swapper") {
+            message = "Entity Swapper commands: reload";
+            messageActivationTime = GetTick();
+            messageText = " " + message;
+            return true;
+        } else if (substring(message, 0, 3) == "es " || substring(message, 0, 8) == "swapper ") {
+            array<string@>@ args = split(message, " ");
+            if (valid(args)) {
+            } else {
+                message = "Entity Swapper Error: Could not parse command arguments.";
+                messageActivationTime = GetTick();
+                messageText = " " + message;
+                return true;
+            }
+            if (args[1] == "reload") {
+                Log("Entity Swapper - Reloading from config file.");
+                loadConfigFromCfgFile();
+                Log("Entity Swapper - Reload finished.");
+                return true;
+            }
+        }
+        //  Display messages on top of screen in big
+        return false;
+    }
+
+};
+
+class CEntitySwapperMapObject {
+    uint protoId;
+    uint16 hexX;
+    uint16 hexY;
+    uint index1;
+    uint index2;
+    uint index3;
+    uint index4;
+    uint posFixX = 0;
+    uint posFixY = 0;
+    CEntitySwapperMapObject(uint proto, uint16 x, uint16 y, uint i1, uint i2, uint i3, uint i4) {
+        protoId = proto;
+        hexX = x;
+        hexY = y;
+        index1 = i1;
+        index2 = i2;
+        index3 = i3;
+        index4 = i4;
+    }
+};
+
+
+class CEntitySwapperPosFixDataObject {
+    uint protoId;
+    int posFixX;
+    int posFixY;
+    CEntitySwapperPosFixDataObject(uint proto, int x, int y) {
+        protoId = proto;
+        posFixX = x;
+        posFixY = y;
+    }
+};
+
+class CEntitySwapperPlugin : IMapperPlugin {
+    CEntitySwapper entitySwapper;
+    CEntitySwapperPlugin() {
+        entitySwapper = CEntitySwapper();
+    }
+
+    void Render(uint layer) {
+        if (layer == 1) {
+            MapperMap@ map = GetActiveMap();
+            if (!valid(map)) {
+                return;
+            }
+        }
+        if(layer == 2) {
+            entitySwapper.Draw();
+        }
+    }
+
+    void Draw() {
+        entitySwapper.Draw();
+    }
+
+    string GetName()                            { return "Entity Swapper"; }
+    bool MouseDown(int click)                   { return entitySwapper.MouseDown(click); }
+    bool MouseUp(int click)                     { return entitySwapper.MouseUp(click); }
+    void MouseMove(int x, int y)                { entitySwapper.MouseMove(x, y); }
+    bool KeyDown(uint8 key,string& keyText)     { return entitySwapper.KeyDown(key); }
+    bool KeyUp(uint8 key,string& keyText)       { return entitySwapper.KeyUp(key); }
+    void InputLost()                            { entitySwapper.InputLost(); }
+    void Loop()                                 {}
+    bool Message(string& msg)                   { return entitySwapper.Message(msg); }
+    void RenderMap()                            {}
+};
+
+void RegisterEntitySwapper() {
+    IMapperPlugin@ entitySwapperPlugin = CEntitySwapperPlugin();
+    //  add file init here?
+    if (Plugins_Register(entitySwapperPlugin)) {
+        Message("Entity Swapper plugin (WIP) registered. Ctrl + Scroll for basic message.");
+    }
+}
+
+#endif // __MAPPER_ENTITY_SWAPPER__ //

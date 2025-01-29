@@ -1,0 +1,543 @@
+//
+// FOnline: Classic - Brave New World
+// Sasabmeg
+//
+// prod_fishing.fos
+//
+#ifndef __TRAINING_DUMMY__
+#define __TRAINING_DUMMY__
+
+#include "_macros.fos"
+#include "_npc_pids.fos"
+
+
+#define ENTIRE_TRAINNG_DUMMY_SPOT       (110)
+
+uint[] trainingDummyPids = {NPC_PID_TrainingDummyLeatherJacket, NPC_PID_TrainingDummyLeatherArmor, NPC_PID_TrainingDummyCombatArmor,
+                            NPC_PID_TrainingDummyMetalArmor, NPC_PID_TrainingDummyTeslaArmor, NPC_PID_TrainingDummyPowerArmor};
+
+bool d_IsNotFreeDummySpot(Critter& player, Critter@ npc) {
+    return !d_IsFreeDummySpot(player, npc);
+}
+
+bool d_IsFreeDummySpot(Critter& player, Critter@ npc) {
+    Map@ map = player.GetMap();
+    if (!valid(map))
+        return false;
+    uint dummySpotCount;
+    uint entireValue = ENTIRE_TRAINNG_DUMMY_SPOT;
+    array<uint> dummySpotEntires;
+    array<uint16> dummySpotHexX;
+    array<uint16> dummySpotHexY;
+    dummySpotCount = map.GetEntires(entireValue, dummySpotEntires, dummySpotHexX, dummySpotHexY);
+    if (dummySpotCount > 0) {
+        for (uint i = 0; i < trainingDummyPids.length(); i++) {
+            //Log("TRAINING DUMMY :: d_IsFreeDummySpot - Checking for free dummy spot index = " + i + " (" + dummySpotHexX[i] + ", " + dummySpotHexY[i] + ")");
+            Critter@ otherDummy = map.GetCritter(dummySpotHexX[i], dummySpotHexY[i]);
+            if (valid(otherDummy)) {
+                if (otherDummy.IsPlayer()) {
+                    //Log("TRAINING DUMMY :: d_IsFreeDummySpot - Player " + otherDummy.Name + "is blocking the dummy spot.");
+                    //player.Say(SAY_NETMSG, "Player " + otherDummy.Name + "is blocking the dummy spot.");
+                } else if (isTrainingDummy(otherDummy) && otherDummy.IsDead()) {
+                    //Log("TRAINING DUMMY :: d_IsFreeDummySpot - Dead training dummy " + otherDummy.Name + "is blocking the dummy spot.");
+                } else {
+                    //Log("TRAINING DUMMY :: d_IsFreeDummySpot - Spot " + i + " is occupied by: " + otherDummy.Name);
+                    //player.Say(SAY_NETMSG, "Spot " + i + " is occupied by: " + otherDummy.Name);
+                }
+            } else {
+                //Log("TRAINING DUMMY :: d_IsFreeDummySpot - Found a good dummy spot at (" + dummySpotHexX[i] + ", " + dummySpotHexY[i] + ")");
+                //player.Say(SAY_NETMSG, "Found a good dummy spot at (" + dummySpotHexX[i] + ", " + dummySpotHexY[i] + ")");
+                return true;
+            }
+        }
+    } else {
+        //Log("TRAINING DUMMY :: d_IsFreeDummySpot - There are no good spots to set up a training dummy here.");
+        player.Say(SAY_NETMSG, "There are no good spots to set up a training dummy here.");
+        return false;
+    }
+    return false;
+}
+
+void r_SpawnDummy(Critter& player, Critter@ npc, int val) {
+    Map@ map = player.GetMap();
+    if (!valid(map))
+        return;
+    uint dummySpotCount;
+    uint entireValue = ENTIRE_TRAINNG_DUMMY_SPOT;
+    array<uint> dummySpotEntires;
+    array<uint16> dummySpotHexX;
+    array<uint16> dummySpotHexY;
+    dummySpotCount = map.GetEntires(entireValue, dummySpotEntires, dummySpotHexX, dummySpotHexY);
+    bool isFreeSpot = false;
+    if (dummySpotCount > 0) {
+        for (uint i = 0; i < trainingDummyPids.length(); i++) {
+            //Log("TRAINING DUMMY :: Checking for free dummy spot index = " + i + " (" + dummySpotHexX[i] + ", " + dummySpotHexY[i] + ")");
+            Critter@ otherDummy = map.GetCritter(dummySpotHexX[i], dummySpotHexY[i]);
+            if (valid(otherDummy)) {
+                if (otherDummy.IsPlayer()) {
+                    //Log("TRAINING DUMMY :: Player " + otherDummy.Name + "is blocking the dummy spot.");
+                    //player.Say(SAY_NETMSG, "Player " + otherDummy.Name + "is blocking the dummy spot.");
+                } else {
+                    //Log("TRAINING DUMMY :: Spot " + i + " is occupied by: " + otherDummy.Name);
+                    //player.Say(SAY_NETMSG, "Spot " + i + " is occupied by: " + otherDummy.Name);
+                }
+            } else {
+                //Log("TRAINING DUMMY :: Found a good dummy spot index = " + i + " at (" + dummySpotHexX[i] + ", " + dummySpotHexY[i] + ")");
+                //player.Say(SAY_NETMSG, "Found a good dummy spot index = " + i + " at (" + dummySpotHexX[i] + ", " + dummySpotHexY[i] + ")");
+                isFreeSpot = true;
+                spawnTrainingDummy(player, map, dummySpotHexX[i], dummySpotHexY[i], val);
+                return;
+            }
+        }
+    } else {
+        //Log("TRAINING DUMMY :: There are no good spots to set up a training dummy here.");
+        player.Say(SAY_NETMSG, "There are no good spots to set up a training dummy here.");
+    }
+}
+
+void spawnTrainingDummy(Critter& player, Map& map, uint16 hexX, uint16 hexY, int val) {
+    int[] params = {
+        ST_TEAM_ID, 0,
+        ST_NPC_ROLE, 0,
+        ST_DIALOG_ID, DIALOG_all_tdummy_cmb,
+        ST_REPLICATION_TIME, REPLICATION_NEVER
+    };
+    ProtoItem@ armor = GetProtoItem(PID_LEATHER_JACKET);
+
+    uint mobPid = 0;
+    switch (val) {
+        case 1:
+            mobPid = NPC_PID_TrainingDummyLeatherJacket;
+            @armor = GetProtoItem(PID_LEATHER_JACKET);
+            break;
+        case 2:
+            mobPid = NPC_PID_TrainingDummyThermalLeatherArmor;
+            @armor = GetProtoItem(PID_THERMAL_LEATHER_ARMOR);
+            break;
+        case 3:
+            mobPid = NPC_PID_TrainingDummyLeatherArmor;
+            @armor = GetProtoItem(PID_LEATHER_ARMOR);
+            break;
+        case 4:
+            mobPid = NPC_PID_TrainingDummyLeatherArmor2;
+            @armor = GetProtoItem(PID_LEATHER_ARMOR_MK_II);
+            break;
+        case 5:
+            mobPid = NPC_PID_TrainingDummyCombatArmor;
+            @armor = GetProtoItem(PID_COMBAT_ARMOR);
+            break;
+        case 6:
+            mobPid = NPC_PID_TrainingDummyCombatArmor2;
+            @armor = GetProtoItem(PID_COMBAT_ARMOR_MK_II);
+            break;
+        case 7:
+            mobPid = NPC_PID_TrainingDummyMetalArmor;
+            @armor = GetProtoItem(PID_METAL_ARMOR);
+            break;
+        case 8:
+            mobPid = NPC_PID_TrainingDummyMetalArmor2;
+            @armor = GetProtoItem(PID_METAL_ARMOR_MK_II);
+            break;
+        case 9:
+            mobPid = NPC_PID_TrainingDummyTeslaArmor;
+            @armor = GetProtoItem(PID_TESLA_ARMOR);
+            break;
+        case 10:
+            mobPid = NPC_PID_TrainingDummyPowerArmor;
+            @armor = GetProtoItem(PID_POWERED_ARMOR);
+            break;
+        default:
+            mobPid = NPC_PID_TrainingDummyLeatherJacket;
+            @armor = GetProtoItem(PID_LEATHER_JACKET);
+    }
+    Critter@ newDummy = map.AddNpc(mobPid, hexX, hexY, 3, params, null, "");
+    if (valid(newDummy)) {
+        //Log("TRAINING DUMMY :: Spawned dummy at (" +hexX + ", " + hexY + ")");
+        player.Say(SAY_NETMSG, "A new training dummy is set up for some practice!");
+        newDummy.SpawnedBy = player.Id;
+        newDummy.StatBase[ST_HEALING_RATE] = 0;
+    } else {
+        //Log("TRAINING DUMMY :: Spawning dummy at (" + hexX + ", " + hexY + ") failed.");
+        player.Say(SAY_NETMSG, "Setting up the new dummy failed.");
+    }
+}
+
+//  DUMMY COSTS
+
+uint[] leatherJacketMats =          {PID_LEATHER_JACKET, 1,         PID_FIREWOOD, 5, PID_JUNK, 2, PID_FIBER, 2};
+uint[] thermalLeatherArmorMats =    {PID_THERMAL_LEATHER_ARMOR, 1,  PID_FIREWOOD, 5, PID_JUNK, 2, PID_FIBER, 2};
+uint[] leatherArmorMats =           {PID_LEATHER_ARMOR, 1,          PID_FIREWOOD, 5, PID_JUNK, 2, PID_FIBER, 2};
+uint[] leatherArmor2Mats =          {PID_LEATHER_ARMOR_MK_II, 1,    PID_FIREWOOD, 5, PID_JUNK, 2, PID_FIBER, 2};
+uint[] combatArmorMats =            {PID_COMBAT_ARMOR, 1,           PID_FIREWOOD, 5, PID_JUNK, 2, PID_FIBER, 2};
+uint[] combatArmor2Mats =           {PID_COMBAT_ARMOR_MK_II, 1,     PID_FIREWOOD, 5, PID_JUNK, 2, PID_FIBER, 2};
+uint[] metalArmorMats =             {PID_METAL_ARMOR, 1,            PID_FIREWOOD, 5, PID_JUNK, 2, PID_FIBER, 2};
+uint[] metalArmor2Mats =            {PID_METAL_ARMOR_MK_II, 1,      PID_FIREWOOD, 5, PID_JUNK, 2, PID_FIBER, 2};
+uint[] teslaArmorMats =             {PID_TESLA_ARMOR, 1,            PID_FIREWOOD, 5, PID_JUNK, 2, PID_FIBER, 2};
+uint[] powerArmorMats =             {PID_POWERED_ARMOR, 1,          PID_FIREWOOD, 5, PID_JUNK, 2, PID_FIBER, 2};
+
+
+//  Generic
+bool hasMats(Critter& player, uint[] @ values) {
+    for (uint i = 0; i < values.length() / 2; i++) {
+        if (player.CountItem(values[2 * i]) < values[2 * i + 1]) {
+            return false;
+        }
+    }
+    return true;
+}
+
+bool takeMats(Critter& player, uint[] @ values) {
+    if (hasMats(player, values)) {
+        for (uint i = 0; i < values.length() / 2; i++) {
+            player.DeleteItem(values[2 * i], values[2 * i + 1]);
+        }
+        return true;
+    } else {
+        return false;
+    }
+}
+
+bool d_hasMatsForDummy(Critter& player, Critter@ npc, int armorType) {
+    switch (armorType) {
+        case 1: return hasMats(player, leatherJacketMats);
+        case 2: return hasMats(player, thermalLeatherArmorMats);
+        case 3: return hasMats(player, leatherArmorMats);
+        case 4: return hasMats(player, leatherArmor2Mats);
+        case 5: return hasMats(player, combatArmorMats);
+        case 6: return hasMats(player, combatArmor2Mats);
+        case 7: return hasMats(player, metalArmorMats);
+        case 8: return hasMats(player, metalArmor2Mats);
+        case 9: return hasMats(player, teslaArmorMats);
+        case 10: return hasMats(player, powerArmorMats);
+    }
+    return false;
+}
+
+void r_takeMatsForDummy(Critter& player, Critter@ npc, int armorType) {
+    bool noDesyncIssue = true;
+    switch (armorType) {
+        case 1: noDesyncIssue = takeMats(player, leatherJacketMats);
+            break;
+        case 2: noDesyncIssue = takeMats(player, thermalLeatherArmorMats);
+            break;
+        case 3: noDesyncIssue = takeMats(player, leatherArmorMats);
+            break;
+        case 4: noDesyncIssue = takeMats(player, leatherArmor2Mats);
+            break;
+        case 5: noDesyncIssue = takeMats(player, combatArmorMats);
+            break;
+        case 6: noDesyncIssue = takeMats(player, combatArmor2Mats);
+            break;
+        case 7: noDesyncIssue = takeMats(player, metalArmorMats);
+            break;
+        case 8: noDesyncIssue = takeMats(player, metalArmor2Mats);
+            break;
+        case 9: noDesyncIssue = takeMats(player, teslaArmorMats);
+            break;
+        case 10: noDesyncIssue = takeMats(player, powerArmorMats);
+            break;
+    }
+    if (!noDesyncIssue) {
+        Log("TRANING DUMMY :: Dialog desync issue when trying to take mats for creating or upgrading dummy for player = " + player.Name);
+    }
+}
+
+
+//  PERK COSTS
+
+//  Toughness upgrade
+uint[] toughnessMats = {PID_JUNK, 1, PID_FIBER, 2, PID_GOLDEN_GECKO_PELT, 2};
+
+bool d_hasMatsToughness(Critter& player, Critter@ npc) {
+    return hasMats(player, toughnessMats);
+}
+
+void r_takeMatsToughness(Critter& player, Critter@ npc) {
+    if (!takeMats(player, toughnessMats)) {
+        Log("TRAINING DUMMY :: Dialog desync when trying to upgrade Toughness to dummy. Player = " + player.Name);
+    }
+}
+
+//  Even Tougher upgrade
+uint[] evenTougherMats = {PID_JUNK, 1, PID_METAL_PARTS, 3};
+
+bool d_hasMatsEvenTougher(Critter& player, Critter@ npc) {
+    return hasMats(player, evenTougherMats);
+}
+
+void r_takeMatsEvenTougher(Critter& player, Critter@ npc) {
+    if (!takeMats(player, evenTougherMats)) {
+        Log("TRAINING DUMMY :: Dialog desync when trying to upgrade Even tougher to dummy. Player = " + player.Name);
+    }
+}
+
+//  In Your Face upgrade
+uint[] inYourFaceMats = {PID_JUNK, 1, PID_FIBER, 2, PID_GECKO_PELT, 2};
+
+bool d_hasMatsInYourFace(Critter& player, Critter@ npc) {
+    return hasMats(player, inYourFaceMats);
+}
+
+void r_takeMatsInYourFace(Critter& player, Critter@ npc) {
+    if (!takeMats(player, inYourFaceMats)) {
+        Log("TRAINING DUMMY :: Dialog desync when trying to upgrade In Your Face to dummy. Player = " + player.Name);
+    }
+}
+
+//  Stonewall upgrade
+uint[] stonewallMats = {PID_JUNK, 1, PID_FIREWOOD, 1, PID_METAL_PARTS2, 1};
+
+bool d_hasMatsStonewall(Critter& player, Critter@ npc) {
+    return hasMats(player, stonewallMats);
+}
+
+void r_takeMatsStonewall(Critter& player, Critter@ npc) {
+    if (!takeMats(player, stonewallMats)) {
+        Log("TRAINING DUMMY :: Dialog desync when trying to upgrade Stonewall to dummy. Player = " + player.Name);
+    }
+}
+
+//  Man of Steel upgrade
+uint[] manOfSteelMats = {PID_JUNK, 1, PID_METAL_PARTS2, 1};
+
+bool d_hasMatsManOfSteel(Critter& player, Critter@ npc) {
+    return hasMats(player, manOfSteelMats);
+}
+
+void r_takeMatsManOfSteel(Critter& player, Critter@ npc) {
+    if (!takeMats(player, manOfSteelMats)) {
+        Log("TRAINING DUMMY :: Dialog desync when trying to upgrade Man of Steep to dummy. Player = " + player.Name);
+    }
+}
+
+
+//  Iron Limbs upgrade
+uint[] ironLimbsMats = {PID_JUNK, 1, PID_FIBER, 2, PID_GOLDEN_GECKO_PELT, 2};
+
+bool d_hasMatsIronLimbs(Critter& player, Critter@ npc) {
+    return hasMats(player, ironLimbsMats);
+}
+
+void r_takeMatsIronLimbs(Critter& player, Critter@ npc) {
+    if (!takeMats(player, ironLimbsMats)) {
+        Log("TRAINING DUMMY :: Dialog desync when trying to upgrade Iron Limbs to dummy. Player = " + player.Name);
+    }
+}
+
+//  Jinxed upgrade
+uint[] jinxedMats = {PID_FIBER, 1, PID_COSMETIC_CASE, 1, PID_GOLD_LOCKET, 1, PID_GOLD_TOOTH, 1};
+
+bool d_hasMatsJinxed(Critter& player, Critter@ npc) {
+    return hasMats(player, jinxedMats);
+}
+
+void r_takeMatsJinxed(Critter& player, Critter@ npc) {
+    if (!takeMats(player, jinxedMats)) {
+        Log("TRAINING DUMMY :: Dialog desync when trying to upgrade Jinxed to dummy. Player = " + player.Name);
+    }
+}
+
+/**
+ * Show the combat stats of the dummy. @lex dummyStats@ is used.
+ */
+void dlg_ShowDummyStats(Critter& player, Critter@ npc, string@ text) {
+    if (!IS_DIALOG_GENERATED(text))
+        return;
+
+    array<string> perks;
+    bool perkFound = false;
+    if (npc.Perk[PE_TOUGHNESS] > 0) {
+        perks.insertLast("Toughness");
+        perkFound = true;
+    }
+    if (npc.Perk[PE_EVEN_TOUGHER] > 0) {
+        perks.insertLast("Even Tougher");
+        perkFound = true;
+    }
+    if (npc.Perk[PE_IN_YOUR_FACE] > 0) {
+        perks.insertLast("In Your Face");
+        perkFound = true;
+    }
+    if (npc.Perk[PE_STONEWALL] > 0) {
+        perks.insertLast("Stonewall");
+        perkFound = true;
+    }
+    if (npc.Perk[PE_MAN_OF_STEEL] > 0) {
+        perks.insertLast("Man of Steel");
+        perkFound = true;
+    }
+    if (npc.Perk[PE_IRON_LIMBS] > 0) {
+        perks.insertLast("Iron Limbs");
+        perkFound = true;
+    }
+    if (npc.Perk[PE_JINXED_II] > 0) {
+        perks.insertLast("Jinxed");
+        perkFound = true;
+    }
+    if (!perkFound) {
+        perks.insertLast("N/A");
+    }
+
+    string str = "\t--- Combat Stats ---  \t --- Perks ---\n\n";
+    str += "      \t       BODY\t  HEAD  ";
+    str += "\t" + (perks.length() > 0 ? perks[0] : "");
+
+    str += "\nAC:          \t" + npc.GetAC(false) + "\t       " + npc.GetAC(true) + "     ";
+    if ((npc.GetAC(false) < 10 || npc.GetAC(false) % 10 == 1 || npc.GetAC(false) / 10 == 1) &&
+        (npc.GetAC(true) < 10 || npc.GetAC(true) % 10 == 1 || npc.GetAC(true) / 10 == 1)) {
+        str += " ";
+    }
+    str += "\t" + (perks.length() > 1 ? perks[1] : "");
+
+    str += "\nNormal:  \t" + getAllignedText(npc, DAMAGE_TYPE_NORMAL);
+    str += "\t" + (perks.length() > 2 ? perks[2] : "");
+
+    str += "\nLaser:   \t" + getAllignedText(npc, DAMAGE_TYPE_LASER);
+    str += "\t" + (perks.length() > 3 ? perks[3] : "");
+
+    str += "\nFire:      \t" + getAllignedText(npc, DAMAGE_TYPE_FIRE);
+    str += "\t" + (perks.length() > 4 ? perks[4] : "");
+
+    str += "\nPlasma: \t" + getAllignedText(npc, DAMAGE_TYPE_PLASMA);
+    str += "\t" + (perks.length() > 5 ? perks[5] : "");
+
+    str += "\nElectric:\t" + getAllignedText(npc, DAMAGE_TYPE_ELECTR);
+    str += "\t" + (perks.length() > 6 ? perks[6] : "");
+
+    str += "\nExplode:\t" + getAllignedText(npc, DAMAGE_TYPE_EXPLODE);
+    str += "\t" + (perks.length() > 7 ? perks[7] : "");
+
+    text = "$dummyStats " + str;
+}
+
+string getAllignedText(Critter@ npc, uint damageType) {
+    string str = "";
+    int bodyDT,  bodyDR, headDT, headDR;
+    bodyDT = npc.GetDT(damageType, false);
+    bodyDR = npc.GetDR(damageType, false);
+    headDT = npc.GetDT(damageType, true);
+    headDR = npc.GetDR(damageType, true);
+    int spaceCount = 0;
+    if (bodyDT % 10 == 1) spaceCount++;
+    if (bodyDT / 10 == 1) spaceCount++;
+    if (spaceCount >= 2) str += " ";
+    if (bodyDT == 1) str += " ";
+    spaceCount = spaceCount % 2;
+    str += (bodyDT < 10 ? " " : "") + bodyDT + "/" + bodyDR + "%" + (bodyDR < 10 ? " " : "");
+    if (bodyDR % 10 == 1) spaceCount++;
+    if (bodyDR / 10 == 1) spaceCount++;
+    if (headDT % 10 == 1) spaceCount++;
+    if (headDT / 10 == 1) spaceCount++;
+    if (spaceCount >= 2) str += " ";
+    if (spaceCount >= 4) str += " ";
+    spaceCount = spaceCount % 2;
+    if (bodyDT != 1 && bodyDT < 10 && headDT < 10) str += " ";
+    str += "\t" + (headDT < 10 ? " " : "") + headDT + "/" + headDR + "%" + (headDR < 10 ? " " : "");
+    if (headDR % 10 == 1) spaceCount++;
+    if (headDR / 10 == 1) spaceCount++;
+    if (spaceCount >= 2) str += " ";
+    return str;
+}
+/**
+ * Show the combat stats of the dummy. @lex lex@ is used.
+ */
+void dlg_RemoveOldDummyStands(Critter& player, Critter@ npc, string@ text) {
+    if (!IS_DIALOG_GENERATED(text))
+        return;
+    Map@ map = player.GetMap();
+    if (!valid(map))
+        return;
+    string str = "";
+    uint dummySpotCount;
+    uint entireValue = ENTIRE_TRAINNG_DUMMY_SPOT;
+    array<uint> dummySpotEntires;
+    array<uint16> dummySpotHexX;
+    array<uint16> dummySpotHexY;
+    bool found = false;
+    dummySpotCount = map.GetEntires(entireValue, dummySpotEntires, dummySpotHexX, dummySpotHexY);
+    if (dummySpotCount > 0) {
+        for (uint i = 0; i < trainingDummyPids.length(); i++) {
+            //Log("TRAINING DUMMY :: d_IsFreeDummySpot - Checking for free dummy spot index = " + i + " (" + dummySpotHexX[i] + ", " + dummySpotHexY[i] + ")");
+            Critter@ otherDummy = map.GetCritter(dummySpotHexX[i], dummySpotHexY[i]);
+            if (valid(otherDummy)) {
+                if (isTrainingDummy(otherDummy) && otherDummy.IsDead()) {
+                    //Log("TRAINING DUMMY :: d_IsFreeDummySpot - Player " + otherDummy.Name + "is blocking the dummy spot.");
+                    //player.Say(SAY_NETMSG, "Player " + otherDummy.Name + "is blocking the dummy spot.");
+                    found = true;
+                    DeleteNpc(otherDummy);
+                }
+            }
+        }
+    } else {
+        str += "There are no dummies here.";
+        text = "$oldDummies " + str;
+        return;
+    }
+    if (found) {
+        str += "Removed old dummy stands, you can install a new ones in their place.";
+    } else {
+        str += "You found no broken dummies to be cleaned up.";
+    }
+    text = "$oldDummies " + str;
+}
+
+
+bool isTrainingDummy(Critter& cr) {
+    if (!valid(cr)) {
+        return false;
+    }
+    if (cr.GetProtoId() >= NPC_PID_TrainingDummyLeatherJacket && cr.GetProtoId() <= NPC_PID_TrainingDummyPowerArmor) {
+        return true;
+    }
+    return false;
+}
+
+uint[] dummyRepairMats = {PID_JUNK, 1, PID_FIBER, 1};
+
+bool _DummySkillOnMe(Critter& cr, Critter& who, int skill) {
+    if (skill == SK_REPAIR) {
+        if (hasTool(who)) {
+            if (hasMats(who, dummyRepairMats)) {
+                takeMats(who, dummyRepairMats);
+                int repairAmount = cr.StatBase[ST_MAX_LIFE] * Random(who.Skill[SK_REPAIR] / 2, who.Skill[SK_REPAIR]) / 200;
+                cr.StatBase[ST_CURRENT_HP] += repairAmount;
+                if (cr.StatBase[ST_CURRENT_HP] > cr.StatBase[ST_MAX_LIFE]) {
+                    cr.StatBase[ST_CURRENT_HP] = cr.StatBase[ST_MAX_LIFE];
+                    who.Say(SAY_NETMSG, "You managed to fully repair the dummy.");
+                } else {
+                    who.Say(SAY_NETMSG, "You managed to repair " + repairAmount + " durability of the dummy.");
+                }
+            } else {
+                who.Say(SAY_NETMSG, "You need the following materials to repair this dummy: 1 x Junk, 1 x Fiber.");
+            }
+        } else {
+            who.Say(SAY_NETMSG, "You won't manage without some tools.");
+        }
+        return true;
+    }
+    if (skill == SK_SCIENCE) {
+        if (cr.IsDead()) {
+            int woodSalvaged = Random(0, 3);
+            who.Say(SAY_NETMSG, "You managed to clean up this broken dummy stand and salvaged some wood.");
+            who.AddItem(PID_FIREWOOD, woodSalvaged);
+            DeleteNpc(cr);
+        } else {
+            who.Say(SAY_NETMSG, "You managed to clean up this dummy and salvage some materials from it.");
+            int woodSalvaged = Random(0, 5);
+            int fiberSalvaged = Random(0, 2);
+            int junkSalvaged = Random(0, 2);
+            who.AddItem(PID_FIREWOOD, woodSalvaged);
+            who.AddItem(PID_PUMP_PARTS, junkSalvaged);
+            who.AddItem(PID_FIBER, fiberSalvaged);
+            DeleteNpc(cr);
+        }
+        return true;
+    }
+    return false;
+}
+
+bool hasTool(Critter& player) {
+    return player.CountItem(PID_MULTI_TOOL) > 0 || player.CountItem(PID_SUPER_TOOL_KIT) > 0;
+}
+
+#endif 	//	__TRAINING_DUMMY__

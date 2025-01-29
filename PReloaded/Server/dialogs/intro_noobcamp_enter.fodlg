@@ -1,0 +1,118 @@
+[comment]
+Noob Camp Intro Dialog
+
+[data]
+lang=engl russ
+
+[dialog]
+&
+1 1000 None 0 #
+2 1010 @
+2 2000 None 0 #
+3 2010 #
+5 2020 #
+6 2030 #
+7 2040 @
+3 3000 None 0 #
+5 3010 #
+6 3020 #
+7 3030 @
+5 4000 None 0 #
+3 4010 #
+6 4020 #
+7 4030 @
+6 5000 None 0 #
+3 5010 #
+5 5020 #
+7 5030 @
+7 6000 None 0 #
+8 6010 #
+3 6020 #
+5 6030 #
+6 6040 @
+8 7000 None 0 #
+0 7010 &
+
+[engl]
+{100}{}{Camp Entrance}
+{200}{}{Enter the Camp}
+{210}{}{Ooooh!}
+{1000}{}{Predialogue installations}
+{1010}{}{intro}
+{2000}{}{[You find yourself inside of a rather small, but cozy settlement. Out in the distance you can see the ruins of large skycrappers overshadowing the brahmin hide tents, and makeshift caravan carts. Several tradesmen, and labourers hurry about tending to the various needs of the camp. One of them seems to be looking for volunteers, he mentions you over, but you're still interested in seeing more of what this camp has to offer. Perhaps you could learn a thing or two about this strange new world?]}
+{2010}{}{[Ponder the strange aroma]}
+{2020}{}{[Listen in on a nearby conversation]}
+{2030}{}{[Notice all the Vault Dwellers]}
+{2040}{}{[Continue]}
+{3000}{}{[The smell of a strange new meat reaches your nostrils as your mouth begins to water. You wonder what strange creature was caught this morning? You ask to try the stew and are handed a wooden bowl with a small spoon. It's bland tasting, rough, but has a fairly unique flavor you can't seem to put your finger on. You ask the man doing the cooking what this meat is, "Molerat" he replies, "With some Xander root and Broc flower for seasoning]}
+{3010}{}{[Listen in on a nearby conversation]}
+{3020}{}{[Notice all the Vault Dwellers]}
+{3030}{}{[Take it all in]}
+{4000}{}{[You over hear two men talking about a place, or thing named "L.A" infested by giant three headed abominations, and Roman Centurions. Either way you aren't quite sure what a Centaur really is, or if your recollection of history is still right. The vault records were pretty old]}
+{4010}{}{[Ponder about the strange aroma]}
+{4020}{}{[Notice all the Vault Dwellers]}
+{4030}{}{[Take it all in]}
+{5000}{}{[The camp is full of vault dwellers with no numbers on their backs just like you. This must be the outpost security talked about on your way out. You should be able to make some friends here, better be on your best behaviour]}
+{5010}{}{[Ponder about the strange aroma]}
+{5020}{}{[Listen in on a nearby conversation]}
+{5030}{}{[Take it all in]}
+{6000}{}{[You take a deep breath and take it all in, it's a bit too much for you, and you're definitely feeling culture-shocked. The outside air alone is something that makes you cringe; you're not in Kansas anymore. This new world feels almost primitive to you, but there's no going back now. You think you're ready to go exploring, and take the biggest step of your life]}
+{6010}{}{[Continue]}
+{6020}{}{[Ponder about the strange aroma]}
+{6030}{}{[Listen in on a nearby conversation]}
+{6040}{}{[Notice all the Vault Dwellers]}
+{7000}{}{[As you walk around the camp you are overwhelmed with the amount of things to do and see. You simply never expected these outsiders of accomplishing so much in such little time. It feels like there is a lot you should learn from this new world, and here would be the perfect place to start]}
+{7010}{}{[Begin]}
+{100000001}{}{Better wash the counter again...}
+{100000002}{}{That's 5 caps buddy. Hey did you hear me? Cough em' up.}
+{100000003}{}{Better change the keg...}
+{100000004}{}{RotGut? You drink that shit?}
+{100000005}{}{Domestic? I got B.E.E.R buddy, do you want one or not?}
+{100000006}{}{Fuckin' dust is getting everywhere. Hey close the fuckin' door!}
+{100000007}{}{I swear if the next asshole doesn't tip. Ima' shoot somebody!}
+{100000008}{}{I got bottles, I got shots, and I got a bat behind the counter for the retards. Your not a retard are you?}
+{100000009}{}{Uh-huh, yeah that's nice buddy. You don't say...What? Of course I'm listening...}
+{100000010}{}{That's 5 caps. FIVE CAPS Tribal! F.I.V.E! }
+{100000011}{}{Shut up and order a fuckin' beer already!}
+{100000012}{}{I swear if I have to serve another drunk, I'm getting the shotgun!}
+{100000013}{}{Look the keg went dry, and it's going to be another month until the caravan shows up again.}
+{100000014}{}{Really? You don't say, buy another drink or get out!}
+{100000015}{}{What? I'm on break.}
+{100000016}{}{Be right with ya'}
+{100000017}{}{Have a sit stranger. I'll be with you in a moment.}
+{100000018}{}{When do we close? Uh, when the place get's shot up, that's when!}
+{100000019}{}{We're fresh outta' cold beer, sorry. You'll just have to drink it warm.}
+{100000020}{}{RotGut? No man, go make that shit yourself! I wouldn't drink it!}
+
+[russ]
+{100}{}{Алкоголик}
+{200}{}{Вы видите пьяницу.}
+{210}{}{Вы видите шатающегося из стороны в сторону пьяного человека в лохмотьях. Лицо его распухло, нос синющий как слива. А аромат рядом с ним такой, что свалит брамина насмерть. Он что-то бормочет про себя и иногда громко поет песни.}
+{210}{}{Вы видите алкаша. Он весьма грязен - кажется, он повалялся в луже, но не особо этим расстроен.}
+{1000}{}{I?aaaeaeiaiaua onoaiiaee}
+{1010}{}{intro}
+{2000}{}{Thank you! Thank you! }
+{2010}{}{[Ponder about the strange aroma[}
+{2020}{}{[Listen in on a nearby conversation]}
+{2030}{}{[Are those Vault Dwellers?]}
+{2040}{}{[Take it all in]}
+{3000}{}{The smell of a strange new meat reaches your nostrils as your mouth begins to water. You wonder what strange creature was caught this morning? You ask to try the stew and are handed a wooden bowl with a small spoon. It's bland tasting, rough, but has a fairly unique flavor you can't seem to put your finger on. You ask the man doing the cooking what this meat is, "Molerat" he replies, "With some Xander root and Broc flower for seasoning.}
+{3010}{}{[Listen in on a nearby conversation]}
+{3020}{}{[Notice all the Vault Dwellers]}
+{3030}{}{[Take it all in]}
+{4000}{}{You over hear two men talking about a place, or thing named "L.A" infested by giant three headed abominations, and Roman Centurions. Either way, you aren't quite sure what a Centaur really is, or if your recollection of history is still right. The vault records were pretty old. }
+{4010}{}{[Ponder about the strange aroma]}
+{4020}{}{[Notice all the Vault Dwellers]}
+{4030}{}{[Take it all in]}
+{5000}{}{The camp is full of Vault Dwellers with no numbers on their backs, just like you. This must be the outpost security talked about on your way out. You should be able to make some friends here; better be on your best behaviour. }
+{5010}{}{[Ponder about the strange aroma]}
+{5020}{}{[Listen in on a nearby conversation]}
+{5030}{}{[Take it all in]}
+{6000}{}{You take a deep breath and take it all in, it's a bit too much for you, and you're definitely feeling culture-shocked. The outside air alone is something that makes you cringe; you're not in Kansas anymore. This new world feels almost primitive to you, but there's no going back now. You think you're ready to go exploring, and take the biggest step of your life. }
+{6010}{}{[Continue]}
+{6020}{}{[Ponder about the strange aroma]}
+{6030}{}{[Listen in on a nearby conversation]}
+{6040}{}{[Notice all the Vault Dwellers]}
+{7000}{}{As you walk around the camp you are overwhelmed with the amount of things to do and see. You simply never expected these outsiders of accomplishing so much, in such little time. It feels like there is a lot you should learn from this new world, and here would be the perfect place to start.}
+{7010}{}{[Begin]}
+
