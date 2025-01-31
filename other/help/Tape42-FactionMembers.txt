@@ -1,0 +1,49 @@
+***************************************************1713
+
+Info Tape 42: FACTION MEMBERS
+
+*******************************************************
+
+Information on Tape: FACTION MEMBERS
+The Miners, 10 Oct 2014
+
+WHAT IT MEANS
+What does it mean exactly, to be a member of a player
+faction in this world? All it really means is that a
+player has a character joined to a faction base. What
+that does is mainly just a few things:
+
+-Makes that character part of a team's NameColorizing
+-That character will count in Town control mechanics
+
+Mechanically, that's really it. Players often impose
+expectations beyond that though so find out from them
+what else it means to them to be part of their team.
+
+Each character can only be a member of one faction at
+a time, and this includes NPC factions like Enclave.
+
+Players are not members of factions. Only characters
+can be, so theoretically a player can work with more
+than one faction. Having characters in multiple teams
+can be tricky though if two teams become enemies, so
+some factions expect all of their members to be tied
+exclusively with their faction only. Inform your team
+in cases where you wish to have characters in other
+factions. Allies factions should have no problem with
+this...as long as diplomatic relations hold.
+
+MISPERCEPTIONS
+One common misperception is that a character must be
+added to a base to be a member of a team. While it is
+true that this is necessary to satisfy the mechanics
+of the game, characters only need to be added to a
+base in order to participate in Town Control. There
+is simply no need to add names to bases otherwise. If
+you are joining a faction and they do not add you to
+a base just yet, your team is probably just being
+cautious about giving new recruits access to bases.
+
+Check your faction affilations anytime in-game by
+typing this command in the chat bar: ~factioninfo
+*******************************************************

@@ -1,0 +1,73 @@
+***************************************************1974
+
+Info Tape 11: ABOUT RADIOS
+
+*******************************************************
+
+Information on Tape: ABOUT RADIOS
+The Miners, 01 Dec 2013
+
+THEY WORK
+The in-game radios work. They provide a way for
+characters to communicate with each other from all
+across the map. You can craft a radio and tune it to
+any one of thousands of channels.
+
+TRANSMIT
+To talk to someone using radios, both people need a
+radio tuned to the same channel. You do not need to
+have the radio equipped in your hand. Type your
+message into the chat bar but hold down the SHIFT
+key as you press ENTER. This sends your message over
+your radio. Or type /r in front of your text.
+
+CONTROLS
+Each radio has two power buttons: transmit and
+receive. If you have multiple radios all set
+to different channels when you send a radio message,
+then your message will be sent on all of those
+channels. Use the power buttons to control this.
+
+DISTRESS SIGNAL
+You can use radios to re-group with your friends when
+you get separated. One player enters a random
+encounter while the other player(s) remain on the
+world map. First player sends signal by typing /hhere.
+This puts a temporary red dot on the map for players
+tuned to that channel. All radios must be in-hand for
+this to work.
+
+CAUTION
+Remember that all players can listen to your radio
+chatter and learn your plans if you're not careful.
+If your team goes out on a group op, you should all
+choose a new channel during that op. Don't use radios
+for PvP. Use a voice chat program instead.
+
+A FUN THING
+Get two radios and tune both to the same channel.
+Then put one on the ground behind a cactus and talk
+on the other. The cactus will talk! This can be fun.
+It can also be helpful to leave a few radios laying
+around tuned to popular channels like zero. You will
+see some conversations as you pass by.
+
+RADIO SCANNER
+You can simulate a radio scanner by arranging banks
+of radios on the ground, each tuned to a different
+channel. Try first just making a stack of ten radios
+with channels 1 to 10 and another stack of ten with
+channels 11 to 20.
+
+*******************************************************
+
+
+
+
+
+
+
+
+
+
+

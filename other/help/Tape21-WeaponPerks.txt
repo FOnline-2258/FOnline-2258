@@ -1,0 +1,105 @@
+***************************************************1995
+
+Info Tape 21: WEAPON PERKS
+
+*******************************************************
+
+Information on Tape: WEAPON PERKS
+The Miners, 08 Jan 2014
+
+Other than major Perks and Support Perks, there are
+Weapon Perks. Any serious player should review them
+and test them all.
+
+ACCURATE
+Increases Hit Chance by 20%.
+ * 9mm Mauser
+ * PPK12 Gauss Pistol
+ * H&K G11
+ * H&K G11E
+ * Sawed-Off Shotgun
+ * Shotgun
+ * XL70E3
+ * Avenger Minigun
+ * Minigun
+ * Cattle Prod
+ * Super Cattle Prod
+
+FAST RELOAD
+Reloading your weapon costs 1 less AP.
+ * .44 Magnum with Speed Loader
+
+FLAMEBOY
+Produces more violent death animations.
+ * Improved Flamer
+
+KNOCKBACK
+Pushes the target away and sometimes knocks him down.
+The following weapons have the Knockback perk, which
+is triggered by a critical hit only:
+ * Super Sledge
+ * Sledgehammer
+ * Louisville Slugger
+
+The following weapons can knock back your enemies due
+to their Damage Type, triggered by any hit:
+ * Frag Grenade
+ * Dynacord Stick
+ * Dynamite
+ * Rocket Launcher
+
+All Shotguns have a chance to do Knockback if target
+is 6 or less hexes away. The chance is 20% per bullet:
+ * Shotgun
+ * Sawed-Off Shotgun
+ * Combat Shotgun
+ * H&K CAWS
+ * Pancor Jackhammer
+
+LONG RANGE
+Changes the Hit Chance formula from (PE-2)x8% to
+(PE-2)x16%, giving you a much better Hit Chance:
+ * All Assault Rifles
+ * Sniper Rifle
+ * Hunting Rifle
+ * M72 Gauss Rifle
+ * All Laser Rifles
+ * Plasma Rifle
+ * Turbo Plasma Rifle
+ * Rocket Launcher
+ * Bozar
+
+PENETRATE
+Reduces your target's DT to 1/3 of its nominal value:
+ * 14mm Pistol
+ * .223 Pistol
+ * Needler Pistol
+ * Combat Shotgun
+ * H&K CAWS
+ * Pancor Jackhammer
+ * Magneto-Laser Pistol
+ * YK32 Pulse Pistol
+ * Switchblade
+ * Sharpened Spear
+ * Wakizashi Blade
+ * Ripper
+ * Power Fist
+ * Mega Power Fist
+ * Palm Strike
+ * Piercing Strike
+ * Hook Kick
+ * Piercing Kick
+
+Using certain ammo has the PENETRATE effect:
+ * 10mm AP
+ * 14mm AP
+ * 5mm AP
+ * Rocket AP
+ * HN AP Needler Cartridge
+
+SCOPED
+Adds 32% to your Hit Chance at 8 or more hexes, but
+drops your Hit Chance instead by 5% at >8 hexes.
+ * Scoped Hunting Rifle
+
+*******************************************************

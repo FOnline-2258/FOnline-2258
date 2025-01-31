@@ -1,0 +1,66 @@
+***************************************************1867
+
+Info Tape 02: THE RULES
+
+*******************************************************
+
+Information on Tape: THE RULES
+The Miners, 10 Aug 2014
+
+The rules described here are subject to change. Check
+the forum for updates.
+
+Below are some actions that are unfair and thus
+illegal in this game. If you find someone breaking
+any of these rules, feel free to message an Admin
+in-game with this command:
+
+ +requesthelp <and your message here>
+
+NO MULTILOGGING
+Using multilog or bypassing the relog timer in order
+to gain an advantage in PvP activities is a violation
+of the rules. This applies also to scouting and
+looting before, during or after combat. The use of
+Fast Relog has been a hotly debated topic for years.
+When your character dies in a PvP fight, you are not
+allowed to switch immediately to an alternate
+character to return to battle quickly. You can log
+out anytime but you must wait for the respawn timer
+to fully expire before showing up with a different
+character. Do not attempt to force your own
+convenient interpretation of this rule to suit your
+needs. If you are anywhere near a PvP area, you
+can be expected to adhere to this rule.
+
+BUG EXPLOITS
+Do not exploit a known bug or abuse any features.
+Report violations; you might get a reward if it has
+not been reported yet.
+
+HOSTILE SPEECH
+Using excessive hostile speech is a violation of the
+rules. Player complaints can be factored into such
+judgements.
+
+SPAMMING
+Repeating the same text over and over or otherwise
+hindering the in-game chat is a violation of the
+rules.
+
+NAME THEFT
+Stealing nicknames or faction names will result in
+removal of characters/factions.
+
+HACKING
+Stealing any user accounts or passwords both in-game
+and on the forum or wiki is also a violation of the
+rules. We cannot stop you from sharing your password
+info but we highly advise against it.
+
+POSSIBLE SANCTIONS
+ -Warnings
+ -Temporary bans
+ -Permanent bans
+ -Banning entire factions from participating in TC.
+*******************************************************

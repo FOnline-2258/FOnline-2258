@@ -1,0 +1,73 @@
+***************************************************1856
+
+Info Tape 08: CRAFTING
+
+*******************************************************
+
+Information on Tape: CRAFTING
+The Miners, 10 Aug 2014
+
+The crafting system is a major feature not only so
+wastelanders can supply themselves with the best gear
+for combat, but to stimulate the economy as well. The
+Fix-Boy opens when you press F. There you will see a
+list of items you can craft along with recipes. Some
+items require blueprints and some require specific
+things like a Medical Terminal or a Repair Tool or an
+Advanced Workbench.
+
+MEDICAL TERMINALS
+-Inside Vault City's vault
+-Inside Vault 15
+-Shi Temple in San Fran
+-In Vault 12 under Necropolis
+
+ADVANCED WORKBENCHES
+-Gunrunners
+-All Town Control towns
+-Klamath Toxic Caves
+-Mariposa Military Base
+-Brotherhood of Steel
+-Glow
+
+BLUEPRINTS
+Your Fix-Boy's list of craftable items gets longer
+as you aquire profesional training and longer still
+as you get blueprints to make the best gear of all.
+-Blueprints for Combat Drugs: Renesco at New Reno
+-Blueprints for Healing Meds: Dr Jubilee at NCR
+-Blueprints for Small/Big Guns: Jacob at Hub
+-Blueprints for Explosives: Zaius at Broken Hills
+-Blueprints for Energy Weapons: Ralph at Gunrunners
+-Blueprints for Armor: Rondo at NCR
+
+Notice the crafting bonuses on some items determined
+randomly as you work. Keep the best for yourself and
+sell the rest where you can.
+
+.25 chance: Quality items have 1 buff
+.12 chance: Improved items have 2 buffs
+.07 chance: Superior items have 3 buffs
+.03 chance: Advanced items have 4 buffs
+.01 chance: Unique items have 5 buffs
+
+ARMOR BUFFS:
+ + Normal/Laser/Fire/Plasma/Explode DT and DR
+ + SPECIAL Stats (ST PE EN CH IN AG LK)
+ + 1 Action Point
+ + Radiation/Poison Resistance
+ + Carry Weight
+ + Healing Rate
+ - Critical Power/Chance mod
+
+HELMET BUFFS:
+ + Normal/Laser/Fire/Plasma/Explode DT and DR
+ - Critical Power/Chance mod
+
+WEAPON BUFFS:
+ + Critical Power/Chance
+ + Min/Max Damage
+ + Accuracy
+ - 1 AP Cost
+
+*******************************************************

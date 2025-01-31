@@ -1,0 +1,58 @@
+***************************************************1940
+
+Info Tape 14: DRIVERS EDUCATION
+
+*******************************************************
+
+Information on Tape: DRIVERS ED
+The Miners, 09 Aug 2014
+
+CHOOSING
+Some vehicles move fast on the map but use more fuel
+than others. Some move slow but have much more trunk
+space. Some are cheaper to buy but have fewer seats
+for passengers while some do not seat any passengers
+at all. Consider your character's role when deciding
+which vehicle to buy.
+
+BUYING
+Wherever you buy a vehicle, know that cars are prizes
+to thieves who will sometimes wait for those coming
+to buy them. Buy them via dialogue with T-Ray in New
+Reno Garage or Todd in Junkyard. A key will appear in
+your inventory. T-Ray offers some additional options
+like spare keys for 1000 caps each, and the Rot Gut
+Engine Upgrade which allows you to fuel your vehicle
+with Rot Gut in addition to MFC and SEC. For a spare
+key, move the existing key to Slot 1 and dialogue
+with him again, ready with 1000 caps.
+
+OPERATING
+Using a vehicle to travel on the world map will give
+you an effective maximum Outdoorsman skill, but you
+can still be forced into hostile encounters. Thus it
+is highly advised to drive your vehicle in Real-Time
+mode in order to make quick exits before combat even
+begins.
+
+PARKING
+Never park in a city or other public location like a
+mine. Use your own safe network of tents or houses or
+bases. Anyone can use Lockpick on your car to steal
+it and raid the trunk. You can park your vehicle in
+a random encounter and use the exit grid to return to
+the world map on foot. Your vehicle's location will
+be visible on the map for a short time so you can get
+back to it. If you wait too long though, the location
+becomes visible to all other players who will surely
+steal it when they find it.
+
+MAINTENANCE
+Watch your fuel level and always make sure you have
+more fuel in the trunk. Watch the deterioration on
+your vehicle and repair it using a repair tool. You
+can check both of these anytime when the vehicle is
+parked by using your Science skill on the vehicle.
+
+*******************************************************
+

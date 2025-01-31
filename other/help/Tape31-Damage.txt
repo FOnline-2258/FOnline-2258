@@ -1,0 +1,83 @@
+***************************************************1988
+
+Info Tape 31: ABOUT DAMAGE
+
+*******************************************************
+
+Information on Tape: ABOUT DAMAGE
+The Miners, 31 Aug 2014
+
+DAMAGE TYPES
+There are 7 types of damage, plus DR and DT. It is
+wise to learn them all well.
+
+NORMAL DAMAGE
+-Fists and Feet
+-Rocks
+-Bear Traps
+-Gauss Weapons
+-Zip Gun
+-All Non-Powered Melee Weapons
+-All standard weapons, not listed below
+
+LASER DAMAGE
+-Laser/Magneto Pistol/Rifle
+-Gatling Laser
+
+PLASMA DAMAGE
+-Plasma Grenades
+-Plasma Pistol and Rifle
+-Turbo Plasma Rifle
+
+FIRE DAMAGE
+-All Flamethrowers
+-Solar Scorcher
+-Watch out for Fire Geckos
+
+EXPLODE DAMAGE
+-Frag Grenades
+-Frag Mines
+-Plastic Explosives aka C4
+-Dynacord Stick
+-Dynamite
+
+ELECTRICAL DAMAGE
+-All Cattle Prods
+-Alien Blaster
+-All Pulse Weapons
+-Power Fists
+
+EMP DAMAGE
+Electromagnetic Pulse. Player characters are immune
+to EMP damage which is however deadly to robots.
+-Pulse Grenades
+-EMP Shotgun Shells
+
+Each character has resistances to these known as DR
+and DT.
+
+DAMAGE THRESHOLD
+DT represents a reduction of incoming damage that is
+a number of incoming damage points rather than a
+percentage of damage, and is calculated first before
+DR. Certain perks like Toughness will increase DT as
+well as certain armor. Drugs do not reduce DT. If a
+character has a DT of 3 and is hit with a shotgun for
+23, then 3 points of damage are removed immediately
+so DR will be calculated on only 20 points of damage.
+
+DAMAGE RESISTANCE
+DR represents a reduction of incoming damage that is
+a percentage of incoming damage rather than a number
+of damage points, and is calculated after DT. Certain
+perks like Toughness will increase DR and so will
+certain armor, but also some drugs. If the character
+above has DR of 10 from the perk Even Tougher, then
+the 20 points of incoming damage gets reduced to 18.
+If the same character uses standard Combat Armor, he
+will have an additional 40 DR for a total of 50. That
+orginal shotgun blast of 23 would be reduced to 10.
+Drinking a beer will give 5 more DR which would bring
+the net damage down to 9 from 23 in the above case.
+
+*******************************************************

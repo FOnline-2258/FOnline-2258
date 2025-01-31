@@ -1,0 +1,110 @@
+***************************************************1895
+
+Info Tape 15: VEHICLE LIST
+
+*******************************************************
+
+Information on Tape: VEHICLE LIST
+The Miners, 09 Aug 2014
+
+Trunks can be re-locked using crafted Locks. Car keys
+each have unique ID numbers that match the car's key
+number. Fuel Cell Controllers (FCC) can be found in
+a certain wrecked car in random encounters, but are
+rare. The wreck is a hoodless convertible with a
+visible engine and will sometimes only yield junk and
+maybe a common epart.
+
+COCKROACH
+It can be tricky to access this car's trunk. Stand
+next to the car in a certain place and press G.
+ Junkyard Todd
+ Price: 1k caps + FCC
+ Seats: 1
+ Speed: Fast
+ Fuel: 50
+
+BUGGY
+ Reno T-Ray
+ Price: 15k caps
+ Seats: 2
+ Speed: Fast
+ Fuel: 50
+
+SCOUT
+ Junkyard Todd
+ Price: 20k caps
+ Seats: 4
+ Speed: slow
+ Fuel: 60
+
+HUMMER
+ Reno T-Ray
+ Price: 50k caps
+ Seats: 10
+ Speed: Medium
+ Fuel: 120
+
+HIGHWAYMAN
+ Reno T-Ray
+ Price: 120k caps
+ Seats: 6
+ Speed: Fast
+ Fuel: 80 
+
+TRUCK
+ Junkyard Todd
+ Price: 100k caps + FCC
+ Seats: 10
+ Speed: Slow
+ Fuel: 200
+
+FIRETRUCK
+The only vehicle that holds water!
+ Junkyard Todd
+ Price: 70k caps + FCC
+ Seats: 6
+ Speed: Slow
+ Fuel: 100
+ Water: 100 filled by water bags or bottles
+
+POLICE CAR
+ Junkyard Todd
+ Price: 120k caps + FCC
+ Seats: 4
+ Speed: Fast
+ Fuel: 40
+
+MOTORBIKE
+ Junkyard Todd
+ Price: 40k caps + FCC
+ Seats: 2
+ Speed: Medium
+ Fuel: 50
+
+CORVEGA
+ Gordon's Gas Station and Reno T-Ray
+ Price: 200k caps
+ Seats: 4
+ Speed: Fast
+ Fuel: 60
+
+VERTIBIRD
+The fastest vehicle, it can be found in a Special
+Encounter and is the only vehicle that can reach the
+islands.
+ Seats: 10
+ Speed: Ultra-Fast
+ Fuel: 400
+
+TRAIN
+There are four rail lines that connect Vault City,
+NCR, Boneyard and San Francisco with a station
+at each location. A ticket is required to ride on any
+segment of the line and each ticket costs 100 caps.
+Check the time in your Pip-Boy and ask ticket-taker
+for train schedule. The four train stations are
+available after doing any one of three quests.
+
+*******************************************************
+

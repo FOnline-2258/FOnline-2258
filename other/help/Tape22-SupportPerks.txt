@@ -1,0 +1,135 @@
+***************************************************1968
+
+Info Tape 22: SUPPORT PERKS
+
+*******************************************************
+
+Information on Tape: SUPPORT PERKS
+The Miners, 27 July 2014
+
+AWARENESS
+Shady Sands, PE 6 or CC 100
+More info on targets
+
+CAUTIOUS NATURE
+Shady Sands, PE 6 + OD 100
+Better placement in random encounters
+
+DEAD MAN WALKING
+Watershed Necropolis, IN 5 + Doc 50
+Doubles negative HP before death from 20 to 40
+
+DEMOLITION EXPERT
+A gambler in Redding, Traps 125
+More damage from explosives, no accidents
+
+DISMANTLER
+Boyce in Junktown, Science 120
+Doubles resources from Sciencing items
+
+EDUCATED
+Boneyard Library, IN 8 + Science 100
++2 SP per level
+
+EXPLORER
+Mantis at NCR Train Station, OD 150
+Most locations must be found to get this perk
+Faster movement on map
+
+FASTER HEALING
+Doctor in San Francisco, IN 6 + Doc 75
++5 Healing Rate
+
+GECKO SKINNING
+Trapper in Klamath, OD 50
+Get pelts
+
+HARMLESS
+Miss Kitty at New Reno, CH 6 + Steal 125
+Half rep loss from steal fails
+
+LIGHT STEP
+Kids at Klamath, Traps 50
+Halves chance to trigger traps
+
+MAGNETIC PERSONALITY
+Miss Kitty at New Reno, Speech 100
++50 PP, +1 to party size
+
+MASTER THIEF
+Oldtown Hub, Steal 125
+Halves stealing cooldown
+
+MR FIXIT
+Smitty at Den, Repair 120
+Easier to Repair
+
+NEGOTIATOR
+T-Ray, Barter 125
+Suspends bad rep with NPCs
+
+PACK RAT
+Dangerous Dan, Level 6
+More Carry Weight
+
+PATHFINDER
+Shady Sands, OD 150
+Faster movement on map
+
+PICKPOCKET
+Hub, Steal 125
+Easier stealing
+
+RAD RESISTANCE
+Gecko, IN 7 + Doc 100
+More rad/poison resist
+
+RANGER
+Gordons, OD 100
+Safe Houses
+
+SCOUT
+Vault City, OD 150
+More sight on map
+
+SEX APPEAL
+New Reno, Speech 75
+More rep with opposite gender
+
+SNAKEATER
+Junktown, EN 6
+More rad/poison resist
+
+SPEAKER
+Cathedral, Speech 125
+Halves loyalty loss of followers
+
+STEALTH GIRL
+Vault City, Sneak 100 + Repair 100
+Doubles Stealthboy
+
+STRONG BACK
+Francis in Broken Hills, EN 6 + Level 6
+More Carry Weight
+
+SWIFT LEARNER
+Hub Bookstore, IN 6 + Science 50
+More xp
+
+THIEF
+Hub, Steal 100
+Less cooldowns on steal fails
+
+TREASURE HUNTER
+Mickey in Broken Hills, LP 125
+More from random lockers
+
+*******************************************************
+
+
+
+
+
+
+
+

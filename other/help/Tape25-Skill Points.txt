@@ -1,0 +1,72 @@
+***************************************************1806
+
+Info Tape 25: SKILL POINTS
+
+*******************************************************
+
+Information on Tape: SKILL POINTS
+The Miners, 21 Dec 2013
+
+As you know by now, each character can tag three
+skills. Skills are raised by using Skill Points which
+are earned each time you level up, and each tagged
+skill is easier to increase than a non-tagged skill.
+When you spend 1 Skill Point on a non-tagged skill
+under 100, that skill is raised by 1, but a skill
+under 100 that is tagged will increase by 2 for each
+Skill Point. Skills over 100 require more SP as shown
+in the last chart below.
+
+INTELLIGENCE
+A character gets more Skill Points as he levels up
+based mostly on his Intelligence, but having the
+Skilled Trait will bring in 5 additional SP per level.
+
+IN  1 =  7 SP/L, 12 Skilled
+IN  2 =  9 SP/L, 14 Skilled
+IN  3 = 11 SP/L, 16 Skilled
+IN  4 = 13 SP/L, 18 Skilled
+IN  5 = 15 SP/L, 20 Skilled
+IN  6 = 17 SP/L, 22 Skilled
+IN  7 = 19 SP/L, 24 Skilled
+IN  8 = 21 SP/L, 26 Skilled, 23 Educated, 28 both
+IN  9 = 23 SP/L, 28 Skilled, 25 Educated, 30 both
+IN 10 = 25 SP/L, 30 Skilled, 27 Educated, 32 both
+
+The Educated Perk requires IN 8 or higher and yields
+an additional 2 SP per level.
+
+INCREASING COST
+The higher a skill, the more Skill Points are needed
+to raise it even higher. This cost is half for skills
+that are tagged:
+
+SKill   1-100% costs 1 SP for +1% or +2% if tagged
+SKill 101-125% costs 2 SP for +1% or +2% if tagged
+SKill 126-150% costs 3 SP for +1% or +2% if tagged
+SKill 151-175% costs 4 SP for +1% or +2% if tagged
+SKill 176-200% costs 5 SP for +1% or +2% if tagged
+SKill 201-300% costs 6 SP for +1% or +2% if tagged
+
+Certain skills can also be increased by reading Skill
+Books. No skills can exceed 300 and some skills have
+caps less then 300 as shown here:
+
+First Aid and Doctor = 200
+Lockpick, Steal, Traps, Barter, Gambling = 150
+Science and Repair = 125
+Outdoorsman = 175
+
+*******************************************************
+
+
+
+
+
+
+
+
+
+
+
+

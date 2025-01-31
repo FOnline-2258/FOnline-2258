@@ -1,0 +1,82 @@
+***************************************************1953
+
+Info Tape 20: CHANCE TO HIT
+
+*******************************************************
+
+Information on Tape: CHANCE TO HIT
+The Miners, 08 Jan 2014
+
+It is very important to understand the factors that
+affect your success in battle, and one primary factor
+is Hit Chance.
+
+It is likely that Hit Chance is always between 5-95%
+so even the most skilled marksman will miss a target
+once every 20 shots on average.
+
+Many things affect Hit Chance. It can be calculated
+according to the items below. These are not listed
+in formula order:
+
+* Start with Weapon Skill, which can be maxed at 300.
+
+* Deduct 4% for each hex between you and the target.
+
+* Each weapon has a minimum Strength requirement. You
+can use weapons even if your ST is lower, but you will
+suffer a Hit Chance penalty of 20% for each missing ST
+point.
+
+* Add a bonus based on Perception. It is (PE-2)x8 by
+default, but is (PE-2)x16 for any weapon with the
+Long Range weapon perk, or (PE-2)x20 for the
+Scoped Hunting Rifle.
+
+* Add another 20% bonus when using any weapon with
+the Accurate weapon perk.
+
+* Characters with the Sharpshooter perk benefit from
+another 8% bonus to Hit Chance.
+
+* Darkness should cause a penalty to Hit Chance,
+though this is possibly not implemented yet.
+
+* Obstructions in the line of fire can cause a penalty
+to your Hit Chance. This includes other potential
+targets whether friendly or hostile.
+
+* Add a 32% bonus to Hit Chance when using a weapon
+with the Scoped weapon perk at 8 or more hexes from
+the target.
+
+* Subtract 5% from Hit Chance when using a weapon
+with the Scoped weapon perk at 7 hexes are closer to
+the target.
+
+* Subtract a penalty to Hit Chance when doing an AIMED
+attack, based on the targeted area regardless of Luck.
+Eyes: -60, Head: -40, Groin: -30, Arms: -30, Legs: -20
+No penalty to AIMED shots at torso.
+
+* When shooting at a running target, first subtract
+your ammo's AC modifier from your target's Armor
+Class, and then subtract the result as a penalty to
+your Hit Chance.
+
+Watch the FOnline:Reloaded Changelogs for changes.
+
+*******************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,76 @@
+***************************************************1939
+
+Info Tape 05: COMMANDS
+
+*******************************************************
+
+Information on Tape: GAME COMMANDS
+The Miners, 02 Dec 2013
+
+Type one of these followed by your messaage:
+
+IN CHAT
+
+.Shello or /Shello to Shout "HELLO"
+.Whello or /WHello to Whisper "hello"
+.EHello or /EHello to Emote "Hello"
+.OHello or /OHello to say "Hello" Out of Character
+
+RADIOS
+
+.RHello or /RHello to transmit "Hello" on a radio
+.Hhere or /Hhere to send "here" as a Distress Signal
+
+GETTING INFORMATION
+~factioninfo shows faction info for this character
+~factionnames shows current factions in game
+~ffn lists unused, available faction names
+~myinfo shows char's name, ID, dob, and tent coords
+~pp shows Party Points, used/max
+~awareness enables/disables Awareness perk
+~names refreshes colorized names
+~timeouts turns on/off on-screen timeouts display
+~changepassword [old password] [new password] 
+~Combatmode shows current setting, either TB or RT
+~combatmode [mode] sets combat mode to TB or RT
+See also: CombatMode config variable.
+
+ACTIONS
+
+~deleteself [password] deletes current character
+
+Wait 3 minutes after logout. If you have spaces in
+your password, use * (asterisk) symbol instead of
+spaces. Can be canceled by re-entering the command.
+
+~disbandparty permanently removes all NPC followers
+~disbandparty away_team applies only to current map
+
+Note: If you make any mistake typing this command,
+~disbandparty will be used instead so be very careful.
+
+~suicide sends character to respawn, if less than 0hp
+~eventsuicide works only on islands. Does not work on
+worldmap. Applies to these 20 zones:
+     18-23:45
+     19-20:46
+     22-23:49
+     23:50
+     27-29:48
+     28-29:49
+     27-28:51
+     28-29:52
+
+~exit exits the game
+
+/r order recognition [CharacterName]
+
+Checks faction database for info on this character.
+You have to be in a faction and use a radio with your
+faction frequency, as noted in the faction terminal.
+
++requesthelp [yourmessage] calls a GM. Be patient.
+
+~spectate (Ask GMs for info about this)
+
+*******************************************************

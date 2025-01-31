@@ -1,0 +1,59 @@
+***************************************************1949
+
+Info Tape 27: VTDB
+
+*******************************************************
+
+Information on Tape: VTDB
+The Miners, 24 July 2014
+
+The VTDB feature is unique. It allows you to enable
+elements of your character profile to be viewed via a
+web browser. To set this up, do the following:
+
+Open your Character Profile by pressing C. Then click
+the ONLINE button at the bottom right to open the
+VTDB options screen. Click ALL to enable your
+complete profile to be viewed online, or only click
+the items you want to be seen. Click OK. The VTDB
+options screen will close.
+
+To view your profile online, open the VTDB options
+screen again and click the tiny link at the bottom
+called Character page. This should open your web
+browser and show you whatever portion of your profile
+that you enabled.
+
+This is a handy feature for getting help from more
+experienced players. You can use the VTDB feature
+to easily share your character build with others and
+get helpful advice. Other players can open their
+own profile and then switch to yours easily. Helpful
+players can give you advice about your build like
+which perks they recommend, and the advantages and
+drawbacks of whatever Skills you tagged and the
+optional Traits you chose, plus tips about which
+weapons will combine best with your SPECIAL stats.
+
+Joining a strong player faction to do intense PvP
+fighting is a big step up in this world. Such teams
+need to know their new members have proper PvP builds
+and the VTDB feature is one convenient way to show
+them. 
+
+To view someone else's profile online, of course they
+first need to enable it. Then you open your own and
+switch to theirs by replacing your ID with their ID
+in the URL. The Character ID is the last sequence of
+numbers at the end of the URL.
+
+You can get any character's ID by using Alt+Click on
+that character.
+
+Just remember to disable your VTDB options when this
+feature is not needed as other players can use this
+against you in combat.
+
+Please tell others about this handy feature and of
+course...be careful out there!
+*******************************************************

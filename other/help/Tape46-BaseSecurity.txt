@@ -1,0 +1,62 @@
+***************************************************1975
+
+Info Tape 46: BASE SECURITY
+
+*******************************************************
+
+Information on Tape: BASE SECURITY
+The Miners, 10 Oct 2014
+
+MISPERCEPTIONS
+There are a few different approaches to securing your
+faction's bases. Typically most players assume they
+must implement rigid controls to prevent thefts,
+betrayals and infiltrations. The reality is there is
+no way to totally prevent these things. One can use
+the access level options within the faction terminal
+to control who sees what, but this gets to be quite a
+chore as a team grows in size.
+
+THE EASY WAY
+The easiest approach is to only use a base to satisfy
+the game mecahnics for Town Control, and never use a
+faction base for anything more than that. That is, do
+not craft there, do not store any gear there, and do
+not park any cars there. While the look of a base
+calls players to use it for more, leaving it empty is
+the easiest approach to security. Give thiefs nothing
+to steal and nothing will get stolen there. This is a
+low maintenance method that becomes more appealing
+after a team invariably experiences its first base
+raid by enemies. A spy got recruited and led his team
+to your base, or a PK tagged one of your members and
+followed him to the base, killed him and looted your
+best stuff.
+
+CONTROLLING HIDEOUT ACCESS
+If you do want to try using the security features in
+the base terminal, it will require that you study the
+options first. There are several levels of trust:
+
+-Invited
+-Recruits
+-Accepted
+-Trusted
+-Important
+
+Its up to you to decide which members are in which
+group, and this can become a source of irritation or
+worse within the team. Which base is seen by which of
+these groups can be set by the faction leader. Next,
+someone has to manage promotions and demotions of
+each member. Who wants to do that? It takes too much
+time and effort as membership grows. Demote the
+jealous guy and he throws a fit. Promote the spy and
+he gets too much access, and leads a base raid.
+
+To keep things simple, just use a single base so your
+team can do TC and leave it empty.
+*******************************************************
+
+
+

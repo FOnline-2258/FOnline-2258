@@ -1,0 +1,44 @@
+***************************************************1058
+
+Info Tape 97: THE SERVER
+
+*******************************************************
+
+Information on Tape: THE SERVER
+The Miners, 11 Aug 2014
+
+The Reloaded project was migrated from Poland to a
+data center in France on 04 September 2013.
+
+OLD MACHINE
+ - POLAND
+ - Home server, just a typical budget PC
+ - Intel Celeron G530 @ 2.4 Ghz (2 Cores, 2 Threads)
+ - 4GB of memory
+ - 320GB SATA HDD
+ - 8 Mbit Upload
+ - Cisco Cable Modem EPC3008
+ - Linksys Router WRT160Nv2
+
+NEW MACHINE
+ - FRANCE
+ - A dedicated server in data center
+ - Intel i7-930 @ 2.8 Ghz (4 Cores, 8 Threads)
+ - 24GB of memory
+ - 2 TB SATA HDD
+ - 100 Mbit
+
+12 June 2014 the Reloaded project was migrated to an
+alternate machine within the same French data center.
+This was a change made to cut maintenance costs from
+40 euros per month to 18 euros per month and by irony
+seems to have possibly improved performance landing
+the game on a better machine.
+
+The game server's Host is: play.fonline-reloaded.net
+and the port is 2238.
+
+TeamSpeak3 license acquired on 15 September 2013
+which hosts 10 virtual servers with up to 512 clients
+at no cost. Connect to: play.fonline-reloaded.net
+*******************************************************

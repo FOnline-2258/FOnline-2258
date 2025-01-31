@@ -1,0 +1,54 @@
+***************************************************1978
+
+Info Tape 13: TOWN SCOPING
+
+*******************************************************
+
+Information on Tape: SCOPING TOWNS
+The Miners, 20 Dec 2013
+
+When you arrive at a major location, you should spy it
+first before entering. Other players may be present in
+that area and you can take a peek to see who is there
+before you enter.
+
+Not all map locations have this option, but cities do
+and several other places on the world map do as well.
+To scope one out, go there on the map but when you get
+to it, don't click on it to enter it yet. Instead,
+stay on the world map and click on the Town/World
+button. This will toggle your map view from the world
+map to a local town map, which will show you the
+major areas of that location including alternate
+entry points.
+
+Each entry point has an up-down arrow on the town map.
+If you click the down-arrow, you will enter that place
+immediately, but click the up-arrow to spy on that
+area first, without going in yet. What you see is a
+snapshot of that area at that moment. From there, you
+can choose to enter immediately or go Back to the 
+local map and spy the other entry points if there are
+any. What you see when scoping is not 100% reliable
+so if you suspect danger, scope it a few times before
+entering. Do you see other players there? Do you see
+any sign of conflict? Any dead NPCs or gear laying
+around?
+
+This scoping feature is especially helpful when going
+to notoriously risky areas like the northern towns and
+New Reno. The northern towns are part of the Town
+Control system so they are often PvP intense. Reno
+has many areas that can be scoped before you enter,
+such as the Garage where players buy cars. Be advised
+that PKs will scope areas too, waiting to find someone
+entering so they can enter and attack. So if for
+example you're going to buy a car from T-Ray, scoping
+the Garage first is a very good idea.
+
+It's a harsh wasteland so features like this become
+important for your survival. Use the Town/World
+options frequently whenever you arrive at a major
+location on the map. Be careful and don't give up!
+
+*******************************************************

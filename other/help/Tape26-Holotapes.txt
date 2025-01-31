@@ -1,0 +1,77 @@
+***************************************************1986
+
+Info Tape 26: HOLOTAPES
+
+*******************************************************
+
+Information on Tape: Holotapes
+The Miners, 27 July 2014
+
+In-game data tapes are another unique feature. Tapes
+can be used by any character to load info up to the
+Pip-Boy for later reference. This is a very handy
+way to keep certain info accessible in-game.
+
+You can sometimes find blank holotapes for sale cheap
+via NPC merchants. Single tapes are sold for 500 caps
+at the Boneyard Library via dialogue. A few tapes
+are also available via quests. They have pre-written
+quest-related messages which can be erased so you can
+re-use the tapes.
+
+Holotapes are limited to <2000 characters max and 55
+wide. Writing your own tape is best done in a txt
+file out of game. The text can be copied from there
+and pasted into a tape when a character's chat bar
+is closed. Use your Science skill on a tape to open
+the tape editing screen.
+
+Hint: Keep line width to 53 characters 
+
+LIMITS
+The tape editing functions are very limited. It has
+already been noted on the forum and devs have already
+commented on this. Limits include the following:
+
+-Erasing data is only done 1 character at a time.
+-No way to delete a record once loaded to Pip-Boy.
+-No way to scroll inside the editing screen.
+-No way to re-organize list of records in Pip-Boy.
+-Cannot use mouse pointer to orient editing cursor.
+
+For these reasons, it is best to write longer tapes
+out of game in a text file first and then paste into
+a tape. If you attempt to paste too much data into a
+tape, the paste process will fail, so use a character
+counter tool when working with longer tapes.
+
+Pasting data into a tape will also fail if the
+character's chat bar is open.
+
+Once loaded, the character can access the info by
+opening his Pip-Boy and going to Archives.
+
+One handy use for a holotape is to save a record of
+your character's build. Write up the build details in
+a text file, paste it into a blank tape and load it.
+Now that character has his plan, perks, drugs, and
+other notes available at a glance.
+
+Now go have fun with holotapes!
+*******************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

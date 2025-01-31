@@ -1,0 +1,55 @@
+***************************************************1995
+
+Info Tape 30: SAFE NETWORK
+
+*******************************************************
+
+Information on Tape: SAFE NETWORK
+The Miners, 24 Aug 2014
+
+It's important to get set up with your own network of
+safe places all over the map. Each player should plan
+to use one of his first characters to buy a private
+base and build numerous tents or Safe Houses. You'll
+need safe places to park near every public location.
+This includes every major town, the mines, Glow, Ares
+Rocket Silo, Mariposa, Sierra, Vault 15, Junkyard,
+Boneyard, Waterworks, Barter Grounds and more. Having
+a safe network set up will make it easy and fast for
+you to meet up with teammates for group ops. Without
+it, you will be the guy who is always lagging behind
+the rest of the team, trying to catch up, or needs a
+ride.
+
+As you set up tents or Safe Houses, upgrade the fire
+pit to a Campfire, rename them and get a map to each
+one. Drop the pile of maps in a safe place and work
+on getting a private base.
+
+The character that gets your first base should remain
+the member leader there permanently so add additional
+characters if you want to join other factions. You
+are building a private safe network so do not share
+any of these locations with anyone. You can always
+share other locations with trusted friends but having
+an unshared network becomes level 1 of your security
+foundation.
+
+Getting your first private base means establishing a
+faction. You do not need any other players for this
+and this should be your own private faction for the
+purpose of storing your maps.
+
+Once you have a base built, you should move your maps
+to it and drop them on the ground in piles of ten.
+Use the terminal to set access to the base by setting
+it to "Allow Friends".
+
+Now you have a great advantage. Each time you start a
+new character you can simply add his name and set his
+status to "Friend". When you log back into the new
+character, he will see the base on his map, go there
+and read all of the maps. Your new character will see
+your whole network of safe places all over the map
+within only a few minutes of starting!
+*******************************************************

@@ -1,0 +1,69 @@
+***************************************************1959
+
+Info Tape 03: CONFIG OPTIONS
+
+*******************************************************
+
+Information on Tape: CONFIG OPTIONS
+The Miners, 20 Dec 2013
+
+It is very important to set a few config options to
+help you survive and win fights. There are two config
+tools and both are in your game's main directory. One
+is FO2238Config.exe and the other is FOConfig.exe
+
+KEY BINDINGS
+Above all, setting up hotkeys is the most important
+config option. Add a key-bind for using stims, and
+one to Reload. Set some for doing targeted shots and
+set one to disable aim.
+
+ALWAYS RUN
+By default, you always walk and you must hold down
+the Shift key to run. To keep up with other players,
+switch this by setting "Always Run". Now you'll run
+by default and only walk when you want to by holding
+down the Shift key.
+
+KEYBOARD LANGUAGE
+By default, pressing Control+Shift switches the chat
+language to Russian. This key combination is too
+easily pressed by accident. You can avoid this by
+switching this setting to Alt+Shift.
+
+COMBAT MODES
+Many new players are fans of the original Turn-Based
+Fallout games. Due to this familiarity, most new
+players start playing in TB mode. However, the
+primary features here are in Real-Time. How you
+set your default Combat Mode is up to you but the
+sooner you start getting skilled in RT mode, the
+better. It is also recommended to be in RT mode
+whenever you drive vehicles so you can quickly
+escape forced encounters.
+
+AMMO AMOUNTS
+Many players prefer to see ammo indicators as both
+lines and numbers.
+
+DAMAGE INDICATOR
+Adjust the time delay for longer or shorter display
+of damage overhead. Set properly, you will see how
+much damage is being done as targets are hit.
+
+FULL SCREEN
+Town Control and most other PvP is highly competitive
+and in RT only. Every advantage is used to optimize
+combat success. RT in windowed mode is considered to
+be a big mistake by most players. Full-Screen mode is
+thus the standard during PvP in order to avoid
+mis-clicking outside of a windowed session, which
+will usually result in combat disaster.
+
+*******************************************************
+
+
+
+
+
+

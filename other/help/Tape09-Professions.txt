@@ -1,0 +1,79 @@
+***************************************************1778
+
+Info Tape 09: PROFESSIONS
+
+*******************************************************
+
+Information on Tape: PROFESSIONS
+The Miners, 16 Aug 2014
+
+Any character can craft some basic gear at level 1
+with no training, but professional training is also
+available for crafting much better gear. Professions
+each have 2 tiers of training which cost 1500 and
+3000 caps for tier 1 and 2 respectively and require
+50 or 100 in certain skills. Blueprints are needed
+for crafting most tier 2 items:
+
+ARMOR INSTRUCTORS (Repair)
+-Modoc: Balthas
+-NCR: Rondo
+-Navarro: Armstrong
+-Brotherhood of Steel: Jenna
+-Salvagers in Boneyard: Simon
+-BoS San Fran: Ron
+
+Tier 1: Mark II and Combat Leathers, Metal Armor.
+Tier 2: Mark II Metal, Tesla and Combat Armor.
+
+DEMOLITIONS EXPERTS (Traps)
+-Redding: Dangerous Dan McGrew
+-Broken Hills: Zaius
+
+Tier 1: Frag Grenades
+Tier 2: Dynacord Stick, Plasma Grenades, Dynamite,
+and Plastic Explosives.
+
+DOCTORS (Doctor)
+-Junktown: Doc Larrikin
+-NCR: Dr Jubilee
+-Redding: Doc Johnson
+-San Francisco: Dr Fung
+-Vault City: Doc Andrew
+
+Tier 1: Antidote
+Tier 2: Stimpak, Super Stimpak, RadAway, Rad-X, Jet,
+Mentats, Buffout, Psycho, Needler ammo.
+
+ENERGY EXPERTS (Science)
+-Broken Hills: Brian
+-Gecko: Hank
+-Navarro: Jefferson
+-Gun Runners: Elmer
+-BoS San Fran: Ron
+
+Tier 1: Magneto-Laser Pistol, Cattle Prod, and Power
+Fist. Tier 2: MFC and a list of weapons.
+
+BIG GUNS GUNSMITHS (Repair)
+-New Reno: Eldridge
+-Navarro: Quincy
+-Hub: Jacob
+-Brotherhood of Steel: Peter
+-BoS San Fran: Ron
+-Broken Hills: Marcus
+
+Tier 1: M60, 5mm JHP, and Explosive Rockets.
+Tier 2: Rocket Launcher, Improved Flamer, Light
+Support Weapon, and Minigun/Avenger.
+
+SMALL GUNS GUNSMITHS (Repair)
+-Gecko: Skeeter
+-Junktown: Boyce
+-New Reno: Eldridge
+-Raiders: Miller
+
+Tier 1: 10mm AP, 5mm JHP, 12g Slug Shells, many guns.
+Tier 2: 14mm AP, 5mm AP, 223 FMJ, Needler ammo, and
+many guns.
+*******************************************************

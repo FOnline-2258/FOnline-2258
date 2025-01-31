@@ -1,0 +1,74 @@
+***************************************************1975
+
+Info Tape 19: COMBAT IMPLANTS
+
+*******************************************************
+
+Information on Tape: COMBAT IMPLANTS
+The Miners, 25 Dec 2013
+
+Any character can get surgical procedures to enhance
+combat performance. What is required are Implant
+Modules, a fresh Combat Armor, and 100k caps per
+procedure to pay for the service, which is available
+in San Francisco from Dr Fung.
+
+The basic implants can be surgically installed in a
+character that is level 30 or higher. They include:
+
+Dermal Impact Armor       +4% DR Normal/Explode
+Phoenix Armor Implants   +4% DR Fire/Laser/Plasma
+Nemean Armor (1)            +20 Max Hit Points
+Hypertrophy Accelerator +1 Strength
+Optics Enhancer              +1 Perception
+Nociception Regulator     +1 Endurance
+Empathy Synthesizer       +1 Charisma
+Logic Co-Processor         +1 Intelligence
+Reflex Booster               +1 Agility
+Probability Calculator     +1 Luck
+
+The advanced implants require minimum level 40. The
+Dermal and Phoenix implants will not only boost
+Damage Resistance but also Damage Threshold:
+
+Dermal Impact Assault Enhancement
+ 4% DR and +1 DT Normal/Explode
+
+Phoenix Assault Enhancement
+ 4% DR and +1 DT Fire/Laser/Plasma
+
+Nemean Armor (2) +20 Max Hit Points
+
+Only one module can be implanted per procedure. Any
+single character can potentially get all implants
+installed if planned correctly. This surgery is a
+permanent modification of the character and cannot
+be undone or moved.
+
+Implants are a new feature of this server and are hard
+to get until the new dungeons are implemented, at
+which time they will probably still be challenging
+to obtain. Check the game forum and recent Changelogs
+for news about how to obtain implants.
+
+The availability of implants will have an impact on
+how certain character builds are planned. Implants
+will be highly coveted for that reason, so that PvP
+fighters can be further optimized. If you obtain an
+implant, before you eagerly run your crafter off to
+get surgery, consider using it only on a carefully
+planned fighter build, designed with implants in mind.
+
+*******************************************************
+
+
+
+
+
+
+
+
+
+
+
+

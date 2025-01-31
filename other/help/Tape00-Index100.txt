@@ -1,0 +1,77 @@
+***************************************************1953
+
+Info Tape 00: TAPE INDEX
+
+*******************************************************
+
+Information on Tape: TAPE INDEX
+The Miners, 10 Aug 2014
+
+Your favorite wasteland librarian has shared this
+information with you for the purpose of improving
+your understanding of this project, which is to make
+important info easily available in-game where it's
+most handy to have at a glance. This project is not
+done yet and this is only a partial index. It will
+expand as additional details about our world become
+more apparent.
+
+Ask for a tape on any of these important topics!
+
+-TAPE SERIES 100 GAME INFO-
+Tape 001: DONE 1995 - Welcome Warning
+Tape 002: DONE 1867 - Rules
+Tape 003: DONE 1959 - Config Options
+Tape 004: DONE 1992 - Getting Started
+Tape 005: DONE 1957 - Commands
+Tape 006: DONE 1958 - Controls
+Tape 007: DONE 1965 - Skill Books
+Tape 008: DONE 1904 - Crafting
+Tape 009: DONE 1778 - Professions
+Tape 010: DONE 1922 - Making Caps
+Tape 011: DONE 1974 - Radios
+Tape 012: DONE 1980 - Communicaiton
+Tape 013: DONE 1978 - Town Scoping
+Tape 014: DONE 1940 - Drivers Ed
+Tape 015: DONE 1893 - Vehicle List
+Tape 016: DONE 1948 - Combat Drugs
+Tape 017: DONE 1980 - Radiation Meds
+Tape 018: DONE 1996 - Fighter Training
+Tape 019: DONE 1999 - Implants
+Tape 020: DONE 1997 - Hit Chance
+Tape 021: DONE 1994 - Weapon Perks
+Tape 022: DONE 1990 - Support Perks
+Tape 023: DONE 1970 - Leveling Tips
+Tape 024: DONE 1861 - XP Levels
+Tape 025: DONE 1806 - Skill Points
+Tape 026: DONE 1986 - About Holotapes
+Tape 027: DONE 1949 - VTDB
+Tape 028: DONE 1991 - Caravans
+Tape 029: DONE 1898 - Abbreviations
+Tape 030: DONE 1995 - Safe Network
+Tape 031: DONE 1988 - About Damage
+Tape 032: PLANNED 0000 - Companions
+Tape 033: PLANNED 0000 - Banks
+Tape 034: PLANNED 0000 - Homesteaders
+Tape 035: PLANNED 0000 - Private Mines
+Tape 036: PLANNED 0000 - NPC Factions
+Tape 037: PLANNED 0000 - Player Factions
+Tape 038: PLANNED 0000 - Player Bases
+Tape 039: NEXT - (next topic)
+Tape 040: NEXT - (next topic)
+Tape 041: PLANNED 0000 - Joining a Faction
+Tape 042: PENDING 1713 - Faction Members
+Tape 043: PLANNED 0000 - What Teams Expect
+Tape 044: PLANNED 0000 - What Kills a Team
+Tape 045: PLANNED 0000 - Base Terminal Menu
+Tape 046: DONE 1975 - Base Security
+
+Tape 051: DONE 1939 - Pre-TC Checklist
+
+Tape 095: PLANNED 0000 - Character Rerolls
+Tape 096: PENDING 1959 - Game History
+Tape 097: PENDING 1058 - Reloaded Server
+Tape 098: PLANNED 0000 - Server Wipes
+Tape 099: PLANNED 0000 - Donations
+
+*******************************************************

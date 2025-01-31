@@ -1,0 +1,320 @@
+***************************************************0000
+
+Info Tape 00: HOLOTAPE INDEX
+
+*******************************************************
+
+Information on Tape: HOLOTAPE INDEX
+The Miners, 20 Dec 2013
+
+TAPE 00: DONE 1953 - TAPE INDEX
+TAPE 99: TAPE TEMPLATE
+
+TAPE SERIES 100 (001-100): General Info
+TAPE SERIES 200 (101-200): Character Builds
+TAPE SERIES 300 (201-300): Professions
+TAPE SERIES 400 (301-400): Quests
+TAPE SERIES 500 (401-500): Map Locations
+TAPE SERIES 600 (501-600): 
+TAPE SERIES 700 (601-700): 
+TAPE SERIES 800 (701-800): Catholic Catechism
+
+--------------------------------------------
+
+SERIES 100: GAME INFO
+
+Tape 001: DONE 1995 - Welcome Warning
+Tape 002: DONE 1867 - Rules
+Tape 003: DONE 1959 - Config Options
+Tape 004: DONE 1992 - Getting Started
+Tape 005: DONE 1957 - Commands
+Tape 006: DONE 1958 - Controls
+Tape 007: DONE 1965 - Skill Books
+Tape 008: DONE 1904 - Crafting
+Tape 009: DONE 1778 - Professions
+Tape 010: DONE 1922 - Making Caps
+Tape 011: DONE 1974 - Radios
+Tape 012: DONE 1980 - Communicaiton
+Tape 013: DONE 1978 - Town Scoping
+Tape 014: DONE 1940 - Drivers Ed
+Tape 015: DONE 1895 - Vehicle List
+Tape 016: DONE 1948 - Combat Drugs
+Tape 017: DONE 1980 - Radiation Meds
+Tape 018: DONE 1996 - Fighter Training
+Tape 019: DONE 1999 - Implants
+Tape 020: DONE 1997 - Hit Chance
+Tape 021: DONE 1994 - Weapon Perks
+Tape 022: DONE 1990 - Support Perks
+Tape 023: DONE 1970 - Leveling Tips
+Tape 024: DONE 1861 - XP Levels
+Tape 025: DONE 1806 - Skill Points
+Tape 026: DONE 1986 - About Holotapes
+Tape 027: DONE 1949 - VTDB
+Tape 028: DONE 1991 - CARAVANS
+Tape 029: DONE 1898 - Abbreviations
+Tape 030: DONE 1995 - Safe Network
+Tape 031: DONE 1988 - About Damage
+Tape 032: PLANNED 0000 - Burst Mechanics
+Tape 033: PLANNED 0000 - Companions
+Tape 034: PLANNED 0000 - Banks
+Tape 035: PLANNED 0000 - Homesteaders
+Tape 036: PLANNED 0000 - Private Mines
+Tape 037: PLANNED 0000 - NPC Factions
+Tape 038: PLANNED 0000 - Player Factions
+Tape 039: PLANNED 0000 - Player Bases
+Tape 040: NEXT - Traps and PKs
+Tape 041: NEXT - Joining a Faction
+			Find a suitable Team
+			Play with them for a bit
+			
+Tape 042: NEXT - Faction Members
+			What Does It Mean?
+Tape 043: NEXT - What Teams Expect
+			Self-Sufficiency
+			No Rogues
+			Routine Participation
+			
+Tape 044: NEXT - What Kills a Team
+			Saboteurs
+			Thefts
+			Drama
+			Incompatible Goals
+			Conflicting Styles
+			Lack of Cohesion
+			
+Tape 045: NEXT - Base Terminal Menu
+			News
+			 -Previous
+			 -Next
+			Browse the database
+			 -Create new record for non-member
+			 -View/Modify the Record
+			 -Browse Records
+				Next
+				Previous
+				Change Status
+				Change the rank
+				Change the faction
+				Modify Reputation
+			 -Browse Factions
+			Manage Members
+			 -Invite New Member
+			 -Promote Member
+			 -Demote Member
+			 -Expel Member
+			 -Browse Members List
+			Miscellaneous
+			 -Radio
+			 -Resign
+			Manage Hideouts Clearance
+			 -Next
+			 -Previous
+			 -Allow/Disallow Recruits
+			 -Allow/Disallow Accetped Members
+			 -Allow/Disallow Trusted Members
+			 -Allow/Disallow Important Members
+			 -Allow/Disallow Invited
+			 -Allow/Disallow Friends
+Tape 046: DONE 1975 - Base Security
+Tape 047: NEXT - Team Dynamics
+			Confidence
+			Attacking/Retreating
+			Avoid Panic
+			Regrouping
+			Leading/Following
+			Looting
+
+Tape 048: NEXT - Team Recruiting
+			Assess Resolve
+			Screen Their Playstyle
+			People Need Help
+			Expect Spies
+
+Tape 049: NEXT - Team Growth
+			Attrition
+			
+Tape 050: NEXT - Winning Teams
+Tape 051: NEXT - Town Control
+Tape 052: DONE 1939 - TC Checklist
+Tape 053: NEXT - TC Procedures
+Tape 054: NEXT - TC Best Practices
+Tape 055: NEXT - TC Readiness
+Tape 056: NEXT - TC Winning
+Tape 057: NEXT - TC Losing
+Tape 058: NEXT - TC Keep Fighting
+Tape 059: NEXT - TC Rewards
+Tape 060: NEXT - TC Aftermath
+Tape 061: NEXT - 
+Tape 062: NEXT - 
+Tape 063: 
+Tape 064: 
+Tape 065: 
+Tape 066: 
+Tape 067: 
+Tape 068: 
+Tape 069: 
+Tape 070: 
+Tape 071: 
+Tape 072: 
+Tape 073: 
+Tape 074: 
+
+Tape 095: PLANNED 0000 - Character Rerolls
+Tape 096: PENDING 1959 - Game History
+Tape 097: PENDING 1058 - Reloaded Server
+Tape 098: PLANNED 0000 - About Wipes
+Tape 099: PLANNED 0000 - Donations
+Tape 100: PLANNED 0000 - Credits
+
+--------------------------------------------------
+
+SERIES 200: BUILDS
+
+Tape 101: DONE 1995 - About Builds
+Tape 102: DONE 1977 - Build Advice
+Tape 103: PLANNED 0000 - More Build Advice
+Tape 104: PLANNED 0000 - More on Builds
+Tape 105: PLANNED 0000 - PvP Builds
+Tape 106: PLANNED 0000 - TB Builds
+Tape 107: PLANNED 0000 - Plan a Build
+Tape 108: 
+Tape 109: 
+Tape 110: 
+Tape 111: 
+Tape 112: 
+Tape 113: PLANNED 0000 - Fast Boxer
+Tape 114: PLANNED 0000 - Boxing Bruiser
+Tape 115: PLANNED 0000 - Crit Puncher
+
+
+*******************************************************
+
+SERIES 300: PROFESSIONS
+
+Tape 201: Profession - Armorer
+Tape 202: Profession - Small Guns Smith
+Tape 203: Profession - Big Guns Smith
+Tape 204: Profession - Energy Expert
+Tape 205: Profession - Demolitions
+Tape 206: Profession - Doctor
+
+*******************************************************
+
+SERIES 400: QUESTS
+
+Tape 301: PLANNED - Hub: Wasteland Band
+Tape 302: PLANNED - Hub: Sad Wife
+Tape 303: PLANNED - Hub: JD's Message
+Tape 304: PLANNED - Hub: 
+Tape 311: PLANNED - Junktown: 
+Tape 312: PLANNED - Junktown: 
+Tape 313: PLANNED - Junktown: 
+Tape 314: PLANNED - Junktown: 
+Tape 321: PLANNED - Necropolis:
+Tape 322: PLANNED - Necropolis:
+Tape 323: PLANNED - Necropolis:
+Tape 324: PLANNED - Necropolis:
+Tape 331: PLANNED - Boneyard: Dogs of LA
+Tape 332: PLANNED - Boneyard: A Man's Job
+Tape 333: PLANNED - Boneyard: Industrial Park
+Tape 334: PLANNED - Boneyard:
+Tape 341: PLANNED - San Fran: Ant Lair
+Tape 342: PLANNED - San Fran: 
+Tape 343: PLANNED - San Fran: 
+Tape 344: PLANNED - San Fran: 
+Tape 351: PLANNED - Shady Sands: Buster's Smokes
+Tape 352: PLANNED - Shady Sands: Mira's Debt
+Tape 353: PLANNED - Shady Sands: Guard the Brahmin
+Tape 354: PLANNED - Shady Sands: Railine Gang
+Tape 361: PLANNED - Vault City: Medical Investigation
+Tape 362: PLANNED - Vault City: 
+Tape 363: PLANNED - Vault City: 
+Tape 364: PLANNED - Vault City: 
+Tape 374: ERROR 1948 - Klamath Stranded Rust
+
+Tape 395: 
+Tape 396: 
+Tape 397: 
+Tape 398:
+Tape 399:
+
+
+*******************************************************
+
+SERIES 500: MAP LOCATIONS
+
+Tape 501: PLANNED 0000 - SE Howitzer
+Tape 502: PLANNED 0000 - SE Family Grave
+Tape 503: PLANNED 0000 - SE Gauss Bunker
+Tape 504: PLANNED 0000 - SE Nuka Cola Truck
+Tape 505: PLANNED 0000 - SE Medical Clinic
+Tape 506: PLANNED 0000 - SE Warehouse
+Tape 507: PLANNED 0000 - SE Vertibird
+Tape 508: PLANNED 0000 - SE Implant Bunker
+Tape 509: NEXT 0000 - SE 
+Tape 510: NEXT 0000 - SE 
+Tape 511: NEXT 0000 - SE 
+
+Tape 551: PLANNED 0000 - Ares Rocket Silo
+Tape 552: PLANNED 0000 - Barter Grounds
+Tape 553: PLANNED 0000 - Boneyard Area
+Tape 554: PLANNED 0000 - Boneyard Train Sta
+Tape 555: PLANNED 0000 - Broken Hills
+Tape 556: PLANNED 0000 - Cathedral
+Tape 557: PLANNED 0000 - Crater
+Tape 558: PLANNED 0000 - Den
+Tape 559: PLANNED 0000 - Gecko
+Tape 560: PLANNED 0000 - Ghost Farm
+Tape 561: PLANNED 0000 - The Glow
+Tape 562: PLANNED 0000 - Golgotha
+Tape 563: PLANNED 0000 - Gordon's Gas Station
+Tape 564: PLANNED 0000 - Gun Runners
+Tape 565: PLANNED 0000 - Hinkley
+Tape 566: PLANNED 0000 - Junktown
+Tape 567: PLANNED 0000 - Junktown Quarry
+Tape 568: PLANNED 0000 - Junkyard
+Tape 569: PLANNED 0000 - Klamath
+Tape 570: PLANNED 0000 - Klamath Mine
+Tape 571: PLANNED 0000 - Library
+Tape 572: PLANNED 0000 - Lost Hills
+Tape 573: PLANNED 0000 - Mariposa
+Tape 574: PLANNED 0000 - Modoc
+Tape 575: PLANNED 0000 - Navarro
+Tape 576: PLANNED 0000 - NCR QUarry
+Tape 577: PLANNED 0000 - NCR Train Sta
+Tape 578: PLANNED 0000 - Necropolis
+Tape 579: PLANNED 0000 - New Adytum
+Tape 580: PLANNED 0000 - New Reno
+Tape 581: PLANNED 0000 - Raiders North
+Tape 582: PLANNED 0000 - Raiders South
+Tape 583: PLANNED 0000 - Redding
+Tape 584: PLANNED 0000 - Salvagers
+Tape 585: PLANNED 0000 - San Francisco
+Tape 586: PLANNED 0000 - San Fran Mine
+Tape 587: PLANNED 0000 - SF Train Sta
+Tape 588: PLANNED 0000 - Shady Sands
+Tape 589: PLANNED 0000 - Sierra Army Depot
+Tape 590: PLANNED 0000 - Stables
+Tape 591: PLANNED 0000 - Talchem Cali HQ
+Tape 592: PLANNED 0000 - Themepark
+Tape 593: PLANNED 0000 - Tobacco Farm
+Tape 594: PLANNED 0000 - Toxic Caves
+Tape 595: PLANNED 0000 - Vault 13
+Tape 596: PLANNED 0000 - Vault 15
+Tape 597: PLANNED 0000 - Vault City
+Tape 598: PLANNED 0000 - VC Train Sta
+Tape 599: PLANNED 0000 - Warehouse
+Tape 600: PLANNED 0000 - Waterworks
+
+*******************************************************
+
+SERIES 800: CATECHESIS
+
+Tape 701: DONE 1696 - TIME
+Tape 711: DONE 1996 - THE CRUSADES
+Tape 712: DONE 1993 - THE CRUSADES
+Tape 713: PLANNED 0000 - THE CRUSADES
+Tape 731: DONE 1975 - THE FOUR LAST THINGS
+
+
+

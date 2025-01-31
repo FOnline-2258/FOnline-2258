@@ -1,0 +1,74 @@
+***************************************************1861
+
+Info Tape 24: XP LEVELS
+
+*******************************************************
+
+Information on Tape: XP AND LEVELS
+The Miners, 01 Dec 2013
+
+EXPERIENCE LEVELS
+As a character levels up, he gets new Skill Points,
+Hit Points and Perks. New Hit Points and Perks end at
+Level 24, a soft level cap, whereas additional Skill
+Points continue far beyond Level 100.
+
+The chart below shows Levels, total xp required to
+reach each level, additional xp needed to level up,
+and when perks are earned.
+
+Characters with the Skilled Trait earn only 6 perks
+total, every 4 levels, rather than 8 every 3 levels.
+
+01 000000
+02 001000 (+01000)
+03 003000 (+02000) Perk #1 if not Skilled
+04 006000 (+03000) Perk #1 if Skilled
+05 010000 (+04000)
+06 015000 (+05000) Perk #2 if not Skilled
+07 021000 (+06000)
+08 028000 (+07000) Perk #2 if Skilled
+09 036000 (+08000) Perk #3 if not Skilled
+10 045000 (+09000)
+11 055000 (+10000)
+12 066000 (+11000) Next Perk
+13 078000 (+12000)
+14 091000 (+13000)
+15 105000 (+14000) Perk #5 if not Skilled
+16 120000 (+15000) Perk #4 if Skilled
+17 136000 (+16000)
+18 153000 (+17000) Perk #6 if not Skilled
+19 171000 (+18000)
+20 190000 (+19000) Perk #5 if Skilled
+21 210000 (+20000) Perk #7 if not Skilled
+22 231000 (+21000)
+23 253000 (+22000)
+24 276000 (+23000) Last Perk
+25 300000 (+24000)
+26 325000 (+25000)
+27 351000 (+26000)
+28 378000 (+27000)
+29 406000 (+28000) Last Perk Deadline
+30 435000 (+29000)
+
+CAUTION! You can lose perks! You can delay picking a
+perk but only for a few levels. If you need to choose
+a perk and you reach the next perk level, you lose a
+perk. You earn the last perk when you reach Level 24.
+You can delay choosing this last perk until Level 29
+but you lose it if you reach Level 30 first.
+
+CAUTION! You can lose Skill Points! You can delay the
+distribution of Skill Points and accumulate them but
+only up to 99 unassigned Skill Points. If you do not
+assign them, you do not get additional Skill Points
+over 99.
+
+*******************************************************
+
+
+
+
+
+
+

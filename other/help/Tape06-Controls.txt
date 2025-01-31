@@ -1,0 +1,72 @@
+***************************************************1958
+
+Info Tape 06: CONTROLS
+
+*******************************************************
+
+Information on Tape: CONTROLS
+The Miners, 12 July 2014
+
+FOLLOW SOMEONE
+Click-hold on a character to access the drag-down
+menu and choose the fifth option, denoted as an arrow
+pointing to a group. This adds an arrow over their
+head. That character can leave via an exit grid and
+you should get a prompt to follow them if you were
+standing close enough to them when they left. The
+character you tag to follow will see a chevron over
+your head too which tells them you have them tagged
+to follow. So look around in a crowd and see if
+anyone has a chevron over their head - they tagged
+you and might intend to follow you when you leave via
+an exit grid.
+
+FRIEND OR ENEMY
+YOu can manually green or red someone by using other
+options in the drag-down menu when you click-hold on
+a character. There is no Buddy List.
+
+Control+G picks up all items in that hex
+Control+D drops all items from inventory
+
+These are default Hotkeys. They work as listed unless
+you have set up custom Hotkeys which override these:
+
+HOTKEYS
+Q - shows your character's Field of View
+W - shows the max range of your active weapon
+A - changes to attack mode
+B - switches between your two active slots
+G - picks up items from the ground
+G - picks up an item in that hex
+P - opens your Pip-Boy
+F - opens your Fixboy
+S - opens the Skilldex
+T - shows who is tagging who to follow
+F1 - displays shortcuts and ping
+F2 - saves messages to a file
+F3 - saves a screenshot
+F4 - show/hide command bar
+F5 - expand/collapse the message window
+F6 - displays character names
+F8 - mouse-scrolling toggle (helps in window mode)
+F10 - shows Town Control display area
+F11 - shows Town Control alerts
+F12 - will minimize client window
+< and > will rotate your character left and right
+
+QUICK SKILL KEYS
+1 - Sneak
+2 - Lockpick
+3 - Steal
+4 - Traps
+5 - First Aid
+6 - Doctor
+7 - Science
+8 - Repair
+
+HEX THROWING
+By holding down the tilde key ~ you can throw certain
+items on the ground at a specific hex from Slot 1.
+
+*******************************************************

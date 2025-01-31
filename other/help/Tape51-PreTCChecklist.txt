@@ -1,0 +1,75 @@
+***************************************************1939
+
+Info Tape 51: PRE-TC CHECKLIST
+
+*******************************************************
+
+Information on Tape: PRE-TC CHECKLIST
+The Miners, 03 August 2014
+
+Being an effective team means each teammate takes
+PvP seriously. Make sure you have covered these items
+so your team will have a professional start.
+
+VOICE CHAT
+Mandatory. PvP is too fast for text chat.
+
+BUILD VERIFICATION
+You need a true PvP build. Do not bring anything less
+to PvP. Get the help you need planning an optimal
+build. Use a planner tool for best results and use
+the VTDB feature to share a build for feedback.
+
+NAME COLORIZING
+Manually marking others as friends or enemies is not
+good enough for team ops. Instead, use a custom
+NameColorizing txt file. Rename your default file and
+get the team's custom version. That way all enemies
+will automatically show up red for all teammates.
+
+KEY BINDINGS
+Each player is expected to set up hotkeys to do fast
+reloads and Superstims.
+
+FIELD OF VIEW
+Enable your Sight/weapon range indicators: Q and W.
+
+SAFE PLACES
+Each member is expected to have places already set up
+next to PvP locations for spare gear.
+
+TRANSPORTATION
+Each fighter is expected to have a car and move fast
+on the map. Outdoorsman 150 with Pathfinder and
+Explorer perks allow a fighter to return to the fight
+quickly on foot. Your team needs you back in the
+fight asap!
+
+SPARE GEAR
+Each fighter is expected to have plenty of spare gear
+ready to go. This includes:
+- Armor
+- Weapons
+- Ammo
+- Combat Drugs
+- SStims
+
+FOLLOW THE LEADER
+- Pay attention to the leader and follow orders.
+- All members shoot at same target. Focus fire!
+- Avoid meat shields in Power Armor. Shoot them last.
+- Control your impetuous tendancies. Don't go Rambo.
+- Move together as a group to stay strong.
+
+BASICS
+- Practice. Hinkley helps.
+- Shoot and take cover to recharge your AP.
+- Watch out for sneakers and anyone trying to 1-hex.
+- Stay cool. We all lose gear. It's just pixels.
+- Do not Fast-Relog to an alternate fighter.
+- Do not insult the enemy. Have some class.
+
+*******************************************************
+
+
+

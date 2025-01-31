@@ -1,0 +1,90 @@
+***************************************************1948
+
+Info Tape 16: COMBAT DRUGS
+
+*******************************************************
+
+Information on Tape: COMBAT DRUGS
+The Miners, 16 Jan 2014
+
+Combat drugs are an important way to get a fighting
+advantage, especially in PvP combat. These drugs are
+used by the best fighters and are a standard part
+of all serious PvP builds. A fighter build planned
+without drugs will be at a serious disadvantage. All
+effects last 10 hours, and addictions 20 hours unless
+otherwise indicated below.
+
+BEER
+Some type of home brewed beer.
+Immediate: -2 PE, +5 DR, +1 CH
+Addict: 0% chance
+Weighs 203g, 5 caps
+Craft: Barley + water
+Brewerage Device (0xp)
+
+BUFFOUT
+Highly advanced steroids.
+Immediate: +2 ST, -1 AG, +2 EN
+Addict: 25% chance, -1 max AP +10 hrs
+Weighs 102g, 275 caps
+Craft: Doc 2, BP, 2 chems + 5 jerkies
+Med Terminal (400xp)
+
+CIGARETTES
+A pack of pre-war cigarettes.
+Immediate: +1 PE, -1 CH
+Addict: 15% chance, -1 max AP +10 hrs
+Weighs 100g, 3 caps
+Craft: 2 Tobacco
+Toolbench (10xp)
+
+COOKIE
+A chocolate chip cookie. Yum!
+Immediate: 15 min +1 max AP
+Weighs 12g
+
+JET
+A powerful methamphetamine.
+Immediate: +2 max AP, -1 CH, -2 ST, -15 DR
+Addict: 100% chance, -1 max AP +10 hrs
+Weighs 51g, 100 caps
+Craft: Doc 2, BP, 1 poo + 2 chems + empty can
+Adv.Toolbench (20xp)
+
+JET ANTIDOTE
+Removes Jet addiction.
+
+MENTATS
+A pillbox of mind-altering chems.
+Immediate +2 IN, +2 CH
+Addict: 25% chance, -1 max AP +10 hrs
+Weighs 62g, 400 caps
+Craft: Doc 2, BP, 2 chem + 6 fruit
+Med Terminal (350xp)
+
+MONUMENT CHUNK
+A piece of a stone monument.
+Immediate: +3 ST, +3 AG, +50 DR
+Full Recovery takes 2 hrs after -6 ST/AG
+Addict 0% chance
+Weighs 2267g
+
+NUKA COLA
+The flavored softdrink of the post-nuclear world.
+Immediate +1 AG
+Addict: 15% chance, -1 max AP +10 hrs
+Weighs 200g, 3 caps
+Craft: 2 Fruit + 1 Water
+Nuka Cola Machine (0xp)
+
+PSYCHO
+Unknown chemicals meant to increases a soldier's
+combat potential.
+Immediate +15 DR, +1 ST, +1 EN, -2 PE
+Addict: 30% chance +10 hrs
+Weighs 100g, 700 caps
+Craft: Doc 2, BP, 1ss + 2 chems + 1 Biogel
+Med Terminal (???xp)
+
+*******************************************************

@@ -1,0 +1,73 @@
+***************************************************0077
+
+Info Tape 100: CREDITS
+
+*******************************************************
+
+Information on Tape: CREDITS
+The Miners, 17 Oct 2014
+
+RELOADED PROJECT LEADER
+	Kilgore
+
+DEVELOPERS
+	Kilgore
+	Cubik2k
+	Mojuk
+
+ORIGINAL PROJECT LEADER
+	Anton "CVET" Tsvetinskiy
+
+ORIGINAL CORE DEVELOPERS
+	Anton "CVET" Tsvetinskiy
+	Oleg "OLEGMMM" Mareskin
+
+ORIGINAL CONTENT BY
+	The Black Isle Studios
+
+2238 PROJECT LEADER
+	AHS-9
+
+2238 DEVELOPERS
+	Bartos "Scypior" Przygoda
+	Markus "Ghosthack" Oberg
+	Grzegorz "Atom" Jagiella
+	Anton "CVET" Tsvetinskiy
+	Slaven "Lisac2k" Ostojic
+	Wipe
+	Mayck
+	JovankaB
+
+2238 REVERSE ENGINEERING
+	Markus "Ghosthack" Oberg
+	Grzegorz "Atom" Jagiella
+
+2238 UTILITY PROGRAMMING
+	Markus "Ghosthack" Oberg
+	Grzegorz "Atom" Jagiella
+
+2238 CONTENT MANAGERS
+	Slaven "Lisac2k" Ostojic
+	Stefan "Lexx" Kessner
+
+2238 CONTENT CONCEPTUAL DESIGN
+	Bartos "Scypior" Przygoda
+	Slaven "Lisac2k" Ostojic
+	Stefan "Lexx" Kessner
+	Ben "Slim Charles" Jenkins
+	Markus "Ghosthack" Oberg
+	Grzegorz "Atom" Jagiella
+	Tom "Solar" Jones
+
+2238 MAPS
+	Stefan "Lexx" Kessner
+	Slaven "Lisac2k" Ostojic
+	Frank "Surf Solar" Schimski
+	Anton "ASDU" Sergeevich Dudarko
+	Gunduz Yavuzer
+	Johnny Nuclear
+	Smoothjesus
+	Visco
+	Vintarbc
+	Wichura
+*******************************************************
