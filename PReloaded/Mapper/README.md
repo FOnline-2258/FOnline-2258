@@ -1,15 +1,14 @@
-FOnline: 2238 Mapper, version 1.29.0
+# FOnline: 2238 Mapper, version 1.29.0
 
-***
+## Changes
 
 Changes in FOnline: 2238 Mapper
+    - new interface (Set ScreenWidth = 1090 or higher in client's FOnline.cfg) with re-arranged tabs and submenus
+    - zoom % information
+    - tile grid (press G to turn it on/off)
+    - autowall [wip] (press A and drag mouse to check it out)
 
- - new interface (Set ScreenWidth = 1090 or higher in client's FOnline.cfg) with re-arranged tabs and submenus
- - zoom % information
- - tile grid (press G to turn it on/off)
- - autowall [wip] (press A and drag mouse to check it out)
-
-***
+## Run
 
 To run a mapper, specify the server and client path in the Mapper.cfg file.
 
@@ -17,20 +16,23 @@ To load a saved map, type "~<map name>" in the console.
 TO save a map, type "^<map name> [/text] [/nopack]". "/text" to save it in text format, "/nopack" to save it in unpacked version.
 
 Other commands, preceded with "*":
- new		create a new map;
- unload		unload the current map;
- scripts	list of scripts;
- size <w> <h>	set a new map size;
- dupl		search for items with the same pids, placed on the same hexes;
- scroll		search for scroll blockes, around which there are less than two other scroll blockers;
- pidpos <pid>	search for all items with a given pid;
- hex <hx> <hy>	search for all objects on a given hex.
+    new		create a new map;
+    unload		unload the current map;
+    scripts	list of scripts;
+    size <w> <h>	set a new map size;
+    dupl		search for items with the same pids, placed on the same hexes;
+    scroll		search for scroll blockes, around which there are less than two other scroll blockers;
+    pidpos <pid>	search for all items with a given pid;
+    hex <hx> <hy>	search for all objects on a given hex.
 
 To run a script function, use "#". Executed function must be of prototype "string FuncName(string)", string argument is passed from a console, and function results will be displayed in the message box. Default module is "main", to execute a function from another module use "@" (for example, "#module@MyFunc").
 Example:
+
+```text
 In console, "#MyFunc Hello wo";
 In script, "string MyFunc(string my) { return my + "rld!"; }";
 Result in the message box: "Result: Hello world!".
+```
 
 Scripts are placed in the "/data" directory. List of loaded scripts is in scripts.cfg. The main script is mapper_main.fos, which contains all reserved functions, and basic list of API functions.
 
