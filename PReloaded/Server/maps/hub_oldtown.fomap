@@ -2,8 +2,8 @@
 Version              4
 MaxHexX              163
 MaxHexY              144
-WorkHexX             52
-WorkHexY             80
+WorkHexX             80
+WorkHexY             82
 ScriptModule         map_hub
 ScriptFunc           map_init
 NoLogOut             0
@@ -57,7 +57,7 @@ tile       82   8              art\tiles\edg4002.frm
 tile       84   8              art\tiles\edg4001.frm
 tile       86   8              art\tiles\edg4000.frm
 tile       88   8              art\tiles\edg4002.frm
-tile_l     90   8            3 art\tiles\road27.frm
+tile       90   8              art\tiles\road27.frm
 roof       90   8              art\tiles\tp100.frm
 tile       92   8              art\tiles\road32.frm
 roof       92   8              art\tiles\tp032.frm
@@ -68,7 +68,7 @@ tile       100  8              art\tiles\edg4001.frm
 tile       102  8              art\tiles\road27.frm
 roof       102  8              art\tiles\tp084.frm
 tile       104  8              art\tiles\curb16.frm
-tile_l     106  8            3 art\tiles\curb08.frm
+tile       106  8              art\tiles\curb08.frm
 tile       70   10             art\tiles\curb26.frm
 tile       72   10             art\tiles\edg4007.frm
 tile       74   10             art\tiles\edg4006.frm
@@ -79,7 +79,7 @@ tile       82   10             art\tiles\edg4005.frm
 tile       84   10             art\tiles\edg4004.frm
 tile       86   10             art\tiles\edg4003.frm
 tile       88   10             art\tiles\edg4005.frm
-tile_l     90   10           3 art\tiles\road26.frm
+tile       90   10             art\tiles\road26.frm
 roof       90   10             art\tiles\tp084.frm
 tile       92   10             art\tiles\road33.frm
 roof       92   10             art\tiles\tp033.frm
@@ -102,7 +102,7 @@ tile       82   12             art\tiles\edg4008.frm
 tile       84   12             art\tiles\edg4007.frm
 tile       86   12             art\tiles\edg4006.frm
 tile       88   12             art\tiles\edg4008.frm
-tile_l     90   12           3 art\tiles\road27.frm
+tile       90   12             art\tiles\road27.frm
 roof       90   12             art\tiles\tp092.frm
 tile       92   12             art\tiles\road32.frm
 roof       92   12             art\tiles\tp032.frm
@@ -117,7 +117,7 @@ tile       106  12             art\tiles\curb39.frm
 tile       108  12             art\tiles\edgs004.frm
 tile       64   14             art\tiles\curb16.frm
 tile       66   14             art\tiles\curb16.frm
-tile_l     68   14           3 art\tiles\curb16.frm
+tile       68   14             art\tiles\curb16.frm
 tile       70   14             art\tiles\curb27.frm
 tile       72   14             art\tiles\edg4000.frm
 tile       74   14             art\tiles\edg4003.frm
@@ -128,7 +128,7 @@ tile       82   14             art\tiles\edg4001.frm
 tile       84   14             art\tiles\edg4000.frm
 tile       86   14             art\tiles\edg4002.frm
 tile       88   14             art\tiles\edg4001.frm
-tile_l     90   14           3 art\tiles\road26.frm
+tile       90   14             art\tiles\road26.frm
 roof       90   14             art\tiles\tp100.frm
 tile       92   14             art\tiles\road32.frm
 roof       92   14             art\tiles\tp033.frm
@@ -143,9 +143,9 @@ tile       108  14             art\tiles\edgs001.frm
 tile       110  14             art\tiles\edg4000.frm
 tile       60   16             art\tiles\curb16.frm
 tile       62   16             art\tiles\curb16.frm
-tile_l     64   16           3 art\tiles\curb16.frm
-tile_l     66   16           3 art\tiles\curb16.frm
-tile_l     68   16           3 art\tiles\curb16.frm
+tile       64   16             art\tiles\curb16.frm
+tile       66   16             art\tiles\curb16.frm
+tile       68   16             art\tiles\curb16.frm
 tile       70   16             art\tiles\curb26.frm
 tile       72   16             art\tiles\edg4003.frm
 tile       74   16             art\tiles\road25.frm
@@ -155,10 +155,10 @@ tile       78   16             art\tiles\road22.frm
 tile       80   16             art\tiles\edg4005.frm
 tile       82   16             art\tiles\edg4004.frm
 tile       84   16             art\tiles\edg4003.frm
-tile_l     86   16           3 art\tiles\road25.frm
-tile_l     88   16           3 art\tiles\road23.frm
+tile       86   16             art\tiles\road25.frm
+tile       88   16             art\tiles\road23.frm
 roof       88   16             art\tiles\tp118.frm
-tile_l     90   16           3 art\tiles\road51.frm
+tile       90   16             art\tiles\road51.frm
 roof       90   16             art\tiles\tp108.frm
 tile       92   16             art\tiles\road16.frm
 roof       92   16             art\tiles\tp037.frm
@@ -175,15 +175,15 @@ tile       108  16             art\tiles\edg6009.frm
 tile       110  16             art\tiles\edg2003.frm
 tile       56   18             art\tiles\curb16.frm
 tile       58   18             art\tiles\curb16.frm
-tile_l     60   18           3 art\tiles\curb16.frm
-tile_l     62   18           3 art\tiles\curb16.frm
+tile       60   18             art\tiles\curb16.frm
+tile       62   18             art\tiles\curb16.frm
 tile       64   18             art\tiles\curb21.frm
 tile       66   18             art\tiles\curb20.frm
-tile_l     68   18           3 art\tiles\curb16.frm
+tile       68   18             art\tiles\curb16.frm
 tile       70   18             art\tiles\curb27.frm
 tile       72   18             art\tiles\curb35.frm
 tile       74   18             art\tiles\curb23.frm
-tile_l     76   18           3 art\tiles\curb16.frm
+tile       76   18             art\tiles\curb16.frm
 tile       78   18             art\tiles\curb26.frm
 tile       80   18             art\tiles\edg7000.frm
 tile       82   18             art\tiles\edg6011.frm
@@ -205,15 +205,15 @@ tile       112  18             art\tiles\edg2003.frm
 tile       52   20             art\tiles\curb02.frm
 tile       54   20             art\tiles\curb02.frm
 tile       56   20             art\tiles\curb02.frm
-tile_l     58   20           3 art\tiles\curb02.frm
-tile_l     60   20           3 art\tiles\curb02.frm
-tile_l     62   20           3 art\tiles\curb02.frm
+tile       58   20             art\tiles\curb02.frm
+tile       60   20             art\tiles\curb02.frm
+tile       62   20             art\tiles\curb02.frm
 tile       64   20             art\tiles\curb38.frm
 tile       66   20             art\tiles\curb34.frm
-tile_l     68   20           3 art\tiles\curb31.frm
-tile_l     70   20           3 art\tiles\curb32.frm
+tile       68   20             art\tiles\curb31.frm
+tile       70   20             art\tiles\curb32.frm
 tile       72   20             art\tiles\curb36.frm
-tile_l     74   20           3 art\tiles\curb02.frm
+tile       74   20             art\tiles\curb02.frm
 tile       76   20             art\tiles\curb07.frm
 tile       78   20             art\tiles\curb38.frm
 tile       80   20             art\tiles\edg7002.frm
@@ -222,13 +222,13 @@ tile       84   20             art\tiles\edg6006.frm
 tile       86   20             art\tiles\curb36.frm
 tile       88   20             art\tiles\curb02.frm
 tile       90   20             art\tiles\curb05.frm
-tile_l     92   20           3 art\tiles\curb02.frm
+tile       92   20             art\tiles\curb02.frm
 tile       94   20             art\tiles\curb02.frm
-tile_l     96   20           3 art\tiles\curb02.frm
+tile       96   20             art\tiles\curb02.frm
 tile       98   20             art\tiles\curb02.frm
 tile       100  20             art\tiles\curb38.frm
 tile       102  20             art\tiles\curb36.frm
-tile_l     104  20           3 art\tiles\curb02.frm
+tile       104  20             art\tiles\curb02.frm
 tile       106  20             art\tiles\curb01.frm
 tile       108  20             art\tiles\road32.frm
 tile       110  20             art\tiles\edg2003.frm
@@ -245,28 +245,28 @@ tile       60   22             art\tiles\edg5001.frm
 tile       62   22             art\tiles\edg5002.frm
 tile       64   22             art\tiles\edg5000.frm
 tile       66   22             art\tiles\edg1002.frm
-tile_l     68   22           3 art\tiles\edgs001.frm
+tile       68   22             art\tiles\edgs001.frm
 tile       70   22             art\tiles\edg4004.frm
 tile       72   22             art\tiles\edg4003.frm
-tile_l     74   22           3 art\tiles\edgs000.frm
-tile_l     76   22           3 art\tiles\edgs002.frm
-tile_l     78   22           3 art\tiles\edgs001.frm
+tile       74   22             art\tiles\edgs000.frm
+tile       76   22             art\tiles\edgs002.frm
+tile       78   22             art\tiles\edgs001.frm
 tile       80   22             art\tiles\edg4008.frm
 tile       82   22             art\tiles\edg4007.frm
 tile       84   22             art\tiles\edg4006.frm
-tile_l     86   22           3 art\tiles\road25.frm
-tile_l     88   22           3 art\tiles\road22.frm
-tile_l     90   22           3 art\tiles\edgs001.frm
-tile_l     92   22           3 art\tiles\edgs000.frm
-tile_l     94   22           3 art\tiles\road25.frm
-tile_l     96   22           3 art\tiles\road23.frm
-tile_l     98   22           3 art\tiles\road22.frm
+tile       86   22             art\tiles\road25.frm
+tile       88   22             art\tiles\road22.frm
+tile       90   22             art\tiles\edgs001.frm
+tile       92   22             art\tiles\edgs000.frm
+tile       94   22             art\tiles\road25.frm
+tile       96   22             art\tiles\road23.frm
+tile       98   22             art\tiles\road22.frm
 tile       100  22             art\tiles\edg1001.frm
 tile       102  22             art\tiles\edg6009.frm
-tile_l     104  22           3 art\tiles\road27.frm
-tile_l     106  22           3 art\tiles\road02.frm
-tile_l     108  22           3 art\tiles\road53.frm
-tile_l     110  22           3 art\tiles\road24.frm
+tile       104  22             art\tiles\road27.frm
+tile       106  22             art\tiles\road02.frm
+tile       108  22             art\tiles\road53.frm
+tile       110  22             art\tiles\road24.frm
 tile       112  22             art\tiles\road24.frm
 tile       114  22             art\tiles\road23.frm
 tile       116  22             art\tiles\road24.frm
@@ -298,10 +298,10 @@ tile       90   24             art\tiles\edgs003.frm
 tile       92   24             art\tiles\edg6011.frm
 tile       94   24             art\tiles\road26.frm
 tile       96   24             art\tiles\road37.frm
-tile_l     98   24           3 art\tiles\road53.frm
-tile_l     100  24           3 art\tiles\road22.frm
-tile_l     102  24           3 art\tiles\road25.frm
-tile_l     104  24           3 art\tiles\road51.frm
+tile       98   24             art\tiles\road53.frm
+tile       100  24             art\tiles\road22.frm
+tile       102  24             art\tiles\road25.frm
+tile       104  24             art\tiles\road51.frm
 tile       106  24             art\tiles\road02.frm
 tile       108  24             art\tiles\road02.frm
 tile       110  24             art\tiles\road02.frm
@@ -406,7 +406,7 @@ tile       48   30             art\tiles\road52.frm
 tile       50   30             art\tiles\road02.frm
 tile       52   30             art\tiles\road02.frm
 tile       54   30             art\tiles\road02.frm
-tile_l     56   30           3 art\tiles\curb14.frm
+tile       56   30             art\tiles\curb14.frm
 tile       58   30             art\tiles\curb13.frm
 tile       60   30             art\tiles\curb13.frm
 tile       62   30             art\tiles\curb13.frm
@@ -640,7 +640,7 @@ tile       16   38             art\tiles\curb25.frm
 tile       18   38             art\tiles\curb16.frm
 tile       20   38             art\tiles\curb16.frm
 tile       22   38             art\tiles\curb18.frm
-tile_l     24   38           3 art\tiles\curb16.frm
+tile       24   38             art\tiles\curb16.frm
 tile       26   38             art\tiles\curb08.frm
 tile       28   38             art\tiles\road02.frm
 tile       30   38             art\tiles\road02.frm
@@ -721,10 +721,10 @@ tile       10   40             art\tiles\edg4002.frm
 tile       12   40             art\tiles\edg4001.frm
 tile       14   40             art\tiles\edg4005.frm
 tile       16   40             art\tiles\curb24.frm
-tile_l     18   40           3 art\tiles\curb16.frm
-tile_l     20   40           3 art\tiles\curb16.frm
-tile_l     22   40           3 art\tiles\curb16.frm
-tile_l     24   40           3 art\tiles\curb16.frm
+tile       18   40             art\tiles\curb16.frm
+tile       20   40             art\tiles\curb16.frm
+tile       22   40             art\tiles\curb16.frm
+tile       24   40             art\tiles\curb16.frm
 tile       26   40             art\tiles\curb08.frm
 tile       28   40             art\tiles\road02.frm
 tile       30   40             art\tiles\road02.frm
@@ -806,13 +806,13 @@ tile       8    42             art\tiles\edg4000.frm
 tile       10   42             art\tiles\edg4008.frm
 tile       12   42             art\tiles\edg6009.frm
 tile       14   42             art\tiles\edg4007.frm
-tile_l     16   42           3 art\tiles\curb34.frm
-tile_l     18   42           3 art\tiles\curb30.frm
-tile_l     20   42           3 art\tiles\curb31.frm
+tile       16   42             art\tiles\curb34.frm
+tile       18   42             art\tiles\curb30.frm
+tile       20   42             art\tiles\curb31.frm
 roof       20   42             art\tiles\tp058.frm
-tile_l     22   42           3 art\tiles\curb30.frm
+tile       22   42             art\tiles\curb30.frm
 roof       22   42             art\tiles\tp016.frm
-tile_l     24   42           3 art\tiles\curb20.frm
+tile       24   42             art\tiles\curb20.frm
 tile       26   42             art\tiles\curb08.frm
 tile       28   42             art\tiles\road02.frm
 tile       30   42             art\tiles\road02.frm
@@ -902,7 +902,7 @@ tile       18   44             art\tiles\road28.frm
 tile       20   44             art\tiles\road29.frm
 tile       22   44             art\tiles\road10.frm
 roof       22   44             art\tiles\tp057.frm
-tile_l     24   44           3 art\tiles\curb25.frm
+tile       24   44             art\tiles\curb25.frm
 tile       26   44             art\tiles\curb44.frm
 tile       28   44             art\tiles\road02.frm
 tile       30   44             art\tiles\road02.frm
@@ -993,7 +993,7 @@ tile       16   46             art\tiles\edg5000.frm
 tile       18   46             art\tiles\edg1001.frm
 tile       20   46             art\tiles\edg1000.frm
 tile       22   46             art\tiles\road28.frm
-tile_l     24   46           3 art\tiles\curb25.frm
+tile       24   46             art\tiles\curb25.frm
 tile       26   46             art\tiles\curb08.frm
 tile       28   46             art\tiles\road02.frm
 tile       30   46             art\tiles\road02.frm
@@ -1094,7 +1094,7 @@ tile       16   48             art\tiles\edg5002.frm
 tile       18   48             art\tiles\edg5000.frm
 tile       20   48             art\tiles\edg7001.frm
 tile       22   48             art\tiles\edg7003.frm
-tile_l     24   48           3 art\tiles\curb24.frm
+tile       24   48             art\tiles\curb24.frm
 tile       26   48             art\tiles\curb08.frm
 tile       28   48             art\tiles\road10.frm
 tile       30   48             art\tiles\road13.frm
@@ -1197,7 +1197,7 @@ tile       18   50             art\tiles\edg5003.frm
 tile       20   50             art\tiles\edg7003.frm
 tile       22   50             art\tiles\road25.frm
 roof       22   50             art\tiles\tp060.frm
-tile_l     24   50           3 art\tiles\curb23.frm
+tile       24   50             art\tiles\curb23.frm
 tile       26   50             art\tiles\curb08.frm
 tile       28   50             art\tiles\road19.frm
 tile       30   50             art\tiles\road32.frm
@@ -1301,7 +1301,7 @@ tile       18   52             art\tiles\edg5002.frm
 tile       20   52             art\tiles\edg1002.frm
 tile       22   52             art\tiles\road26.frm
 roof       22   52             art\tiles\tp063.frm
-tile_l     24   52           3 art\tiles\curb17.frm
+tile       24   52             art\tiles\curb17.frm
 tile       26   52             art\tiles\curb08.frm
 tile       28   52             art\tiles\road38.frm
 tile       30   52             art\tiles\road33.frm
@@ -1388,7 +1388,7 @@ tile       18   54             art\tiles\edg5000.frm
 tile       20   54             art\tiles\edg1003.frm
 tile       22   54             art\tiles\road27.frm
 roof       22   54             art\tiles\tp065.frm
-tile_l     24   54           3 art\tiles\curb16.frm
+tile       24   54             art\tiles\curb16.frm
 tile       26   54             art\tiles\curb08.frm
 tile       28   54             art\tiles\road02.frm
 tile       30   54             art\tiles\road32.frm
@@ -1469,8 +1469,8 @@ tile       16   56             art\tiles\road31.frm
 tile       18   56             art\tiles\edg5003.frm
 tile       20   56             art\tiles\edg6011.frm
 tile       22   56             art\tiles\road28.frm
-tile_l     24   56           3 art\tiles\curb20.frm
-tile_l     26   56           3 art\tiles\curb44.frm
+tile       24   56             art\tiles\curb20.frm
+tile       26   56             art\tiles\curb44.frm
 tile       28   56             art\tiles\road02.frm
 tile       30   56             art\tiles\road16.frm
 tile       32   56             art\tiles\road17.frm
@@ -1548,7 +1548,7 @@ tile       16   58             art\tiles\edg7000.frm
 tile       18   58             art\tiles\edg5002.frm
 tile       20   58             art\tiles\edg5000.frm
 tile       22   58             art\tiles\edg1003.frm
-tile_l     24   58           3 art\tiles\curb24.frm
+tile       24   58             art\tiles\curb24.frm
 tile       26   58             art\tiles\curb08.frm
 tile       28   58             art\tiles\road02.frm
 tile       30   58             art\tiles\road02.frm
@@ -1625,9 +1625,9 @@ tile       16   60             art\tiles\edg2000.frm
 tile       18   60             art\tiles\edg5005.frm
 tile       20   60             art\tiles\edg5002.frm
 tile       22   60             art\tiles\edg6011.frm
-tile_l     24   60           3 art\tiles\curb34.frm
-tile_l     26   60           3 art\tiles\curb39.frm
-tile_l     28   60           3 art\tiles\road52.frm
+tile       24   60             art\tiles\curb34.frm
+tile       26   60             art\tiles\curb39.frm
+tile       28   60             art\tiles\road52.frm
 tile       30   60             art\tiles\road02.frm
 tile       32   60             art\tiles\road02.frm
 tile       34   60             art\tiles\curb11.frm
@@ -1702,10 +1702,10 @@ tile       16   62             art\tiles\edg5003.frm
 tile       18   62             art\tiles\edg5000.frm
 tile       20   62             art\tiles\edg5004.frm
 tile       22   62             art\tiles\edg5000.frm
-tile_l     24   62           3 art\tiles\edgs001.frm
-tile_l     26   62           3 art\tiles\edgs000.frm
-tile_l     28   62           3 art\tiles\road28.frm
-tile_l     30   62           3 art\tiles\road52.frm
+tile       24   62             art\tiles\edgs001.frm
+tile       26   62             art\tiles\edgs000.frm
+tile       28   62             art\tiles\road28.frm
+tile       30   62             art\tiles\road52.frm
 tile       32   62             art\tiles\road02.frm
 tile       34   62             art\tiles\curb11.frm
 tile       36   62             art\tiles\curb16.frm
@@ -1779,10 +1779,10 @@ tile       16   64             art\tiles\edg5002.frm
 tile       18   64             art\tiles\edg5006.frm
 tile       20   64             art\tiles\edg5001.frm
 tile       22   64             art\tiles\edg7001.frm
-tile_l     24   64           3 art\tiles\edg6011.frm
-tile_l     26   64           3 art\tiles\edg6010.frm
-tile_l     28   64           3 art\tiles\edg6002.frm
-tile_l     30   64           3 art\tiles\road26.frm
+tile       24   64             art\tiles\edg6011.frm
+tile       26   64             art\tiles\edg6010.frm
+tile       28   64             art\tiles\edg6002.frm
+tile       30   64             art\tiles\road26.frm
 tile       32   64             art\tiles\road02.frm
 tile       34   64             art\tiles\curb11.frm
 tile       36   64             art\tiles\curb16.frm
@@ -1874,10 +1874,10 @@ tile       18   66             art\tiles\edg5001.frm
 tile       20   66             art\tiles\edg6003.frm
 tile       22   66             art\tiles\road25.frm
 roof       22   66             art\tiles\tp028.frm
-tile_l     24   66           3 art\tiles\edg6006.frm
-tile_l     26   66           3 art\tiles\edg6005.frm
-tile_l     28   66           3 art\tiles\edg6004.frm
-tile_l     30   66           3 art\tiles\road27.frm
+tile       24   66             art\tiles\edg6006.frm
+tile       26   66             art\tiles\edg6005.frm
+tile       28   66             art\tiles\edg6004.frm
+tile       30   66             art\tiles\road27.frm
 tile       32   66             art\tiles\road02.frm
 tile       34   66             art\tiles\curb10.frm
 tile       36   66             art\tiles\curb02.frm
@@ -1955,7 +1955,7 @@ roof       128  66             art\tiles\tp077.frm
 tile       130  66             art\tiles\curb16.frm
 tile       132  66             art\tiles\curb16.frm
 tile       134  66             art\tiles\curb16.frm
-tile_l     136  66           3 art\tiles\curb19.frm
+tile       136  66             art\tiles\curb19.frm
 tile       138  66             art\tiles\curb16.frm
 tile       140  66             art\tiles\curb08.frm
 tile       142  66             art\tiles\edg4003.frm
@@ -1968,8 +1968,8 @@ tile       18   68             art\tiles\edg6001.frm
 tile       20   68             art\tiles\edg3001.frm
 tile       22   68             art\tiles\road26.frm
 roof       22   68             art\tiles\tp029.frm
-tile_l     24   68           3 art\tiles\curb28.frm
-tile_l     26   68           3 art\tiles\curb37.frm
+tile       24   68             art\tiles\curb28.frm
+tile       26   68             art\tiles\curb37.frm
 tile       28   68             art\tiles\edg7001.frm
 tile       30   68             art\tiles\road28.frm
 tile       32   68             art\tiles\road11.frm
@@ -2065,8 +2065,8 @@ tile       18   70             art\tiles\edg4008.frm
 tile       20   70             art\tiles\edg4006.frm
 tile       22   70             art\tiles\road27.frm
 roof       22   70             art\tiles\tp011.frm
-tile_l     24   70           3 art\tiles\curb16.frm
-tile_l     26   70           3 art\tiles\curb08.frm
+tile       24   70             art\tiles\curb16.frm
+tile       26   70             art\tiles\curb08.frm
 tile       28   70             art\tiles\edg7002.frm
 tile       30   70             art\tiles\edgs000.frm
 tile       32   70             art\tiles\edg7003.frm
@@ -2164,8 +2164,8 @@ tile       18   72             art\tiles\edg4001.frm
 tile       20   72             art\tiles\edg4005.frm
 tile       22   72             art\tiles\road26.frm
 roof       22   72             art\tiles\tp012.frm
-tile_l     24   72           3 art\tiles\curb16.frm
-tile_l     26   72           3 art\tiles\curb08.frm
+tile       24   72             art\tiles\curb16.frm
+tile       26   72             art\tiles\curb08.frm
 tile       28   72             art\tiles\edg2002.frm
 tile       30   72             art\tiles\edg6008.frm
 tile       32   72             art\tiles\edg1000.frm
@@ -2262,7 +2262,7 @@ tile       18   74             art\tiles\edg6009.frm
 tile       20   74             art\tiles\edg4007.frm
 tile       22   74             art\tiles\road27.frm
 roof       22   74             art\tiles\tp013.frm
-tile_l     24   74           3 art\tiles\curb19.frm
+tile       24   74             art\tiles\curb19.frm
 tile       26   74             art\tiles\curb08.frm
 tile       28   74             art\tiles\road22.frm
 tile       30   74             art\tiles\edg1003.frm
@@ -2360,7 +2360,7 @@ tile       18   76             art\tiles\edg1000.frm
 tile       20   76             art\tiles\edg2000.frm
 tile       22   76             art\tiles\road26.frm
 roof       22   76             art\tiles\tp011.frm
-tile_l     24   76           3 art\tiles\curb16.frm
+tile       24   76             art\tiles\curb16.frm
 tile       26   76             art\tiles\curb08.frm
 tile       28   76             art\tiles\road33.frm
 tile       30   76             art\tiles\edgs001.frm
@@ -2459,7 +2459,7 @@ tile       20   78             art\tiles\road24.frm
 roof       20   78             art\tiles\tp024.frm
 tile       22   78             art\tiles\road19.frm
 roof       22   78             art\tiles\tp034.frm
-tile_l     24   78           3 art\tiles\curb16.frm
+tile       24   78             art\tiles\curb16.frm
 tile       26   78             art\tiles\curb08.frm
 tile       28   78             art\tiles\road16.frm
 tile       30   78             art\tiles\road23.frm
@@ -2467,8 +2467,8 @@ tile       32   78             art\tiles\road22.frm
 tile       34   78             art\tiles\edgs004.frm
 tile       36   78             art\tiles\edg6006.frm
 tile       38   78             art\tiles\edg6005.frm
-tile_l     40   78           3 art\tiles\edg1000.frm
-tile_l     42   78           3 art\tiles\edg1002.frm
+tile       40   78             art\tiles\edg1000.frm
+tile       42   78             art\tiles\edg1002.frm
 tile       44   78             art\tiles\edg4001.frm
 tile       46   78             art\tiles\road28.frm
 tile       48   78             art\tiles\road30.frm
@@ -2547,7 +2547,7 @@ tile       20   80             art\tiles\road29.frm
 roof       20   80             art\tiles\tp021.frm
 tile       22   80             art\tiles\road10.frm
 roof       22   80             art\tiles\tp014.frm
-tile_l     24   80           3 art\tiles\curb16.frm
+tile       24   80             art\tiles\curb16.frm
 tile       26   80             art\tiles\curb08.frm
 tile       28   80             art\tiles\road38.frm
 tile       30   80             art\tiles\road02.frm
@@ -2557,7 +2557,7 @@ tile       36   80             art\tiles\edg6003.frm
 tile       38   80             art\tiles\road25.frm
 tile       40   80             art\tiles\road24.frm
 tile       42   80             art\tiles\road22.frm
-tile_l     44   80           3 art\tiles\edg1001.frm
+tile       44   80             art\tiles\edg1001.frm
 tile       46   80             art\tiles\edg4002.frm
 tile       48   80             art\tiles\edg2003.frm
 tile       50   80             art\tiles\edg2003.frm
@@ -2635,7 +2635,7 @@ tile       18   82             art\tiles\edg1000.frm
 tile       20   82             art\tiles\edg2000.frm
 tile       22   82             art\tiles\road26.frm
 roof       22   82             art\tiles\tp013.frm
-tile_l     24   82           3 art\tiles\curb16.frm
+tile       24   82             art\tiles\curb16.frm
 tile       26   82             art\tiles\curb08.frm
 tile       28   82             art\tiles\road13.frm
 tile       30   82             art\tiles\road11.frm
@@ -2645,7 +2645,7 @@ tile       36   82             art\tiles\edg6002.frm
 tile       38   82             art\tiles\road26.frm
 tile       40   82             art\tiles\road37.frm
 tile       42   82             art\tiles\road33.frm
-tile_l     44   82           3 art\tiles\edg1002.frm
+tile       44   82             art\tiles\edg1002.frm
 tile       46   82             art\tiles\edg4002.frm
 tile       48   82             art\tiles\edg4002.frm
 tile       50   82             art\tiles\edg4001.frm
@@ -2734,8 +2734,8 @@ tile       154  82             art\tiles\road02.frm
 tile       20   84             art\tiles\edg7002.frm
 tile       22   84             art\tiles\road27.frm
 roof       22   84             art\tiles\tp012.frm
-tile_l     24   84           3 art\tiles\curb16.frm
-tile_l     26   84           3 art\tiles\curb08.frm
+tile       24   84             art\tiles\curb16.frm
+tile       26   84             art\tiles\curb08.frm
 tile       28   84             art\tiles\road32.frm
 tile       30   84             art\tiles\edgs002.frm
 tile       32   84             art\tiles\edgs001.frm
@@ -2744,7 +2744,7 @@ tile       36   84             art\tiles\edg6005.frm
 tile       38   84             art\tiles\road28.frm
 tile       40   84             art\tiles\road10.frm
 tile       42   84             art\tiles\road32.frm
-tile_l     44   84           3 art\tiles\edg1001.frm
+tile       44   84             art\tiles\edg1001.frm
 tile       46   84             art\tiles\edgs000.frm
 tile       48   84             art\tiles\edg3000.frm
 tile       50   84             art\tiles\edg2003.frm
@@ -2833,8 +2833,8 @@ tile       156  84             art\tiles\road02.frm
 roof       20   86             art\tiles\tp053.frm
 tile       22   86             art\tiles\road26.frm
 roof       22   86             art\tiles\tp052.frm
-tile_l     24   86           3 art\tiles\curb16.frm
-tile_l     26   86           3 art\tiles\curb08.frm
+tile       24   86             art\tiles\curb16.frm
+tile       26   86             art\tiles\curb08.frm
 tile       28   86             art\tiles\road31.frm
 tile       30   86             art\tiles\edgs001.frm
 tile       32   86             art\tiles\edg5000.frm
@@ -2926,8 +2926,8 @@ roof       18   88             art\tiles\tp040.frm
 roof       20   88             art\tiles\tp035.frm
 tile       22   88             art\tiles\road19.frm
 roof       22   88             art\tiles\tp051.frm
-tile_l     24   88           3 art\tiles\curb16.frm
-tile_l     26   88           3 art\tiles\curb08.frm
+tile       24   88             art\tiles\curb16.frm
+tile       26   88             art\tiles\curb08.frm
 tile       28   88             art\tiles\edgs002.frm
 tile       30   88             art\tiles\edg6001.frm
 tile       32   88             art\tiles\edg2001.frm
@@ -2935,7 +2935,7 @@ tile       34   88             art\tiles\edgs004.frm
 tile       36   88             art\tiles\edg6005.frm
 tile       38   88             art\tiles\edg4000.frm
 tile       40   88             art\tiles\edg2003.frm
-tile_l     42   88           3 art\tiles\edgs002.frm
+tile       42   88             art\tiles\edgs002.frm
 tile       44   88             art\tiles\edgs003.frm
 tile       46   88             art\tiles\road27.frm
 tile       48   88             art\tiles\road02.frm
@@ -3020,8 +3020,8 @@ tile       152  88             art\tiles\road28.frm
 tile       154  88             art\tiles\road52.frm
 tile       156  88             art\tiles\road02.frm
 tile       158  88             art\tiles\road02.frm
-tile_l     24   90           3 art\tiles\curb16.frm
-tile_l     26   90           3 art\tiles\curb08.frm
+tile       24   90             art\tiles\curb16.frm
+tile       26   90             art\tiles\curb08.frm
 tile       28   90             art\tiles\edg7003.frm
 tile       30   90             art\tiles\road25.frm
 tile       32   90             art\tiles\road24.frm
@@ -3115,7 +3115,7 @@ tile       154  90             art\tiles\road27.frm
 tile       156  90             art\tiles\road02.frm
 tile       158  90             art\tiles\road02.frm
 tile       160  90             art\tiles\road02.frm
-tile_l     26   92           3 art\tiles\curb08.frm
+tile       26   92             art\tiles\curb08.frm
 tile       28   92             art\tiles\edg4002.frm
 tile       30   92             art\tiles\road20.frm
 tile       32   92             art\tiles\road35.frm
@@ -3209,7 +3209,7 @@ tile       154  92             art\tiles\road26.frm
 tile       156  92             art\tiles\road02.frm
 tile       158  92             art\tiles\road02.frm
 tile       160  92             art\tiles\road02.frm
-tile_l     26   94           3 art\tiles\curb08.frm
+tile       26   94             art\tiles\curb08.frm
 tile       28   94             art\tiles\road17.frm
 tile       30   94             art\tiles\road19.frm
 tile       32   94             art\tiles\road02.frm
@@ -3219,7 +3219,7 @@ tile       38   94             art\tiles\edgs001.frm
 tile       40   94             art\tiles\edgs002.frm
 tile       42   94             art\tiles\edg6008.frm
 tile       44   94             art\tiles\edg5005.frm
-tile_l     46   94           3 art\tiles\edg1003.frm
+tile       46   94             art\tiles\edg1003.frm
 tile       48   94             art\tiles\road27.frm
 tile       50   94             art\tiles\road02.frm
 tile       52   94             art\tiles\road02.frm
@@ -3309,10 +3309,10 @@ tile       32   96             art\tiles\road29.frm
 tile       34   96             art\tiles\road10.frm
 tile       36   96             art\tiles\road53.frm
 tile       38   96             art\tiles\road22.frm
-tile_l     40   96           3 art\tiles\edg1003.frm
+tile       40   96             art\tiles\edg1003.frm
 tile       42   96             art\tiles\edg4000.frm
 tile       44   96             art\tiles\edg2003.frm
-tile_l     46   96           3 art\tiles\edg3000.frm
+tile       46   96             art\tiles\edg3000.frm
 tile       48   96             art\tiles\road28.frm
 tile       50   96             art\tiles\road52.frm
 tile       52   96             art\tiles\road02.frm
@@ -3391,11 +3391,11 @@ tile       32   98             art\tiles\edg4001.frm
 tile       34   98             art\tiles\road28.frm
 tile       36   98             art\tiles\road29.frm
 tile       38   98             art\tiles\road31.frm
-tile_l     40   98           3 art\tiles\edg1003.frm
+tile       40   98             art\tiles\edg1003.frm
 tile       42   98             art\tiles\edg3000.frm
 tile       44   98             art\tiles\edg4002.frm
-tile_l     46   98           3 art\tiles\edgs002.frm
-tile_l     48   98           3 art\tiles\edg1001.frm
+tile       46   98             art\tiles\edgs002.frm
+tile       48   98             art\tiles\edg1001.frm
 tile       50   98             art\tiles\road26.frm
 tile       52   98             art\tiles\road02.frm
 tile       54   98             art\tiles\road02.frm
@@ -3472,9 +3472,9 @@ tile       34   100            art\tiles\edg4002.frm
 roof       34   100            art\tiles\tp016.frm
 tile       36   100            art\tiles\edg3000.frm
 roof       36   100            art\tiles\tp024.frm
-tile_l     38   100          3 art\tiles\edg2000.frm
+tile       38   100            art\tiles\edg2000.frm
 roof       38   100            art\tiles\tp027.frm
-tile_l     40   100          3 art\tiles\edg1002.frm
+tile       40   100            art\tiles\edg1002.frm
 roof       40   100            art\tiles\tp024.frm
 tile       42   100            art\tiles\curb42.frm
 roof       42   100            art\tiles\tp024.frm
@@ -3532,7 +3532,7 @@ tile       106  100            art\tiles\curb08.frm
 tile       108  100            art\tiles\road02.frm
 tile       110  100            art\tiles\road02.frm
 tile       112  100            art\tiles\road02.frm
-tile_l     114  100          3 art\tiles\curb11.frm
+tile       114  100            art\tiles\curb11.frm
 tile       116  100            art\tiles\curb21.frm
 tile       118  100            art\tiles\curb31.frm
 tile       120  100            art\tiles\curb20.frm
@@ -3551,29 +3551,29 @@ tile       144  100            art\tiles\road02.frm
 tile       146  100            art\tiles\road02.frm
 tile       148  100            art\tiles\road02.frm
 tile       150  100            art\tiles\road02.frm
-tile_l     32   102          3 art\tiles\road29.frm
+tile       32   102            art\tiles\road29.frm
 roof       32   102            art\tiles\tp018.frm
-tile_l     34   102          3 art\tiles\road29.frm
+tile       34   102            art\tiles\road29.frm
 roof       34   102            art\tiles\tp017.frm
-tile_l     36   102          3 art\tiles\road30.frm
+tile       36   102            art\tiles\road30.frm
 roof       36   102            art\tiles\tp025.frm
-tile_l     38   102          3 art\tiles\road29.frm
+tile       38   102            art\tiles\road29.frm
 roof       38   102            art\tiles\tp025.frm
-tile_l     40   102          3 art\tiles\road52.frm
+tile       40   102            art\tiles\road52.frm
 roof       40   102            art\tiles\tp014.frm
-tile_l     42   102          3 art\tiles\road50.frm
+tile       42   102            art\tiles\road50.frm
 roof       42   102            art\tiles\tp026.frm
-tile_l     44   102          3 art\tiles\road30.frm
+tile       44   102            art\tiles\road30.frm
 roof       44   102            art\tiles\tp021.frm
-tile_l     46   102          3 art\tiles\road29.frm
+tile       46   102            art\tiles\road29.frm
 roof       46   102            art\tiles\tp021.frm
-tile_l     48   102          3 art\tiles\road29.frm
+tile       48   102            art\tiles\road29.frm
 roof       48   102            art\tiles\tp018.frm
-tile_l     50   102          3 art\tiles\road52.frm
+tile       50   102            art\tiles\road52.frm
 roof       50   102            art\tiles\tp014.frm
 tile       52   102            art\tiles\curb21.frm
-tile_l     54   102          3 art\tiles\curb39.frm
-tile_l     56   102          3 art\tiles\road52.frm
+tile       54   102            art\tiles\curb39.frm
+tile       56   102            art\tiles\road52.frm
 tile       58   102            art\tiles\road02.frm
 tile       60   102            art\tiles\road02.frm
 tile       62   102            art\tiles\curb11.frm
@@ -3623,16 +3623,16 @@ tile       146  102            art\tiles\road02.frm
 tile       34   104            art\tiles\edgs002.frm
 tile       36   104            art\tiles\edg5005.frm
 tile       38   104            art\tiles\edg5002.frm
-tile_l     40   104          3 art\tiles\road28.frm
-tile_l     42   104          3 art\tiles\road31.frm
+tile       40   104            art\tiles\road28.frm
+tile       42   104            art\tiles\road31.frm
 tile       44   104            art\tiles\edg5003.frm
 tile       46   104            art\tiles\edg5002.frm
 tile       48   104            art\tiles\edg5005.frm
-tile_l     50   104          3 art\tiles\road28.frm
+tile       50   104            art\tiles\road28.frm
 roof       50   104            art\tiles\tp048.frm
 tile       52   104            art\tiles\curb26.frm
-tile_l     54   104          3 art\tiles\edg6004.frm
-tile_l     56   104          3 art\tiles\road27.frm
+tile       54   104            art\tiles\edg6004.frm
+tile       56   104            art\tiles\road27.frm
 tile       58   104            art\tiles\road02.frm
 tile       60   104            art\tiles\road02.frm
 tile       62   104            art\tiles\curb10.frm
@@ -3683,10 +3683,10 @@ tile       42   106            art\tiles\edg5004.frm
 tile       44   106            art\tiles\edg5000.frm
 tile       46   106            art\tiles\edg5003.frm
 tile       48   106            art\tiles\edg5000.frm
-tile_l     50   106          3 art\tiles\curb34.frm
+tile       50   106            art\tiles\curb34.frm
 tile       52   106            art\tiles\curb32.frm
 tile       54   106            art\tiles\edg1001.frm
-tile_l     56   106          3 art\tiles\road26.frm
+tile       56   106            art\tiles\road26.frm
 tile       58   106            art\tiles\road02.frm
 tile       60   106            art\tiles\road02.frm
 tile       62   106            art\tiles\road02.frm
@@ -3739,9 +3739,9 @@ tile       48   108            art\tiles\edg6002.frm
 tile       50   108            art\tiles\edg5001.frm
 tile       52   108            art\tiles\edg6006.frm
 tile       54   108            art\tiles\edg3000.frm
-tile_l     56   108          3 art\tiles\road28.frm
-tile_l     58   108          3 art\tiles\road29.frm
-tile_l     60   108          3 art\tiles\road52.frm
+tile       56   108            art\tiles\road28.frm
+tile       58   108            art\tiles\road29.frm
+tile       60   108            art\tiles\road52.frm
 tile       62   108            art\tiles\road02.frm
 tile       64   108            art\tiles\road13.frm
 tile       66   108            art\tiles\road31.frm
@@ -3785,12 +3785,12 @@ tile       42   110            art\tiles\edg5000.frm
 tile       44   110            art\tiles\edg1001.frm
 tile       46   110            art\tiles\edg6009.frm
 tile       48   110            art\tiles\edg1001.frm
-tile_l     50   110          3 art\tiles\curb35.frm
+tile       50   110            art\tiles\curb35.frm
 tile       52   110            art\tiles\curb33.frm
 tile       54   110            art\tiles\edg6010.frm
-tile_l     56   110          3 art\tiles\edg6005.frm
-tile_l     58   110          3 art\tiles\edg6001.frm
-tile_l     60   110          3 art\tiles\road27.frm
+tile       56   110            art\tiles\edg6005.frm
+tile       58   110            art\tiles\edg6001.frm
+tile       60   110            art\tiles\road27.frm
 tile       62   110            art\tiles\road02.frm
 tile       64   110            art\tiles\road31.frm
 tile       66   110            art\tiles\edgs000.frm
@@ -3828,19 +3828,19 @@ tile       128  110            art\tiles\curb16.frm
 tile       130  110            art\tiles\curb16.frm
 tile       40   112            art\tiles\edg5001.frm
 tile       42   112            art\tiles\edg5000.frm
-tile_l     44   112          3 art\tiles\road25.frm
-tile_l     46   112          3 art\tiles\road23.frm
+tile       44   112            art\tiles\road25.frm
+tile       46   112            art\tiles\road23.frm
 roof       46   112            art\tiles\tp038.frm
-tile_l     48   112          3 art\tiles\road24.frm
+tile       48   112            art\tiles\road24.frm
 roof       48   112            art\tiles\tp070.frm
-tile_l     50   112          3 art\tiles\road22.frm
+tile       50   112            art\tiles\road22.frm
 roof       50   112            art\tiles\tp045.frm
 tile       52   112            art\tiles\curb22.frm
 tile       54   112            art\tiles\curb28.frm
-tile_l     56   112          3 art\tiles\curb33.frm
-tile_l     58   112          3 art\tiles\curb42.frm
-tile_l     60   112          3 art\tiles\curb13.frm
-tile_l     62   112          3 art\tiles\curb13.frm
+tile       56   112            art\tiles\curb33.frm
+tile       58   112            art\tiles\curb42.frm
+tile       60   112            art\tiles\curb13.frm
+tile       62   112            art\tiles\curb13.frm
 tile       64   112            art\tiles\curb43.frm
 tile       66   112            art\tiles\edg2002.frm
 tile       68   112            art\tiles\edg2001.frm
@@ -3875,17 +3875,17 @@ tile       124  112            art\tiles\curb16.frm
 tile       126  112            art\tiles\curb16.frm
 tile       40   114            art\tiles\edg6006.frm
 tile       42   114            art\tiles\edgs003.frm
-tile_l     44   114          3 art\tiles\road28.frm
-tile_l     46   114          3 art\tiles\road30.frm
+tile       44   114            art\tiles\road28.frm
+tile       46   114            art\tiles\road30.frm
 roof       46   114            art\tiles\tp022.frm
-tile_l     48   114          3 art\tiles\road29.frm
+tile       48   114            art\tiles\road29.frm
 roof       48   114            art\tiles\tp021.frm
-tile_l     50   114          3 art\tiles\road31.frm
+tile       50   114            art\tiles\road31.frm
 roof       50   114            art\tiles\tp014.frm
 tile       52   114            art\tiles\curb16.frm
 tile       54   114            art\tiles\curb16.frm
-tile_l     56   114          3 art\tiles\curb26.frm
-tile_l     58   114          3 art\tiles\curb34.frm
+tile       56   114            art\tiles\curb26.frm
+tile       58   114            art\tiles\curb34.frm
 tile       60   114            art\tiles\curb31.frm
 tile       62   114            art\tiles\curb30.frm
 tile       64   114            art\tiles\curb32.frm
@@ -3907,18 +3907,18 @@ roof       84   114            art\tiles\tp070.frm
 tile       86   114            art\tiles\curb22.frm
 roof       86   114            art\tiles\tp069.frm
 tile       88   114            art\tiles\curb33.frm
-tile_l     90   114          3 art\tiles\edg1003.frm
-tile_l     92   114          3 art\tiles\curb34.frm
-tile_l     94   114          3 art\tiles\curb20.frm
-tile_l     96   114          3 art\tiles\curb16.frm
+tile       90   114            art\tiles\edg1003.frm
+tile       92   114            art\tiles\curb34.frm
+tile       94   114            art\tiles\curb20.frm
+tile       96   114            art\tiles\curb16.frm
 roof       96   114            art\tiles\tp020.frm
-tile_l     98   114          3 art\tiles\curb16.frm
+tile       98   114            art\tiles\curb16.frm
 roof       98   114            art\tiles\tp024.frm
-tile_l     100  114          3 art\tiles\curb16.frm
+tile       100  114            art\tiles\curb16.frm
 roof       100  114            art\tiles\tp027.frm
-tile_l     102  114          3 art\tiles\curb16.frm
+tile       102  114            art\tiles\curb16.frm
 roof       102  114            art\tiles\tp020.frm
-tile_l     104  114          3 art\tiles\curb16.frm
+tile       104  114            art\tiles\curb16.frm
 tile       106  114            art\tiles\curb08.frm
 tile       108  114            art\tiles\road02.frm
 tile       110  114            art\tiles\road32.frm
@@ -3935,10 +3935,10 @@ tile       48   116            art\tiles\edg4002.frm
 tile       50   116            art\tiles\curb34.frm
 tile       52   116            art\tiles\curb30.frm
 tile       54   116            art\tiles\curb20.frm
-tile_l     56   116          3 art\tiles\curb26.frm
-tile_l     58   116          3 art\tiles\edgs000.frm
-tile_l     60   116          3 art\tiles\edgs001.frm
-tile_l     62   116          3 art\tiles\edgs003.frm
+tile       56   116            art\tiles\curb26.frm
+tile       58   116            art\tiles\edgs000.frm
+tile       60   116            art\tiles\edgs001.frm
+tile       62   116            art\tiles\edgs003.frm
 tile       64   116            art\tiles\edg4000.frm
 tile       66   116            art\tiles\edg2003.frm
 tile       68   116            art\tiles\edg4003.frm
@@ -3958,8 +3958,8 @@ roof       84   116            art\tiles\tp022.frm
 tile       86   116            art\tiles\road30.frm
 roof       86   116            art\tiles\tp021.frm
 tile       88   116            art\tiles\road31.frm
-tile_l     90   116          3 art\tiles\edgs004.frm
-tile_l     92   116          3 art\tiles\edg1000.frm
+tile       90   116            art\tiles\edgs004.frm
+tile       92   116            art\tiles\edg1000.frm
 tile       94   116            art\tiles\road28.frm
 tile       96   116            art\tiles\road30.frm
 roof       96   116            art\tiles\tp017.frm
@@ -3967,17 +3967,17 @@ tile       98   116            art\tiles\road29.frm
 roof       98   116            art\tiles\tp018.frm
 tile       100  116            art\tiles\road30.frm
 roof       100  116            art\tiles\tp017.frm
-tile_l     102  116          3 art\tiles\road52.frm
+tile       102  116            art\tiles\road52.frm
 roof       102  116            art\tiles\tp014.frm
-tile_l     104  116          3 art\tiles\curb17.frm
-tile_l     106  116          3 art\tiles\curb21.frm
-tile_l     108  116          3 art\tiles\road30.frm
-tile_l     110  116          3 art\tiles\road31.frm
+tile       104  116            art\tiles\curb17.frm
+tile       106  116            art\tiles\curb21.frm
+tile       108  116            art\tiles\road30.frm
+tile       110  116            art\tiles\road31.frm
 tile       112  116            art\tiles\edg5004.frm
 tile       114  116            art\tiles\curb11.frm
 tile       116  116            art\tiles\curb16.frm
 tile       118  116            art\tiles\curb16.frm
-tile_l     120  116          3 art\tiles\curb16.frm
+tile       120  116            art\tiles\curb16.frm
 tile       42   118            art\tiles\edgs003.frm
 tile       44   118            art\tiles\edg6005.frm
 tile       46   118            art\tiles\edg4007.frm
@@ -3985,10 +3985,10 @@ tile       48   118            art\tiles\edg4008.frm
 tile       50   118            art\tiles\edg4000.frm
 tile       52   118            art\tiles\edg4006.frm
 tile       54   118            art\tiles\curb34.frm
-tile_l     56   118          3 art\tiles\curb32.frm
+tile       56   118            art\tiles\curb32.frm
 tile       58   118            art\tiles\edg1002.frm
 tile       60   118            art\tiles\edg2003.frm
-tile_l     62   118          3 art\tiles\edg4005.frm
+tile       62   118            art\tiles\edg4005.frm
 tile       64   118            art\tiles\edg2003.frm
 tile       66   118            art\tiles\edg4003.frm
 tile       68   118            art\tiles\edg4002.frm
@@ -4010,11 +4010,11 @@ tile       94   118            art\tiles\edgs002.frm
 tile       96   118            art\tiles\edgs004.frm
 tile       98   118            art\tiles\edg2000.frm
 tile       100  118            art\tiles\edg6000.frm
-tile_l     102  118          3 art\tiles\road28.frm
-tile_l     104  118          3 art\tiles\curb16.frm
-tile_l     106  118          3 art\tiles\curb27.frm
-tile_l     108  118          3 art\tiles\edgs004.frm
-tile_l     110  118          3 art\tiles\edgs003.frm
+tile       102  118            art\tiles\road28.frm
+tile       104  118            art\tiles\curb16.frm
+tile       106  118            art\tiles\curb27.frm
+tile       108  118            art\tiles\edgs004.frm
+tile       110  118            art\tiles\edgs003.frm
 tile       112  118            art\tiles\edg5005.frm
 tile       114  118            art\tiles\curb11.frm
 tile       116  118            art\tiles\curb16.frm
@@ -4024,10 +4024,10 @@ tile       48   120            art\tiles\edg1001.frm
 tile       50   120            art\tiles\edg6008.frm
 tile       52   120            art\tiles\edgs001.frm
 tile       54   120            art\tiles\edg6009.frm
-tile_l     56   120          3 art\tiles\edgs003.frm
+tile       56   120            art\tiles\edgs003.frm
 tile       58   120            art\tiles\edg1003.frm
 tile       60   120            art\tiles\edg4002.frm
-tile_l     62   120          3 art\tiles\edg4000.frm
+tile       62   120            art\tiles\edg4000.frm
 tile       64   120            art\tiles\edg4001.frm
 tile       66   120            art\tiles\edg4000.frm
 tile       68   120            art\tiles\edg2003.frm
@@ -4044,33 +4044,33 @@ tile       84   120            art\tiles\edg5007.frm
 tile       86   120            art\tiles\edg1002.frm
 tile       88   120            art\tiles\edg2003.frm
 tile       90   120            art\tiles\edg2003.frm
-tile_l     92   120          3 art\tiles\road25.frm
+tile       92   120            art\tiles\road25.frm
 roof       92   120            art\tiles\tp029.frm
-tile_l     94   120          3 art\tiles\road22.frm
+tile       94   120            art\tiles\road22.frm
 roof       94   120            art\tiles\tp032.frm
 tile       96   120            art\tiles\edg6004.frm
 tile       98   120            art\tiles\edg6000.frm
 tile       100  120            art\tiles\edg4005.frm
 tile       102  120            art\tiles\curb34.frm
-tile_l     104  120          3 art\tiles\curb31.frm
-tile_l     106  120          3 art\tiles\curb32.frm
-tile_l     108  120          3 art\tiles\edgs001.frm
-tile_l     110  120          3 art\tiles\edgs000.frm
+tile       104  120            art\tiles\curb31.frm
+tile       106  120            art\tiles\curb32.frm
+tile       108  120            art\tiles\edgs001.frm
+tile       110  120            art\tiles\edgs000.frm
 tile       112  120            art\tiles\edg5007.frm
 tile       46   122            art\tiles\edg5000.frm
 tile       48   122            art\tiles\edg5000.frm
 tile       50   122            art\tiles\edg5000.frm
 tile       52   122            art\tiles\edg5003.frm
 tile       54   122            art\tiles\edg6011.frm
-tile_l     56   122          3 art\tiles\edgs002.frm
+tile       56   122            art\tiles\edgs002.frm
 tile       58   122            art\tiles\edgs000.frm
 tile       60   122            art\tiles\edg4002.frm
-tile_l     62   122          3 art\tiles\edg4005.frm
+tile       62   122            art\tiles\edg4005.frm
 tile       64   122            art\tiles\edg2003.frm
 tile       66   122            art\tiles\edg3000.frm
 tile       68   122            art\tiles\edg6008.frm
-tile_l     70   122          3 art\tiles\edg4004.frm
-tile_l     72   122          3 art\tiles\edg4002.frm
+tile       70   122            art\tiles\edg4004.frm
+tile       72   122            art\tiles\edg4002.frm
 tile       74   122            art\tiles\edg3000.frm
 tile       76   122            art\tiles\edg4003.frm
 tile       78   122            art\tiles\road28.frm
@@ -4080,69 +4080,69 @@ tile       84   122            art\tiles\edg5000.frm
 tile       86   122            art\tiles\edg1003.frm
 tile       88   122            art\tiles\edg4002.frm
 tile       90   122            art\tiles\edg4001.frm
-tile_l     92   122          3 art\tiles\road26.frm
+tile       92   122            art\tiles\road26.frm
 roof       92   122            art\tiles\tp030.frm
-tile_l     94   122          3 art\tiles\road53.frm
+tile       94   122            art\tiles\road53.frm
 roof       94   122            art\tiles\tp037.frm
-tile_l     96   122          3 art\tiles\road24.frm
+tile       96   122            art\tiles\road24.frm
 roof       96   122            art\tiles\tp020.frm
-tile_l     98   122          3 art\tiles\road22.frm
+tile       98   122            art\tiles\road22.frm
 tile       100  122            art\tiles\edg1003.frm
-tile_l     102  122          3 art\tiles\edg1000.frm
-tile_l     104  122          3 art\tiles\edg4004.frm
-tile_l     106  122          3 art\tiles\edg4005.frm
-tile_l     108  122          3 art\tiles\edg4000.frm
+tile       102  122            art\tiles\edg1000.frm
+tile       104  122            art\tiles\edg4004.frm
+tile       106  122            art\tiles\edg4005.frm
+tile       108  122            art\tiles\edg4000.frm
 tile       46   124            art\tiles\edg5002.frm
 tile       48   124            art\tiles\edg5005.frm
 tile       50   124            art\tiles\edg5006.frm
 tile       52   124            art\tiles\edg5002.frm
 tile       54   124            art\tiles\edg6003.frm
-tile_l     56   124          3 art\tiles\edg1002.frm
+tile       56   124            art\tiles\edg1002.frm
 tile       58   124            art\tiles\edg4000.frm
 tile       60   124            art\tiles\edg4000.frm
-tile_l     62   124          3 art\tiles\edg4004.frm
-tile_l     64   124          3 art\tiles\edg4007.frm
-tile_l     66   124          3 art\tiles\edg4005.frm
-tile_l     68   124          3 art\tiles\edg6004.frm
-tile_l     70   124          3 art\tiles\edg6001.frm
-tile_l     72   124          3 art\tiles\edg4003.frm
+tile       62   124            art\tiles\edg4004.frm
+tile       64   124            art\tiles\edg4007.frm
+tile       66   124            art\tiles\edg4005.frm
+tile       68   124            art\tiles\edg6004.frm
+tile       70   124            art\tiles\edg6001.frm
+tile       72   124            art\tiles\edg4003.frm
 tile       74   124            art\tiles\edgs000.frm
 tile       76   124            art\tiles\edg3000.frm
 tile       78   124            art\tiles\edg4000.frm
 tile       80   124            art\tiles\edg2000.frm
 tile       82   124            art\tiles\edg7002.frm
-tile_l     84   124          3 art\tiles\edg2001.frm
-tile_l     86   124          3 art\tiles\edgs003.frm
+tile       84   124            art\tiles\edg2001.frm
+tile       86   124            art\tiles\edgs003.frm
 tile       88   124            art\tiles\edg4002.frm
 tile       90   124            art\tiles\edg4003.frm
-tile_l     92   124          3 art\tiles\road28.frm
+tile       92   124            art\tiles\road28.frm
 tile       94   124            art\tiles\road29.frm
 roof       94   124            art\tiles\tp025.frm
-tile_l     96   124          3 art\tiles\road29.frm
+tile       96   124            art\tiles\road29.frm
 roof       96   124            art\tiles\tp025.frm
 tile       98   124            art\tiles\road31.frm
 tile       100  124            art\tiles\edg2001.frm
 tile       102  124            art\tiles\edg3000.frm
-tile_l     104  124          3 art\tiles\edg4003.frm
-tile_l     48   126          3 art\tiles\curb28.frm
-tile_l     50   126          3 art\tiles\curb29.frm
+tile       104  124            art\tiles\edg4003.frm
+tile       48   126            art\tiles\curb28.frm
+tile       50   126            art\tiles\curb29.frm
 tile       52   126            art\tiles\curb29.frm
 tile       54   126            art\tiles\curb28.frm
-tile_l     56   126          3 art\tiles\curb33.frm
-tile_l     58   126          3 art\tiles\edg1000.frm
-tile_l     60   126          3 art\tiles\edg1001.frm
-tile_l     62   126          3 art\tiles\edg1000.frm
-tile_l     64   126          3 art\tiles\edg1000.frm
-tile_l     66   126          3 art\tiles\edg6003.frm
+tile       56   126            art\tiles\curb33.frm
+tile       58   126            art\tiles\edg1000.frm
+tile       60   126            art\tiles\edg1001.frm
+tile       62   126            art\tiles\edg1000.frm
+tile       64   126            art\tiles\edg1000.frm
+tile       66   126            art\tiles\edg6003.frm
 tile       68   126            art\tiles\edg6006.frm
 tile       70   126            art\tiles\edg6007.frm
-tile_l     72   126          3 art\tiles\edg1001.frm
+tile       72   126            art\tiles\edg1001.frm
 tile       74   126            art\tiles\edg1001.frm
 tile       76   126            art\tiles\edg1000.frm
 tile       78   126            art\tiles\edg4001.frm
 tile       80   126            art\tiles\edg4000.frm
 tile       82   126            art\tiles\edg2003.frm
-tile_l     84   126          3 art\tiles\edg3000.frm
+tile       84   126            art\tiles\edg3000.frm
 tile       86   126            art\tiles\edg4000.frm
 tile       88   126            art\tiles\edg4000.frm
 tile       90   126            art\tiles\edg4002.frm
@@ -4152,56 +4152,56 @@ tile       96   126            art\tiles\edg4005.frm
 tile       98   126            art\tiles\edg2000.frm
 tile       100  126            art\tiles\edg2003.frm
 tile       102  126            art\tiles\edgs002.frm
-tile_l     50   128          3 art\tiles\curb16.frm
+tile       50   128            art\tiles\curb16.frm
 tile       52   128            art\tiles\curb16.frm
 tile       54   128            art\tiles\curb18.frm
-tile_l     56   128          3 art\tiles\curb27.frm
-tile_l     58   128          3 art\tiles\edg1003.frm
-tile_l     60   128          3 art\tiles\edg6007.frm
-tile_l     62   128          3 art\tiles\edg4002.frm
-tile_l     64   128          3 art\tiles\edg4000.frm
-tile_l     66   128          3 art\tiles\edg6005.frm
+tile       56   128            art\tiles\curb27.frm
+tile       58   128            art\tiles\edg1003.frm
+tile       60   128            art\tiles\edg6007.frm
+tile       62   128            art\tiles\edg4002.frm
+tile       64   128            art\tiles\edg4000.frm
+tile       66   128            art\tiles\edg6005.frm
 tile       68   128            art\tiles\edg4001.frm
 tile       70   128            art\tiles\edg4000.frm
 tile       72   128            art\tiles\edg5000.frm
 tile       74   128            art\tiles\edg5000.frm
-tile_l     76   128          3 art\tiles\edg1003.frm
+tile       76   128            art\tiles\edg1003.frm
 tile       78   128            art\tiles\edg2003.frm
 tile       80   128            art\tiles\edg3000.frm
 tile       82   128            art\tiles\edg4002.frm
-tile_l     84   128          3 art\tiles\edgs002.frm
+tile       84   128            art\tiles\edgs002.frm
 tile       86   128            art\tiles\edg6008.frm
 tile       88   128            art\tiles\edgs000.frm
 tile       90   128            art\tiles\edgs000.frm
 tile       92   128            art\tiles\edgs001.frm
 tile       94   128            art\tiles\edg6004.frm
 tile       96   128            art\tiles\edg6000.frm
-tile_l     50   130          3 art\tiles\curb16.frm
+tile       50   130            art\tiles\curb16.frm
 tile       52   130            art\tiles\curb16.frm
 tile       54   130            art\tiles\curb16.frm
-tile_l     56   130          3 art\tiles\curb26.frm
+tile       56   130            art\tiles\curb26.frm
 tile       58   130            art\tiles\edg5000.frm
 tile       60   130            art\tiles\edg5004.frm
-tile_l     62   130          3 art\tiles\edg1000.frm
+tile       62   130            art\tiles\edg1000.frm
 tile       64   130            art\tiles\edg2003.frm
 tile       66   130            art\tiles\edg4000.frm
 tile       68   130            art\tiles\edg3000.frm
 tile       70   130            art\tiles\edg2003.frm
 tile       72   130            art\tiles\edg5000.frm
 tile       74   130            art\tiles\edg5003.frm
-tile_l     76   130          3 art\tiles\edg1002.frm
-tile_l     78   130          3 art\tiles\edg4004.frm
-tile_l     80   130          3 art\tiles\edg4001.frm
-tile_l     82   130          3 art\tiles\edg2000.frm
-tile_l     84   130          3 art\tiles\edg2001.frm
+tile       76   130            art\tiles\edg1002.frm
+tile       78   130            art\tiles\edg4004.frm
+tile       80   130            art\tiles\edg4001.frm
+tile       82   130            art\tiles\edg2000.frm
+tile       84   130            art\tiles\edg2001.frm
 tile       86   130            art\tiles\edg5002.frm
 tile       88   130            art\tiles\edg5000.frm
 tile       90   130            art\tiles\edg6005.frm
-tile_l     92   130          3 art\tiles\edg6007.frm
+tile       92   130            art\tiles\edg6007.frm
 tile       94   130            art\tiles\edg2000.frm
 tile       52   132            art\tiles\curb20.frm
 tile       54   132            art\tiles\curb16.frm
-tile_l     56   132          3 art\tiles\curb27.frm
+tile       56   132            art\tiles\curb27.frm
 tile       58   132            art\tiles\edg5000.frm
 tile       60   132            art\tiles\edg2003.frm
 tile       62   132            art\tiles\edg2003.frm
@@ -4214,13 +4214,13 @@ tile       74   132            art\tiles\edg5002.frm
 tile       76   132            art\tiles\edg6001.frm
 tile       78   132            art\tiles\edg3000.frm
 tile       80   132            art\tiles\edg4000.frm
-tile_l     82   132          3 art\tiles\edg1001.frm
-tile_l     84   132          3 art\tiles\edg1000.frm
+tile       82   132            art\tiles\edg1001.frm
+tile       84   132            art\tiles\edg1000.frm
 tile       86   132            art\tiles\edg2001.frm
 tile       88   132            art\tiles\edg2001.frm
 tile       90   132            art\tiles\edg3001.frm
 tile       54   134            art\tiles\curb16.frm
-tile_l     56   134          3 art\tiles\curb26.frm
+tile       56   134            art\tiles\curb26.frm
 tile       58   134            art\tiles\edg6001.frm
 tile       60   134            art\tiles\edg4002.frm
 tile       62   134            art\tiles\edg4001.frm
@@ -4237,7 +4237,7 @@ tile       82   134            art\tiles\edg4002.frm
 tile       84   134            art\tiles\edg3000.frm
 tile       86   134            art\tiles\edg4002.frm
 tile       54   136            art\tiles\curb16.frm
-tile_l     56   136          3 art\tiles\curb27.frm
+tile       56   136            art\tiles\curb27.frm
 tile       58   136            art\tiles\edg2003.frm
 tile       60   136            art\tiles\edg3000.frm
 tile       62   136            art\tiles\edg2003.frm
@@ -4251,7 +4251,7 @@ tile       76   136            art\tiles\edg4002.frm
 tile       78   136            art\tiles\edg2003.frm
 tile       80   136            art\tiles\edg4001.frm
 tile       82   136            art\tiles\edg3000.frm
-tile_l     56   138          3 art\tiles\curb26.frm
+tile       56   138            art\tiles\curb26.frm
 tile       58   138            art\tiles\edg4002.frm
 tile       60   138            art\tiles\edg4000.frm
 tile       62   138            art\tiles\edg4002.frm
