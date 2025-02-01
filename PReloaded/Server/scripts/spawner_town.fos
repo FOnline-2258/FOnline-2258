@@ -129,7 +129,7 @@ void InitItemsList()
 	spawnItems.insertLast(SpawnItem(PID_FUZZY_PAINTING, 1, 1));
 	spawnItems.insertLast(SpawnItem(PID_BOTTLE_EMPTY, 1, 1));
 	spawnItems.insertLast(SpawnItem(PID_RADIO, 1, 1));
-
+	spawnItems.insertLast(SpawnItem(PID_DOLLAR, 1, 50));
 }
 
 #endif
