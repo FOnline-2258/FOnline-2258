@@ -2,8 +2,8 @@
 Version              4
 MaxHexX              163
 MaxHexY              144
-WorkHexX             80
-WorkHexY             82
+WorkHexX             74
+WorkHexY             85
 ScriptModule         map_hub
 ScriptFunc           map_init
 NoLogOut             0
@@ -11538,6 +11538,8 @@ MapObjType           1
 ProtoId              204
 MapX                 95
 MapY                 67
+ScriptName           spawner_town
+FuncName             MakeSpawnerTown
 
 MapObjType           2
 ProtoId              2544
