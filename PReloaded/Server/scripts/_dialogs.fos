@@ -819,5 +819,6 @@
 #define DIALOG_intro_noobcamp_caravanpacker       (43034)
 #define DIALOG_intro_noobcamp_still1              (23035)
 #define DIALOG_intro_noobcamp_resource_trader     (23036)
+#define DIALOG_hub_foundry                        (23079)
 
 #endif // __DIALOGS__
