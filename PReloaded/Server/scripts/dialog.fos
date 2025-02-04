@@ -898,6 +898,66 @@ void r_GunRunnerInsult(Critter& player, Critter@ npc)
             AttackCritter(crits[i], player);
         }
 }
+
+const uint[][][] RewardBOLow =
+{
+    {
+        { PID_COOKIE, 1}
+    },
+    {
+        { PID_BEER, 1 }
+    },
+    {
+        { PID_CIGARETTES, 2 }
+    },
+    {
+        { PID_LIGHTER, 1 }
+    },
+    {
+        { PID_IGUANA_ON_A_STICK, 2 }
+    },
+    {
+        { PID_10MM_AP, 30 }
+    },
+    {   
+        { PID_SHOTGUN_SHELLS, 30 }
+    },
+    {
+        { PID_ROT_GUT, 2 }
+    },
+    {
+        { PID_SUPER_STIMPAK, 1}
+    },
+    {
+        { PID_STIMPAK, 2 }
+    }
+};
+
+const uint[][][] RewardBOFoundry =
+{
+    {
+        { PID_9MM_MAUSER, 1 }
+    },
+    {
+        { PID_COMBAT_KNIFE, 1 }        
+    },
+    {
+        { PID_SPIKED_KNUCKLES, 1 }        
+    },
+    {
+        { PID_LEATHER_JACKET, 1 }        
+    },
+    {
+        { PID_SHOTGUN, 1 }        
+    },
+    {
+        { PID_10MM_PISTOL, 1 }        
+    },
+    {   
+        { PID_BRAHMIN_HIDE, 4 }        
+    }   
+};
+
 /*
  * Used by some dialogs as quest reward, example Dog quest for Hendriks in Adytum
 */
@@ -932,6 +992,52 @@ void r_DogsQuestReward(Critter& player, Critter@ npc)
     }
     if(Random(1, 1000000) == 1)
         player.AddItem(PID_HOWITZER_SHELL, 1);
+}
+
+void r_BulkOrderRewardLow(Critter& player, Critter@ npc)
+{
+    int mapId = 0;
+    if(valid(player.GetMap()))
+        mapId = player.GetMap().Id;
+
+    int npcId = -1;
+    int dialogId = -1;
+
+    if(valid(npc))
+    {
+        npcId = npc.Id;
+        dialogId = npc.Param[ST_DIALOG_ID];
+    }
+
+    FLog(LOG_DIALOG_REWARD, "Reward - RewardBOLow player: [" + player.Id + "] " + player.Name + " mapId: " + mapId + " npc: " + npcId + " dialog: " + dialogId);
+
+    ProcessRewardTable( player, RewardBOLow);
+    
+    if(Random(1, 5) == 1)
+        player.AddItem(PID_MULTI_TOOL, 1);
+}
+
+void r_BulkOrderRewardFoundry(Critter& player, Critter@ npc)
+{
+    int mapId = 0;
+    if(valid(player.GetMap()))
+        mapId = player.GetMap().Id;
+
+    int npcId = -1;
+    int dialogId = -1;
+
+    if(valid(npc))
+    {
+        npcId = npc.Id;
+        dialogId = npc.Param[ST_DIALOG_ID];
+    }
+
+    FLog(LOG_DIALOG_REWARD, "Reward - RewardBOFoundry player: [" + player.Id + "] " + player.Name + " mapId: " + mapId + " npc: " + npcId + " dialog: " + dialogId);
+
+    ProcessRewardTable( player, RewardBOFoundry);
+    
+    if(Random(1, 5) == 1)
+        player.AddItem(PID_ALLOYS, 1);
 }
 
 void ProcessRewardTable( Critter& player, const uint[][][]& table )
