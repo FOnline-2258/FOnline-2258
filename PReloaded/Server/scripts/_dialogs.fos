@@ -821,5 +821,6 @@
 #define DIALOG_intro_noobcamp_resource_trader     (23036)
 #define DIALOG_hub_foundry                        (23079)
 #define	DIALOG_hub_papa                           (23087)
+#define DIALOG_hub_molester                       (23117)
 
 #endif // __DIALOGS__
