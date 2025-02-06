@@ -820,5 +820,6 @@
 #define DIALOG_intro_noobcamp_still1              (23035)
 #define DIALOG_intro_noobcamp_resource_trader     (23036)
 #define DIALOG_hub_foundry                        (23079)
+#define	DIALOG_hub_papa                           (23087)
 
 #endif // __DIALOGS__
