@@ -12,7 +12,6 @@ CrashDump*.txt
 /Mapper/*.log
 
 /Server/config/**/*.bak
-/Server/dumps/
 /Server/logs/
 /Server/maps/**/*.fomapb
 /Server/save/

@@ -526,6 +526,19 @@
 #define LVAR_hub_gangers2							   (11910)
 #define LVAR_hub_gangers3							   (11911)
 #define LVAR_hub_gangers4							   (11912)
+#define LVAR_hub_heist                          (11913)
+#define LVAR_hub_johnavl                        (11914)
+#define LVAR_hub_daveavl                        (11915)
+#define LVAR_hub_bobavl                         (11916)
+#define LVAR_hub_jetavl                         (11917)
+#define LVAR_hub_bufavl                         (11918)
+#define LVAR_hub_mentavl                        (11919)
+#define LVAR_hub_psyavl                         (11920)
+#define LVAR_hub_postmanq                       (11921)
+#define LVAR_hub_honor                          (11922)
+#define LVAR_hub_bombq                          (11929)
+#define LVAR_q_merchant                         (16236)
+#define LVAR_q_merchant2                        (16237)
 
 /*************************************************************************************
         Id	Type	Name		Start	Min	Max	Flags
@@ -3059,6 +3072,161 @@ $ 11912 1 hub_gangers4 0 0 3 1
  2= talked
  3= completed
 *****************
+
+$ 11913 1 hub_heist 0 0 50 1
+*****************
+ Ford quest 
+ 0 = not taken
+ 1 = taken
+ 2= talked
+ 3= completed
+*****************
+
+$ 11914 1 hub_johnavl 0 0 3 1
+*****************
+ Ford quest 
+ 0 = not taken
+ 1 = taken
+ 2= talked
+ 3= completed
+*****************
+
+$ 11915 1 hub_daveavl 0 0 3 1
+*****************
+ Ford quest 
+ 0 = not taken
+ 1 = taken
+ 2= talked
+ 3= completed
+*****************
+
+$ 11916 1 hub_bobavl 0 0 3 1
+*****************
+ Ford quest 
+ 0 = not taken
+ 1 = taken
+ 2= talked
+ 3= completed
+*****************
+
+$ 11917 1 hub_jetavl 0 0 3 1
+*****************
+ Ford quest 
+ 0 = not taken
+ 1 = taken
+ 2= talked
+ 3= completed
+*****************
+
+$ 11918 1 hub_bufavl 0 0 3 1
+*****************
+ Ford quest 
+ 0 = not taken
+ 1 = taken
+ 2= talked
+ 3= completed
+*****************
+
+$ 11919 1 hub_mentavl 0 0 3 1
+*****************
+ Ford quest 
+ 0 = not taken
+ 1 = taken
+ 2= talked
+ 3= completed
+*****************
+
+$ 11920 1 hub_psyavl 0 0 3 1
+*****************
+ Ford quest 
+ 0 = not taken
+ 1 = taken
+ 2= talked
+ 3= completed
+*****************
+
+$ 11921 1 hub_postmanq 0 0 100 1
+*****************
+ Postman quest 
+ 0 = not taken
+ 1 = Hamilton Library
+ 2 = Marshall GunR
+ 3 = Montag Ady
+ 4 = Lorrain Ady
+ 5 = Zimman Ady
+ 6 = Metz Den
+ 7 = Becky Den
+ 8 = Dark Junk
+ 9 = Meloy Klam
+10 = Skeeter Geck
+11 = Elmer Necro
+12 = Lil Jes Ren
+13 = Jules Ren
+14 = Doc Jon Red
+15 = D Dan Red
+16 = Dr Fung San
+17 = Dusty NCR
+18 = Mira NCR
+19 = Harry VC
+20 = Lydia VC
+21 = Jargo Ady
+22 = Liz Broken
+23 = Phil Broken
+24 = Doc Holi Broken 
+25 = Tubby Den
+26 = Harold Geck
+27 = Gordon of Gas
+28 = Trader Jo Modoc
+29 = Elridge Ren
+30 = Jenna Tanker
+31 = Jacob Broken
+32 = Ralph GunR
+33 = Veronica Library
+34 = Bill Broken
+35 = Zaius Broken
+36 = Flick Den
+37 = Frankie Den
+38 = Mom Den
+39 = Buckner Klamath
+40 = Balthas Modoc
+41 = Grisham Modoc
+42 = Renesco Ren
+43 = Lou Red
+44 = Randal VC
+45 = McRae VC
+46 = Sassy Junk
+98= 150 reward
+99= 500 reward
+100 = 700 reward
+*****************
+
+$ 11922 1 hub_honor 0 0 5 1
+*****************
+ Ford quest 
+ 0 = not taken
+ 1 = taken
+ 2= talked
+ 3= completed
+*****************
+
+$ 11929 1 hub_bombq 0 0 10 1
+*****************
+ Ford quest 
+ 0 = not taken
+ 1 = taken
+ 2= talked
+ 3= completed
+*****************
+
+$ 16236	1 q_merchant 0 0 250 1
+**********
+  bulk order reward score  
+**********
+
+$ 16237	1 q_merchant2 0 0 250 1
+**********
+  bulk order reward fee  
+**********
 
 **************************************************************************************
 **************************************************************************************
