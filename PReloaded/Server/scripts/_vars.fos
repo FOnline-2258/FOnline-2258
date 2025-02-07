@@ -514,6 +514,10 @@
 #define LVAR_ncr_investigation2                 (16049)
 #define GVAR_LAW                                (16217)
 #define GVAR_CRIM                               (16218)
+#define LVAR_drug_dealing			 	            (16173)
+#define LVAR_drug1_locid                        (16174)
+#define LVAR_drug2_locid                        (16175)
+#define LVAR_drug3_locid                        (16176)
 
 /*************************************************************************************
         Id	Type	Name		Start	Min	Max	Flags
@@ -2962,6 +2966,26 @@ $ 16217	0 LAW 0 0 0 4
 $ 16218	0 CRIM 0 0 0 4
 **********
   crime  
+**********
+
+$ 16173	1 drug_dealing 0 0 13 4
+**********
+   drug dealing escort var 
+**********
+
+$ 16174	1 drug1_locid 0 0 13 4
+**********
+   Location id of drug1 job  
+**********
+
+$ 16175	1 drug2_locid 0 0 13 4
+**********
+   Location id of drug2 job  
+**********
+
+$ 16176	1 drug3_locid 0 0 13 4
+**********
+   Location id of drug3 job  
 **********
 
 **************************************************************************************

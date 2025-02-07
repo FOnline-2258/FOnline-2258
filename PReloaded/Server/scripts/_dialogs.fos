@@ -822,5 +822,6 @@
 #define DIALOG_hub_foundry                        (23079)
 #define	DIALOG_hub_papa                           (23087)
 #define DIALOG_hub_molester                       (23117)
+#define DIALOG_hub_drugdealer                     (23230)
 
 #endif // __DIALOGS__
