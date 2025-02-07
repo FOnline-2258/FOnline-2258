@@ -8,3 +8,5 @@ del save\*.fo
 del save\bans\active.txt
 del save\clients\*.client
 del save\clients\last_id.txt
+
+del cache_fail

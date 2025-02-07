@@ -64,10 +64,7 @@ CrashDump*.txt
 /PReloaded/Tools/TiledMapper/TiledMapper.log
 /PReloaded/Tools/TiledMapper/TiledMapper.cfg
 
-
-
 /PReloaded/Server/config/**/*.bak
-/PReloaded/Server/dumps/
 /PReloaded/Server/logs/
 /PReloaded/Server/maps/**/*.fomapb
 /PReloaded/Server/save/
@@ -89,7 +86,6 @@ PReloaded/Tools/WorldEditor/WorldEditor.user.cfg
 *.sdf
 *.suo
 *.vcxproj.user
-
 
 ##
 ##	CodeBlocks project files
