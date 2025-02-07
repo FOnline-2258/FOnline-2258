@@ -521,6 +521,11 @@
 #define LVAR_hub_leatherp                       (11935)
 #define LVAR_q_church2                          (16153)
 #define LVAR_q_inj2                             (16155)
+#define LVAR_hub_gangers							   (11908)
+#define LVAR_hub_gangers1							   (11909)
+#define LVAR_hub_gangers2							   (11910)
+#define LVAR_hub_gangers3							   (11911)
+#define LVAR_hub_gangers4							   (11912)
 
 /*************************************************************************************
         Id	Type	Name		Start	Min	Max	Flags
@@ -3009,6 +3014,51 @@ $ 16155	1 inj2 0 0 25 1
 *********************
 hub doc
 *********************
+
+$ 11908 1 hub_gangers 0 0 17 1
+*****************
+ Ford quest 
+ 0 = not taken
+ 1 = taken
+ 2= talked
+ 3= completed
+*****************
+
+$ 11909 1 hub_gangers1 0 0 3 1
+*****************
+ Ford quest 
+ 0 = not taken
+ 1 = taken
+ 2= talked
+ 3= completed
+*****************
+
+$ 11910 1 hub_gangers2 0 0 3 1
+*****************
+ Ford quest 
+ 0 = not taken
+ 1 = taken
+ 2= talked
+ 3= completed
+*****************
+
+$ 11911 1 hub_gangers3 0 0 3 1
+*****************
+ Ford quest 
+ 0 = not taken
+ 1 = taken
+ 2= talked
+ 3= completed
+*****************
+
+$ 11912 1 hub_gangers4 0 0 3 1
+*****************
+ Ford quest 
+ 0 = not taken
+ 1 = taken
+ 2= talked
+ 3= completed
+*****************
 
 **************************************************************************************
 **************************************************************************************
