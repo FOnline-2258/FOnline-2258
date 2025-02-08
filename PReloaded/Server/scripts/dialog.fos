@@ -1140,6 +1140,29 @@ void r_BulkOrderRewardHub(Critter& player, Critter@ npc)
         player.AddItem(PID_ORE2, 1);
 }
 
+void r_BulkOrderRewardJunk(Critter& player, Critter@ npc)
+{
+    int mapId = 0;
+    if(valid(player.GetMap()))
+        mapId = player.GetMap().Id;
+
+    int npcId = -1;
+    int dialogId = -1;
+
+    if(valid(npc))
+    {
+        npcId = npc.Id;
+        dialogId = npc.Param[ST_DIALOG_ID];
+    }
+
+    FLog(LOG_DIALOG_REWARD, "Reward - RewardBOJunk player: [" + player.Id + "] " + player.Name + " mapId: " + mapId + " npc: " + npcId + " dialog: " + dialogId);
+
+    ProcessRewardTable( player, RewardBOJunk);
+    
+    if(Random(1, 5) == 1)
+        player.AddItem(PID_MINERALS2, 1);
+}
+
 void r_BulkOrderRewardFoundry(Critter& player, Critter@ npc)
 {
     int mapId = 0;
