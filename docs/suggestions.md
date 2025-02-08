@@ -1,0 +1,26 @@
+# Suggestions
+
+- [ ] Fix Overweight Bug with NPC Companions - You can't give them items when you're overweight / same goes for overweight trading
+- [ ] Fix Reno Sewer Slags so killing them will not change Bishop/anything reputation (investigate)
+- [ ] investigate how to change F1 overlay info
+- [ ] do research about GitHub's wiki
+- [ ] Suggestion: Change pulse grenades to work like every other kind. Throwable from inventory with alt + click and control click to throw at specific hex 
+- [ ] pulse granade error - cant use it with hotkey, cant use other granades after using pulse granade
+- [ ] Try emp granates do they deal dmg to power armor, slso pancor
+- [ ] a dungeon with enemies carrying t4 weapons in PAs (no drop)
+- [ ] ideas for stealing skill
+- [ ] scavenging skill
+- [ ] ideas for karma, reputation (PvE features)
+- [ ] planned but never implemented on Reloaded, two Support Perks: Fortune-Finder & Scrounger from this page: <https://www.fonline-reloaded.net/wiki/TmpPage_SupporPerks>
+- [ ] at the Farm, "Unlock the Porter"! a new NPC who auto-runs meat to the food guy and wood to the lumber guy while you do something else! just drop those things wherever you like on the ground, and your Porter handles the logistics of moving it, thus saving you a lot of time (hours and hours over the life of your farm work)
+- [ ] improve mutie quest loot, change cooldown
+- [ ] Add a Guard Team to the farm. Guard NPC - . Costs 5000 dollars initially, and -300 daily income. You can hire him to eliminate any end day events that involve creatures. Like mole rats, wolves, etc. Therefore protecting your crops from those specific events.
+- [ ] Add Carpenter NPC. Carpenter - Costs 5000 dollars to hire initially and -100 daily income. Hire him to build guard rails, fences, and windblocks to protect from storm or weather related end of day event, therefore protecting your crops from those specific events.
+- [ ] Buff Barley some how, whether by making more plants and making it respawn faster, or straight up lowering the cost of planting crops,
+- [ ] it is issue - tricky spots where character is barely seeable (AoP fixed it)
+- [ ] Thats what i liked about 2238. 21 level, regular gear, you had a chance to kill even the biggest grindmaster. Also people werent that scared to loose their precious statted gear so the pvp was more frequent (think about it)
+- [ ] improve maps same as hub_oldtown, hub_water, hub were updated (fixes, improvements etc)
+- [ ] static website such as reloaded has (info about game, faster to load/google lighthouse, SEO etc)
+- [ ] wiki for game content (CMS, GitHub wiki etc)
+- [ ] i suggest an XP upgrade to "Water the Farmers" job in Hub. 500 XP at least. As it is now, you only get 150 XP after running back-n-forth 10 times between the water pipe in the fiber fields and 10 farmers. takes too long just for 150 XP (and 100 Caps), and is clearly not scaled to other jobs around Hub for a newp to do when he starts. I'd like to add this job to the runaround-Hub routine in my startup guide, but it's excluded so far due to such a low benefit-to-time-cost ratio
+- [ ] todo
