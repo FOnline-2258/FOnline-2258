@@ -578,6 +578,14 @@
 #define LVAR_boss14_locid                       (16212)
 #define LVAR_q_boss14                           (16213)
 #define LVAR_z_warrior2                         (16378)
+#define LVAR_hub_waterjobq	           		     	(16000)
+#define LVAR_hub_waterjobden                    (16001)
+#define LVAR_hub_waterjobhills                  (16002)
+#define LVAR_hub_waterjobsan	           		   (16003)
+#define LVAR_waterjobfix                        (16242)
+#define LVAR_ncr_investigation4                 (16109)
+#define LVAR_q_tandi                            (16110)
+#define LVAR_q_tandi_locid                      (16111)
 
 /*************************************************************************************
         Id	Type	Name		Start	Min	Max	Flags
@@ -3460,6 +3468,62 @@ $ 16213	1 q_boss14 0 0 13 4
 $ 16378	1 z_warrior2 0 0 100 4
 **********
    var for lonestar agency bounty score
+**********
+
+$ 16000 1 hub_waterjobq 0 0 10 1
+*****************
+ Ford quest 
+ 0 = not taken
+ 1 = taken
+ 2= talked
+ 3= completed
+*****************
+
+$ 16001 1 hub_waterjobden 0 0 10 1
+*****************
+ Ford quest 
+ 0 = not taken
+ 1 = taken
+ 2= talked
+ 3= completed
+*****************
+
+$ 16002 1 hub_waterjobhills 0 0 10 1
+*****************
+ Ford quest 
+ 0 = not taken
+ 1 = taken
+ 2= talked
+ 3= completed
+*****************
+
+$ 16003 1 hub_waterjobsan 0 0 10 1
+*****************
+ Ford quest 
+ 0 = not taken
+ 1 = taken
+ 2= talked
+ 3= completed
+*****************
+
+$ 16242	1 waterjobfix 0 0 13 4
+**********
+   fix for wj  
+**********
+
+$ 16109	1 ncr_investigation4 0 0 15 5
+**********
+   This variable is for tandi ass
+**********
+
+$ 16110	1 q_tandi 0 0 15 5
+**********
+   This variable is for tandi as
+**********
+
+$ 16111	1 q_tandi_locid 0 0 13 4
+**********
+   Location id of tandi as loc
 **********
 
 **************************************************************************************

@@ -10,20 +10,24 @@ lang=engl
 2 1010 D _param p ST_INTELLECT < 4 D _param p ST_INTELLECT > 4 #
 4 1020 @
 2 2000 None 0 #
-3 2010 @
+12 2010 D _var p hub_waterjobhills = 0 D _var p hub_waterjobq > 0 D _item p PID_WATER_BARREL > 0 R _var p hub_waterjobhills = 1 R _script dialog@r_RemoveCrate 0  R _script dialog@r_AddExperience 1 1200 #
+3 2020 @
 3 3000 None 0 #
 0 3010 @
 4 4000 None 0 #
 5 4010 D _var n name_mem_npc_player = 0 R _var n name_mem_npc_player = 1 #
 7 4020 #
-75 4030 D _script town@d_IsControllingTown 1 1 #
-11 4040 #
-80 4050 D _param p PE_PROFESSION_GUNSMITH_B < 2 D _var n name_mem_npc_player = 1 #
-4 4060 D _script town@d_IsNotControllingTown 1 1 D _script dialog@d_IsGangMember 0  D _script town@d_CanTakeOver 0  R _script town@r_ClaimControl 1 0 #
-50 4070 D _script town@d_CanRecruitMilitia 0  #
-120 4080 D _script town@d_IsControllingTown 1 1 #
-500 4090 D _script town@d_CanChangeLaws 0  #
-0 4100 @
+13 4030 D _var p ncr_investigation4 = 6 #
+75 4040 D _script town@d_IsControllingTown 1 1 #
+11 4050 #
+80 4060 D _param p PE_PROFESSION_GUNSMITH_B < 2 D _var n name_mem_npc_player = 1 #
+4 4070 D _script town@d_IsNotControllingTown 1 1 D _script dialog@d_IsGangMember 0  D _script town@d_CanTakeOver 0  R _script town@r_ClaimControl 1 0 #
+50 4080 D _script town@d_CanRecruitMilitia 0  #
+120 4090 D _script town@d_IsControllingTown 1 1 #
+500 4100 D _script town@d_CanChangeLaws 0  #
+70 4110 #
+12 4120 D _var p hub_waterjobhills = 0 D _var p hub_waterjobq > 0 D _item p PID_WATER_BARREL > 0 R _var p hub_waterjobhills = 1 R _script dialog@r_RemoveCrate 0  R _script dialog@r_AddExperience 1 1200 #
+0 4130 @
 5 5000 None 0 #
 7 5010 #
 7 5020 #
@@ -106,7 +110,28 @@ lang=engl
 440 31000 None 0 @
 450 32000 None 0 #
 0 32010 @
-330 33000 None 0 &
+330 33000 None 0 @
+12 34000 None 0 @
+13 35000 None 0 #
+15 35010 #
+15 35020 #
+14 35030 #
+15 35040 #
+15 35050 #
+14 35060 D _param p ST_KARMA { 0 @
+14 36000 None 0 #
+16 36010 @
+15 37000 None 0 @
+16 38000 None 0 #
+17 38010 D _param p ST_KARMA } 0 #
+17 38020 D _param p ST_KARMA { 0 @
+17 39000 None 0 #
+0 39010 D _var p ncr_investigation4 = 6 R _var p ncr_investigation4 = 7 R _script quest_tandi@r_SpawnLoc 0  R _script dialog@r_AddExperience 1 1000 @
+70 40000 None 0 #
+71 40010 D _item p PID_BOTTLE_CAPS > 9999 #
+0 40020 @
+71 41000 dialog@dlg_TryEnchantItem 0 #
+0 41010 &
 
 [engl]
 {100}{}{Marcus}
@@ -118,20 +143,24 @@ lang=engl
 {1010}{}{Dumb}
 {1020}{}{Normal}
 {2000}{}{What do you want, human?}
-{2010}{}{Uggie.}
+{2010}{}{[Deliver Crate]}
+{2020}{}{Uggie.}
 {3000}{}{Yeah, I'm an ugly mutant. I also run this place. You got a problem with that?}
 {3010}{}{Uh!}
 {4000}{}{What do you want, human?}
 {4010}{}{Who are you?}
 {4020}{}{What's the story with this place?}
-{4030}{}{I want to talk about our allies.}
-{4040}{}{Why aren't you mutants attacking me?}
-{4050}{}{I was wondering, you carrying that big gun around and all... Maybe you could show me a few tricks about big guns.}
-{4060}{}{Do some good, earn some scratch. Got myself a little gang, and we get hungry and bored if we don't have anything to do or any pay coming our way.}
-{4070}{}{We need some volunteers to secure the town.}
-{4080}{}{Where is our cut of the profits?}
-{4090}{}{Let's discuss the law in this place.}
-{4100}{}{Bye.}
+{4030}{}{Hello, Marcus. I'm Detective @pname@, from the NCR. Mind if I ask you a couple of questions?}
+{4040}{}{I want to talk about our allies.}
+{4050}{}{Why aren't you mutants attacking me?}
+{4060}{}{I was wondering, you carrying that big gun around and all... Maybe you could show me a few tricks about big guns.}
+{4070}{}{Do some good, earn some scratch. Got myself a little gang, and we get hungry and bored if we don't have anything to do or any pay coming our way.}
+{4080}{}{We need some volunteers to secure the town.}
+{4090}{}{Where is our cut of the profits?}
+{4100}{}{Let's discuss the law in this place.}
+{4110}{}{I heard you know a way to improve big guns, make them a little better than regular stuff.}
+{4120}{}{[Deliver Crate]}
+{4130}{}{Bye.}
 {5000}{}{I'm Marcus, helped build the place. Now I'm sheriff.}
 {5010}{}{You helped build this place? That must have been a long time ago...}
 {5020}{}{Bullshit. How could you have been around that long?}
@@ -181,7 +210,7 @@ lang=engl
 {19000}{}{Very well, it's a deal then. [Marcus starts explaining. Finally, he gives you a magazine about weapons and ammunition.]}
 {19010}{}{Thanks for everything Jester, that's exectly what I wanted to know. See you!}
 {20000}{}{Very well, it's a deal then. [Marcus starts explaining]}
-{20010}{}{Thanks Jester, that was really something new for me. I have to go now, bye.}
+{20010}{}{Thanks, Marcus! That was really something new for me. I have to go now, bye.}
 {21000}{}{'Little' gang is right, all right. You wouldn't last 5 minutes out here. Maybe when you're a little bigger and more seasoned.}
 {21010}{}{Right.}
 {21020}{}{How rude! I must slay you for the honour of @lex faction@!}
@@ -218,4 +247,27 @@ Attacking criminals on sight: @lex attackflagged@}
 {32000}{}{Are you crazy? We are in the middle of an ongoing attack, start protecting us instead of jerking around in here!}
 {32010}{}{Uh, sure!}
 {33000}{}{Guards, get those retards!}
+{34000}{}{Good. Water. Fresh water at that. Thanks human.}
+{35000}{}{Detective? @sex@|Boy||Girl|, you got no jurisdiction here. I know the NCR annexed us, but you can't come to Broken Hills and play copper.}
+{35010}{}{It's okay, I'm pals with Richard, Stark, Gallows, and Pickard.}
+{35020}{}{It's okay, I'm pals with Beer, Stork, Bellows, and Deckyard.}
+{35030}{}{It's okay, I'm pals with Pint, Stark, Gallows, and Deckard.}
+{35040}{}{It's okay, I'm pals with Pinte, Strak, Galows, and Dreckard.}
+{35050}{}{It's okay, I'm pals with Printe, Strok, Swallows, and Prickard}
+{35060}{}{Why don't you just shut up, and start answering my questions?}
+{36000}{}{Fine. What do you want, human?}
+{36010}{}{Someone tried to assassinate President Tandi recently, have you heard?}
+{37000}{}{Who? What? You, humans. }
+{38000}{}{Yeah, I bet I know who it was. Some jackass from a place called Den Ver, no idea where that is. Far East. Thought the place was dead. Hear is it now. I've been trackin' em just in case one of you NCR cops came asking. Sure was nice of this old mutant, eh?}
+{38010}{}{Show me please.}
+{38020}{}{Show me, mutant.}
+{39000}{}{[If you would like to do this mission in Turn Based mode type /combatmode tb before continuing]}
+{39010}{}{Thanks, Marcus.}
+{40000}{}{Improving big guns you say… I might give it a try, but I must warn you, many things might go wrong in the process and it's hard to predict final result. Hell, it might even destroy your item if you are unlucky! If you want I can try my best but it will cost you, let's say... 10.000, yes, that's a fair price I think.}
+{40010}{}{Here is 10.000 and take this weapon. [You give him item in your hand]
+}
+{40020}{}{That's all I need to know now, thanks.}
+{41000}{}{@lex enchantResult@
+}
+{41010}{}{Thanks.}
 
