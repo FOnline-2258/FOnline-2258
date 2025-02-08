@@ -837,5 +837,6 @@
 #define DIALOG_bossfight12                        (23256)
 #define DIALOG_bossfight13                        (23257)
 #define DIALOG_bossfight14                        (23258)
+#define	DIALOG_hub_waterjob                       (23090)
 
 #endif // __DIALOGS__

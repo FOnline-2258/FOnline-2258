@@ -2379,4 +2379,20 @@ void r_AddLootSetLevel2 (Critter& player, Critter@ npc)
     }
 }
 
+//For water merchant job
+void r_CrateSpawn3(Critter& player, Critter@ npc)
+{
+    player.AddItem(PID_WATER_BARREL, 3);
+}
+
+void r_CrateSpawn(Critter& player, Critter@ npc)
+{
+    player.AddItem(PID_WATER_BARREL, 1);
+}
+
+void r_RemoveCrate(Critter& player, Critter@ npc)
+{
+    _CritDeleteItem(player, PID_WATER_BARREL, 1);
+}
+
 #endif // __DIALOG__ //
