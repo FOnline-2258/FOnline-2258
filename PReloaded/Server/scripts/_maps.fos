@@ -578,5 +578,6 @@
 #define MAP_SierraCavesLevel1Vault6                      (2536) // sierra_caves_lvl1_v6, Sierra Caves(460)
 #define MAP_SierraCavesLevel1Vault7                      (2537) // sierra_caves_lvl1_v7, Sierra Caves(460)
 #define MAP_HubParkingLot                                (2601) // hub_parkinglot, map_hub@map_init, Hub(25)
+#define LOCATION_Q_SadFarmer                             (373) // Location is attacked by dangerous creatures.
 
 #endif // __MAPS__

@@ -1058,6 +1058,119 @@ const uint[][][] RewardBOInde =
     }   
 };
 
+const uint[][][] RewardBOPrints =
+{
+    {
+        { PID_BLUEPRINT_SUPER_STIMPAK, 1 }        
+    },
+    {
+        { PID_BLUEPRINT_STIMPAK, 1 }        
+    },
+    {
+        { PID_BLUEPRINT_JET, 1 }        
+    },
+    {
+        { PID_BLUEPRINT_BUFFOUT, 1 }        
+    },
+    {
+        { PID_BLUEPRINT_MENTATS, 1 }        
+    },
+    {
+        { PID_BLUEPRINT_PSYCHO, 1 }        
+    },
+    {   
+        { PID_BLUEPRINT_RADAWAY, 1 }        
+    },   
+    {   
+        { PID_BLUEPRINT_RADX, 1 }        
+    },   
+	{   
+        { PID_BLUEPRINT_14MM_PISTOL, 1 }        
+    },   
+	{   
+        { PID_BLUEPRINT_NEEDLER_PISTOL, 1 }        
+    },   
+	{   
+        { PID_BLUEPRINT_223_PISTOL, 1 }        
+    },   
+	{   
+        { PID_BLUEPRINT_ASSAULT_RIFLE, 1 }        
+    },       
+	{   
+        { PID_BLUEPRINT_FN_FAL, 1 }        
+    }, 
+    {   
+        { PID_BLUEPRINT_SNIPER_RIFLE, 1 }        
+    },   
+    {   
+        { PID_BLUEPRINT_P90, 1 }        
+    },   
+    {   
+        { PID_BLUEPRINT_PLASMA_PISTOL, 1 }        
+    },   
+    {   
+        { PID_BLUEPRINT_LASER_RIFLE, 1 }        
+    },   
+    {   
+        { PID_BLUEPRINT_PLASMA_RIFLE, 1 }        
+    },   
+    {   
+        { PID_BLUEPRINT_MEGA_POWER_FIST, 1 }        
+    },   	
+    {   
+        { PID_BLUEPRINT_SUPER_CATTLE_PROD, 1 }        
+    }, 
+	{   
+        { PID_BLUEPRINT_RIPPER, 1 }        
+    }, 
+	{   
+        { PID_BLUEPRINT_ROCKET_LAUNCHER, 1 }        
+    }, 
+	{   
+        { PID_BLUEPRINT_LIGHT_SUPPORT_WEAPON, 1 }        
+    }, 
+	{   
+        { PID_BLUEPRINT_MINIGUN, 1 }        
+    }, 
+    {   
+        { PID_BLUEPRINT_SUPER_SLEDGE, 1 }        
+    }, 
+	{   
+        { PID_BLUEPRINT_IMPROVED_FLAMETHROWER, 1 }        
+    }, 
+    {   
+        { PID_BLUEPRINT_HK_CAWS, 1 }        
+    },
+	{   
+        { PID_BLUEPRINT_METAL_ARMOR_MK_II, 1 }        
+    }, 
+	{   
+        { PID_BLUEPRINT_TESLA_ARMOR, 1 }        
+    }, 
+	{   
+        { PID_BLUEPRINT_COMBAT_ARMOR, 1 }        
+    }, 
+	{   
+        { PID_BLUEPRINT_METAL_HELMET_MK2, 1 }        
+    }, 
+    {   
+        { PID_BLUEPRINT_TESLA_HELMET, 1 }        
+    }, 
+	{   
+        { PID_BLUEPRINT_COMBAT_HELMET, 1 }        
+    }, 
+	{   
+        { PID_BLUEPRINT_PLASMA_GRENADE, 1 }        
+    }, 
+	{   
+        { PID_BLUEPRINT_DYNAMITE, 1 }        
+    }, 
+	{   
+        { PID_BLUEPRINT_PLASTIC_EXPLOSIVES, 1 }        
+    }
+
+};
+
 /*
  * Used by some dialogs as quest reward, example Dog quest for Hendriks in Adytum
 */
@@ -1207,6 +1320,29 @@ void r_BulkOrderRewardInde(Critter& player, Critter@ npc)
     
     if(Random(1, 5) == 1)
         player.AddItem(PID_BARLEY, 6);
+}
+
+void r_BulkOrderRewardPrints(Critter& player, Critter@ npc)
+{
+    int mapId = 0;
+    if(valid(player.GetMap()))
+        mapId = player.GetMap().Id;
+
+    int npcId = -1;
+    int dialogId = -1;
+
+    if(valid(npc))
+    {
+        npcId = npc.Id;
+        dialogId = npc.Param[ST_DIALOG_ID];
+    }
+
+    FLog(LOG_DIALOG_REWARD, "Reward - RewardBOPrints player: [" + player.Id + "] " + player.Name + " mapId: " + mapId + " npc: " + npcId + " dialog: " + dialogId);
+
+    ProcessRewardTable( player, RewardBOPrints);
+    
+    if(Random(1, 5) == 1)
+        player.AddItem(PID_BOTTLE_CAPS, 5000);
 }
 
 void ProcessRewardTable( Critter& player, const uint[][][]& table )

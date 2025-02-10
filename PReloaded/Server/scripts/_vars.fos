@@ -587,6 +587,19 @@
 #define LVAR_q_tandi                            (16110)
 #define LVAR_q_tandi_locid                      (16111)
 
+#define LVAR_hub_guard1                         (11900)
+#define LVAR_hub_guard2                         (11901)
+#define LVAR_hub_guard3                         (11902)
+#define LVAR_hub_guard4                         (11903)
+#define LVAR_hub_guard5                         (11904)
+#define LVAR_hub_guard6                         (11905)
+#define LVAR_q_hub_noe                          (7400)
+#define LVAR_q_hub_neo                          (7401)
+#define LVAR_q_hub_ron                          (7402)
+#define LVAR_q_hub_sad_farmer                   (7403)
+#define LVAR_q_hub_sad_farmer_locationId        (7404)
+#define LVAR_q_trader                           (16230)
+
 /*************************************************************************************
         Id	Type	Name		Start	Min	Max	Flags
 **************************************************************************************
@@ -3524,6 +3537,90 @@ $ 16110	1 q_tandi 0 0 15 5
 $ 16111	1 q_tandi_locid 0 0 13 4
 **********
    Location id of tandi as loc
+**********
+
+$ 11900 1 hub_guard1 0 0 3 1
+*****************
+ Ford quest 
+ 0 = not taken
+ 1 = taken
+ 2= talked
+ 3= completed
+*****************	
+
+$ 11901 1 hub_guard2 0 0 3 1
+*****************
+ Ford quest 
+ 0 = not taken
+ 1 = taken
+ 2= talked
+ 3= completed
+*****************	
+
+$ 11902 1 hub_guard3 0 0 3 1
+*****************
+ Ford quest 
+ 0 = not taken
+ 1 = taken
+ 2= talked
+ 3= completed
+*****************	
+
+$ 11903 1 hub_guard4 0 0 3 1
+*****************
+ Ford quest 
+ 0 = not taken
+ 1 = taken
+ 2= talked
+ 3= completed
+*****************
+
+$ 11904 1 hub_guard5 0 0 3 1
+*****************
+ Ford quest 
+ 0 = not taken
+ 1 = taken
+ 2= talked
+ 3= completed
+*****************
+
+$ 11905 1 hub_guard6 0 0 3 1
+*****************
+ Ford quest 
+ 0 = not taken
+ 1 = taken
+ 2= talked
+ 3= completed
+*****************
+
+   $	7400	1	q_hub_noe	0	0	11	1
+**********
+	Noe in Hub quest status.
+**********
+
+   $	7401	1	q_hub_neo	0	0	9	1
+**********
+	Neo in Hub quest status.
+**********
+
+   $	7402	1	q_hub_ron	0	0	2	1
+**********
+	Ron in Hub quest status.
+**********
+
+   $	7403	1	q_hub_sad_farmer	0	0	3	1
+**********
+	Sad farmer in Hub quest status.
+**********
+
+   $	7404	1	q_hub_sad_farmer_locationId 	0	0	0	5
+**********
+	Sad farmer in hub location id.
+**********
+
+$ 16230	1 q_trader 0 0 25 1
+**********
+  trade chain  
 **********
 
 **************************************************************************************
