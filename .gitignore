@@ -1,10 +1,4 @@
 ##
-##	Code:Blocks project files
-##
-/*.cbp
-/*.layout
-
-##
 ## General
 ##
 
@@ -12,14 +6,17 @@
 .gitignore
 !/.gitignore
 
-# External SVN repositories
+# external SVN repositories
 .svn
+
+# other
+*.lnk
 
 ##
 ## Developer files
 ##
 
-# AutomatedBuild directories
+# automatedBuild directories
 /foclassic/SDK*
 
 # maintainers
@@ -37,7 +34,7 @@
 ## CMake leftovers
 ##
 
-# In-Source build
+# in-source build
 /foclassic/CMakeCache.txt
 /foclassic/CMakeFiles
 
@@ -45,7 +42,7 @@
 /foclassic/__cmake_systeminformation
 
 ##
-##	PReloaded
+## PReloaded
 ##
 
 CrashDump*.txt
@@ -88,9 +85,13 @@ PReloaded/Tools/WorldEditor/WorldEditor.user.cfg
 *.vcxproj.user
 
 ##
-##	CodeBlocks project files
+## CodeBlocks project files
 ##
+*.cbp
+*.layout
+
 FOnline-BraveNewWorld.layout
 FOnline-BraveNewWorld.cbp
+
 PReloaded/Tools/PerkEditor/PerkEditor/
 PReloaded/Tools/PerkEditor/
