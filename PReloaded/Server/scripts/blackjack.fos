@@ -1,14 +1,12 @@
 /**<
  *  Main logic for the Blackjack module.
  */
- 
- 
+
 #include "blackjack_h.fos"
 #include "blackjack_shoe.fos"
 #include "ITEMPID.H"
 #include "_math.fos"
- 
- 
+
 class CBlackjack
 {
     private uint playerId;
@@ -196,7 +194,7 @@ class CBlackjack
         {
             lastAction = "A fresh round! ";
         }
-        progress = Bet;
+        progress = BlackjackProgress::Bet;
     }
  
     /**< Gambling skill related stuff. */
@@ -261,7 +259,7 @@ class CBlackjack
      */
     bool IsSidebetAvailable()
     {
-        if (progress == Bet)
+        if (progress == BlackjackProgress::Bet)
         {
             return true;
         }
@@ -334,7 +332,7 @@ class CBlackjack
      */
     bool IsHitAvailable()
     {
-        if ((progress == First || progress == Rest)
+        if ((progress == BlackjackProgress::First || progress == BlackjackProgress::Rest)
             && GetHandSoftValue(playerHand) < 21)
         {
             return true;
@@ -380,7 +378,7 @@ class CBlackjack
     }
     bool IsEvenMoneyAvailable()
     {
-        if (progress == First
+        if (progress == BlackjackProgress::First
             && IsPlayerBlackjack()
             && IsDealerFirstCardAce())
             return true;
@@ -412,7 +410,7 @@ class CBlackjack
     bool IsDoubleDownAvailable()
     {
         if (GetHandSoftValue(playerHand) < 21
-            && (progress == First || progress == Rest)
+            && (progress == BlackjackProgress::First || progress == BlackjackProgress::Rest)
             && doubleDown == false
             && IsPlayerHaveMoney(betValue))
         {
@@ -451,7 +449,7 @@ class CBlackjack
     /**< Surrender related, available only at starting hand. (Early surrender, bc easier to implement and easier for player also.) */
     bool IsSurrenderAvailable()
     {
-        if (progress == First &&  !IsPlayerBlackjack())
+        if (progress == BlackjackProgress::First &&  !IsPlayerBlackjack())
             return true;
         else
             return false;
@@ -775,30 +773,30 @@ class CBlackjack
      */
     void ProgressToFirst()
     {
-        progress = First;
+        progress = BlackjackProgress::First;
         dealFirst();
     }
     void ProgressToPlayerBust()
     {
         ProcessSidebet();
-        progress = PlayerBust;
+        progress = BlackjackProgress::PlayerBust;
     }
     void ProgressToResult()
     {
-        progress = Result;
+        progress = BlackjackProgress::Result;
         ProcessSidebet();
     }
     void ProgressToPlayerBlackjack()
     {
-        progress = PlayerBlackjack;
+        progress = BlackjackProgress::PlayerBlackjack;
     }
     void ProgressToRest()
     {
-        progress = Rest;
+        progress = BlackjackProgress::Rest;
     }
     void ProgressToDealersTurn()
     {
-        progress = DealersTurn;
+        progress = BlackjackProgress::DealersTurn;
         showDealersHoleCard();
         if (IsPlayerBlackjack())
         {
@@ -812,7 +810,7 @@ class CBlackjack
     }
     bool IsDealerDone()
     {
-        if (progress == DealersTurn
+        if (progress == BlackjackProgress::DealersTurn
             && !IsPlayerBlackjack())
         {
             return false;

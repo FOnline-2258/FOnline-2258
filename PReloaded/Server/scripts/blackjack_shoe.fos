@@ -1,7 +1,7 @@
 /**<
  *  Shoe class for Blackjack.
  */
- 
+
 #include "blackjack_h.fos"
 #include "blackjack_deck.fos"
 #include "_macros.fos"

@@ -1,7 +1,7 @@
 /**<
  *  Card class for Blackjack.
  */
- 
+
 #define CARD_SUIT_NONE                  (0)
 #define CARD_SUIT_SPADES                (1)
 #define CARD_SUIT_HEARTS                (2)

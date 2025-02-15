@@ -1,7 +1,7 @@
 /**<
  *  Deck of cards for Blackjack.
  */
- 
+
 #include "blackjack_card.fos"
  
 class CDeck
