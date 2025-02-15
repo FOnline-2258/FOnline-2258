@@ -1,10 +1,8 @@
 /**<
  *  Dialogue calls for the Blackjack module.
  */
- 
- 
+
 #include "blackjack_h.fos"
-//#include "blackjack.fos"
 #include "blackjack_manager.fos"
  
 /**< Init */

@@ -1,7 +1,7 @@
 /**<
  *  Shoe class for Blackjack.
  */
- 
+
 #include "blackjack_h.fos"
 #include "blackjack_deck.fos"
 #include "_macros.fos"
@@ -148,7 +148,7 @@ class CShoe
         for (uint i = 0; i < cards.length(); i++)
         {
             string log = " - ";
-            for (int j = 0; j < cards[i].Value(); j++)
+            for (uint j = 0; j < cards[i].Value(); j++)
             {
                 log += "  ";
             }
