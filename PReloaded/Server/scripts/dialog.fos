@@ -1171,6 +1171,31 @@ const uint[][][] RewardBOPrints =
 
 };
 
+const uint[][][] RewardBOGuns =
+{
+    {
+        { PID_LASER_RIFLE, 1 }        
+    },
+    {
+        { PID_PLASMA_RIFLE, 1 }        
+    },
+    {
+        { PID_ROCKET_LAUNCHER, 1 }        
+    },
+    {
+        { PID_HK_P90C, 1 }        
+    },
+    {
+        { PID_M60, 1 }        
+    },
+    {
+        { PID_223_PISTOL, 1 }        
+    },
+    {   
+        { PID_SUPER_SLEDGE, 1 }        
+    }   
+};
+
 /*
  * Used by some dialogs as quest reward, example Dog quest for Hendriks in Adytum
 */
@@ -2226,6 +2251,141 @@ uint dlg_SayBuyNeedles(Critter& player, Critter@ npc, string@ text)
     return DIALOG_END;
 }
 
+void dlg_TryEnchantItem(Critter& player, Critter@ npc, string@ text)  //player farm stat checker
+{
+    if(!IS_DIALOG_GENERATED(text))
+        return;
+ 
+    Map@ map = player.GetMap();
+ 
+    if( !valid(map) )
+    {
+        player.Say( SAY_NETMSG, "Dialog error, blame random dev." );
+        text = "DIALOG ERROR";
+        return;
+    }
+
+    Item@ item = player.GetItem(0, SLOT_HAND1);
+    if(!valid(item))
+    {
+        text = "$enchantResult" + " I don't see any item in your hand...";
+        return;
+    }
+
+    if( !(item.GetType() == ITEM_TYPE_WEAPON && !item.IsStackable()) && !(item.GetType() == ITEM_TYPE_ARMOR) )
+    {
+        text = "$enchantResult" + " Nothing can be done with this item.";
+        return;   
+    }
+
+    if(item.GetType() == ITEM_TYPE_ARMOR && npc.Stat[ST_DIALOG_ID] != DIALOG_mod_baltas)
+    {
+        text = "$enchantResult" + " I can't help you with this item. Balthas in Modoc is an expert when it comes to armors, you should talk with him about it.";
+        return;     
+    }
+
+    if(item.GetType() == ITEM_TYPE_WEAPON)
+    {
+        switch(item.Proto.Weapon_Skill_0)
+        {
+            case SK_SMALL_GUNS:
+                if(npc.Stat[ST_DIALOG_ID] != DIALOG_den_flik)
+                {
+                    text = "$enchantResult" + " I can't help you with this item. Flick in Den is an expert when it comes to small guns, you should talk with him about it.";
+                    return; 
+                }
+                break;
+            case SK_BIG_GUNS:
+                if(npc.Stat[ST_DIALOG_ID] != DIALOG_bh_marcus)
+                {
+                    text = "$enchantResult" + " I can't help you with this item. Marcus in Broken Hills is an expert when it comes to big guns, you should talk with him about it.";
+                    return; 
+                }
+                break;
+            case SK_ENERGY_WEAPONS:
+                if(npc.Stat[ST_DIALOG_ID] != DIALOG_geck_sceetr)
+                {
+                    text = "$enchantResult" + " I can't help you with this item. Skeeter in Gecko is an expert when it comes to energy weapons, you should talk with him about it.";
+                    return; 
+                }
+                break;
+            case SK_UNARMED:
+            case SK_THROWING:
+                if(npc.Stat[ST_DIALOG_ID] != DIALOG_klam_sulik)
+                {
+                    text = "$enchantResult" + " I can't help you with this item. Sulik in Klamath is an expert when it comes to this kind of weapons, you should talk with him about it.";
+                    return; 
+                }
+                break;
+            default:
+                    text = "$enchantResult" + " I can't help you with this item. Don't know if anyone can...";
+                    return; 
+        }          
+    }
+
+    if(player.CountItem(PID_BOTTLE_CAPS) < 10000 || !player.DeleteItem(PID_BOTTLE_CAPS, 10000))
+    {
+        text = "$enchantResult" + " You got the item, now you need money. Bring me 10000 and we can talk.";
+        return;
+    }
+    
+    uint roll = Random(0, 100);
+    if(roll < 25)
+    {
+        if(AddAnotherBonus(item))
+            text = "$enchantResult" + " I managed to upgrade it a little. It wasn't easy, I hope you will like it.";
+        else
+            text = "$enchantResult" + " Can't do anything more with this item.";
+    }
+    else if(roll < 30)
+    {
+        if(item.GetType() == ITEM_TYPE_ARMOR)
+        {
+            player.AddItem(PID_FIBER, Random(2, 5));
+            if(item.Proto.Material == MATERIAL_METAL)
+            {
+                player.AddItem(PID_METAL_PARTS, Random(1, 3));
+                player.AddItem(PID_ALLOYS, Random(1, 3));
+            }
+            else
+            {
+                player.AddItem(PID_BRAHMIN_HIDE, Random(1, 3));
+                player.AddItem(PID_GECKO_PELT, Random(1, 3));
+            }
+        }
+        else
+        {
+            player.AddItem(PID_PUMP_PARTS, Random(2, 5));
+
+            switch(item.Proto.Weapon_Skill_0)
+            {
+                case SK_SMALL_GUNS:
+                case SK_BIG_GUNS:
+                    player.AddItem(PID_METAL_PARTS, Random(1, 3));
+                    player.AddItem(PID_ALLOYS, Random(1, 3));
+                    break;
+                case SK_ENERGY_WEAPONS:
+                    player.AddItem(PID_ELECTRONIC_PARTS, 3);
+                    player.AddItem(PID_ALLOYS, Random(1, 3));
+                    break;
+                default:
+                    player.AddItem(PID_FIREWOOD, Random(1, 3));
+                    player.AddItem(PID_METAL_PARTS, Random(2, 5));
+            }
+        }
+        DeleteItem(item);
+        text = "$enchantResult" + " I have no idea how it happened... well... I warned you there is a chance things might go wrong... here, that's all that I managed to salvaged.";
+    }
+    else if(roll < 70 && item.IsDeteriorable())
+    {
+        SetMinWear(item, item.BrokenCount-10);
+        SetWear(item, (item.Deterioration/100)-10);
+        text = "$enchantResult" + " I wasn't able to make anything spectacular but I managed to improve your item's condition a little.";
+    }
+    else
+        text = "$enchantResult" + " I was trying really hard but I couldn't do anything this time. You can come back if you want to try again...";
+}
+
 bool d_IsAreaScouted(Critter& player, Critter@ npc, int zoneSX, int zoneSY, int zoneEX, int zoneEY)
 {
     bool scouted = true;
@@ -2530,5 +2690,29 @@ void r_RemoveCrate(Critter& player, Critter@ npc)
 {
     _CritDeleteItem(player, PID_WATER_BARREL, 1);
 }
+
+void r_BulkOrderRewardGuns(Critter& player, Critter@ npc)
+{
+    int mapId = 0;
+    if(valid(player.GetMap()))
+        mapId = player.GetMap().Id;
+
+    int npcId = -1;
+    int dialogId = -1;
+
+    if(valid(npc))
+    {
+        npcId = npc.Id;
+        dialogId = npc.Param[ST_DIALOG_ID];
+    }
+
+    FLog(LOG_DIALOG_REWARD, "Reward - RewardBOGuns player: [" + player.Id + "] " + player.Name + " mapId: " + mapId + " npc: " + npcId + " dialog: " + dialogId);
+
+    ProcessRewardTable( player, RewardBOGuns);
+    
+    if(Random(1, 5) == 1)
+        player.AddItem(PID_DYNAMITE, 3);
+}
+
 
 #endif // __DIALOG__ //
