@@ -118,11 +118,11 @@ class CBlackjack
     /**< Initialize variables for a clean session, generate a new shoe and shuffle it. */
     void Init()
     {
-        progress = Init;
+        progress = BlackjackProgress::Init;
         shoe.Shuffle();
         SetGamblingSkills();
         ResetVariables();
-        progress = Bet;
+        progress = BlackjackProgress::Bet;
         //  Insert test cases here.
         //InsertTestCasesForPlayerBlackjack();
         //InsertTestCasesForDoubleDown();
@@ -181,7 +181,7 @@ class CBlackjack
                 lastAction = "Dealer reshuffles the shoe. A fresh round starts!";
             }
         }
-        if (progress == Init)
+        if (progress == BlackjackProgress::Init)
         {
             if (IsSeeShoeSize())
             {

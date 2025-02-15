@@ -395,7 +395,7 @@
 // COLOR_GAME_RGB(r,g,b), COLOR_IFACE, COLOR_IFACE_A(a), COLOR_IFACE_RED, COLOR_IFACE_GREEN
 
 #ifdef FOCLASSIC_EXTENSION
-# define COLOR_ARGB( a, r, g, b )                         ( (uint)( ( ( (a) & 0xFF ) << 24 ) | ( ( (r) & 0xFF ) << 16 ) | ( ( (g) & 0xFF ) << 8 ) | ( (b) & 0xFF ) ) )
+# define COLOR_ARGB( a, r, g, b )                         ( ( ( ( (a) & 0xFF ) << 24 ) | ( ( (r) & 0xFF ) << 16 ) | ( ( (g) & 0xFF ) << 8 ) | ( (b) & 0xFF ) ) )
 # define COLOR_XRGB( r, g, b )                            COLOR_ARGB( 0xFF, r, g, b )
 # define COLOR_CHANGE_ALPHA( v, a )                       ( ( ( (v) | 0xFF000000 ) ^ 0xFF000000 ) | ( (uint)(a) & 0xFF ) << 24 )
 #endif    // FOCLASSIC_EXTENSION
