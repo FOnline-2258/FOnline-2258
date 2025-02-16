@@ -2,8 +2,8 @@
 Version              4
 MaxHexX              163
 MaxHexY              144
-WorkHexX             75
-WorkHexY             72
+WorkHexX             74
+WorkHexY             49
 ScriptModule         map_hub
 ScriptFunc           map_init
 NoLogOut             0
@@ -12415,11 +12415,6 @@ MapY                 41
 
 MapObjType           2
 ProtoId              2067
-MapX                 83
-MapY                 39
-
-MapObjType           2
-ProtoId              2067
 MapX                 84
 MapY                 39
 
@@ -16853,11 +16848,6 @@ MapObjType           2
 ProtoId              5530
 MapX                 24
 MapY                 86
-
-MapObjType           2
-ProtoId              5529
-MapX                 24
-MapY                 87
 
 MapObjType           2
 ProtoId              5524
