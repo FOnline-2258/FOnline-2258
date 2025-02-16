@@ -567,41 +567,43 @@
 #define LVAR_q_hub_sad_farmer_locationId        (7404)
 #define LVAR_q_trader                           (16230)
 
-#define	LVAR_q_bring44								(11907)
-#define	LVAR_hub_bringshotty						(11923)
-#define	LVAR_hub_chefquest							(11928)
-#define	LVAR_hub_lightjp							(11936)
-#define LVAR_ncr_investigation1					    (16047)
-#define	LVAR_hub_postmanqp 							(11933)
-#define LVAR_q_loan		               		     	(16055)
-#define LVAR_q_loan_locid                    		(16056)
-#define LVAR_hub_lockpickq							(16072)
+#define LVAR_q_bring44								   (11907)
+#define LVAR_hub_bringshotty						   (11923)
+#define LVAR_hub_chefquest							   (11928)
+#define LVAR_hub_lightjp							   (11936)
+#define LVAR_ncr_investigation1					   (16047)
+#define LVAR_hub_postmanqp 							(11933)
+#define LVAR_q_loan		               		   (16055)
+#define LVAR_q_loan_locid                       (16056)
+#define LVAR_hub_lockpickq							   (16072)
 #define LVAR_q_geckoman		 		           	 	(16144)
 #define LVAR_noire1					 	            (16148)
 #define LVAR_noire1_locid			 	            (16149)
 #define LVAR_noire2_locid			 	            (16150)
 #define LVAR_noire3_locid			 	            (16151)
-#define LVAR_camp_evil 	          		 	        (16294)
+#define LVAR_camp_evil 	          		 	      (16294)
 #define LVAR_q_church1				 	            (16152)
 #define LVAR_q_inj1				 	            	(16154)
 #define LVAR_q_inj3				 	           	 	(16156)
-#define LVAR_q_inj4				 	         	   	(16157)
+#define LVAR_q_inj4				 	         	   (16157)
 #define LVAR_hub_inde				 	            (16169)
 #define LVAR_inde1_locid			 	            (16170)
 #define LVAR_inde2_locid			 	            (16171)
 #define LVAR_inde3_locid			 	            (16172)
-#define LVAR_z_bookman   	           	 	        (16332)
-#define	LVAR_hub_rougam  							(11931)
+#define LVAR_z_bookman   	           	 	      (16332)
+#define LVAR_hub_rougam  							   (11931)
 #define LVAR_dungeon_toxic				            (16165)
-#define LVAR_q_adventurecina_toxic_locid            (16164)
+#define LVAR_q_adventurecina_toxic_locid        (16164)
 #define LVAR_q_adventure 		             	 	(16129)
-#define LVAR_q_adventure_locid 	             	 	(16130)
+#define LVAR_q_adventure_locid 	             	(16130)
 #define LVAR_q_adventure2_locid 	              	(16131)
 #define LVAR_q_adventure3_locid 	              	(16132)
 #define LVAR_q_adventure4_locid 	              	(16133)
 #define LVAR_q_adventure5_locid 	              	(16134)
 #define LVAR_q_adventure6_locid 	              	(16135)
 #define LVAR_q_adventure7_locid 	              	(16136)
+#define LVAR_q_pool1                            (16234)
+#define LVAR_q_pool2                            (16235)
 
 /*************************************************************************************
         Id	Type	Name		Start	Min	Max	Flags
@@ -3851,6 +3853,16 @@ $ 16137	1 q_adventurecina_locid 0 0 13 4
 $ 16138	1 q_adventurecina2_locid 0 0 13 4
 **********
    Location id of intro4 loc
+**********
+
+$ 16234	1 q_pool1 0 0 25 1
+**********
+  pool score yours  
+**********
+
+$ 16235	1 q_pool2 0 0 25 1
+**********
+  pool score opponents  
 **********
 
 **************************************************************************************

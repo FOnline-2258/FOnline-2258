@@ -838,6 +838,8 @@
 #define DIALOG_bossfight14                    (23258)
 #define DIALOG_all_tradesmen                  (23262)
 #define DIALOG_blackjack_dealer               (23265)
+#define DIALOG_all_courier                    (23267)
+#define DIALOG_all_pool                       (23272)
 #define DIALOG_all_dailycop                   (23371)
 #define DIALOG_intro_noobcamp_jasonstone      (32450)
 #define DIALOG_noob_camp_exit_gate            (33001)
